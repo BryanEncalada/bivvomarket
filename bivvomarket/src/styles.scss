@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+// Swiper
+@use "swiper/css/bundle";
+
+// Bootstrap
+@use "bootstrap/dist/css/bootstrap.css" as *;
+
+// Otras hojas de estilo externas (de momento no se pueden migrar a @use)
+@import './assets/css/fontAwesome5Pro.css';
+@import './assets/css/ionicons.min.css';
+@import './assets/css/animate.min.css';
+
+// Estilos SCSS propios
+@import './assets/scss/main.scss';
