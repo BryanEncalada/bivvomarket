@@ -1,19 +1,25 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { NavManusComponent } from "../nav-manus/nav-manus.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header-two',
   templateUrl: './header-two.component.html',
   styleUrls: ['./header-two.component.scss'],
-  imports: [NavManusComponent]
+  imports: [NavManusComponent,CommonModule]
+
 })
 export class HeaderTwoComponent {
+
+  @Input () header_big = false;
+  @Input () white_bg = false;
+  @Input () transparent = false;
+
 
   public sticky: boolean = false;
 
   constructor(
-    //public cartService: CartService,
-   // public utilsService: UtilsService,
+   
   ) { }
 
   // sticky nav
@@ -24,5 +30,4 @@ export class HeaderTwoComponent {
       this.sticky = false;
     }
   }
-
 }
