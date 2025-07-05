@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { IProduct } from '../../shared/types/IProduct';
 import { ProductService } from '../../shared/services/product.service';
 import { HeroSliderTwoComponent } from "../../shared/components/slider/hero-slider-two/hero-slider-two.component";
+import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
 
 
 @Component({
   selector: 'app-home-two',
-  imports: [HeroSliderTwoComponent],
+  imports: [HeroSliderTwoComponent, HeaderTwoComponent],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss'
 })
