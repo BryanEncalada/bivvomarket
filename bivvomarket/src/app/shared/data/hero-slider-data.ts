@@ -31,20 +31,22 @@ const hero_slider_two: IHeroSlider[] = [
   id: 1,
   bgImg: '/assets/img/slider/03/sliderBM01.webp',
   isDark: true,
-    title: 'Quinua pop  <br /> Original ',
-  subtitle: 'Quinua inflada cubierta con cacao en polvo'
+    title: 'QUINOA POP ORIGINAL<br />',
+  subtitle: 'QUINOA ORIGINAL is a 100% organic superfood with a high protein content'
 },
 {
   id: 2,
-  bgImg: '/assets/img/slider/03/slider-02.jpg',
-  title: 'Quinua pop  <br /> Original ',
-  subtitle: 'Quinua inflada cubierta con cacao en polvo'
+  bgImg: '/assets/img/slider/03/sliderBM02.webp',
+  isDark: true,
+  title: 'QUINOA POP CACAO  <br />  ',
+  subtitle: 'CACAO QUINOA is a superfood based on quinoa and 100% organic'
 },
 {
   id: 3,
-  bgImg: '/assets/img/slider/03/slider-03.jpg',
-  title: 'Quinua  pop <br /> Original ',
-  subtitle: 'From luxury watches and chronographs to wall clocks and weather stations, Henning Koppels.'
+  bgImg: '/assets/img/slider/03/sliderBM03.webp',
+  isDark: true,
+  title: 'QUINOA POP COVERTED WITH HONEY <br />  ',
+  subtitle: 'HONEY QUINOA is a superfood based on 100% organic quinoa and natural honey'
 }
 ];
 

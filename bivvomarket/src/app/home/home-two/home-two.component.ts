@@ -4,12 +4,11 @@ import { ProductService } from '../../shared/services/product.service';
 import { HeroSliderTwoComponent } from "../../shared/components/slider/hero-slider-two/hero-slider-two.component";
 import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
 import { ShopCategoryComponent } from "../../shop/shop-category/shop-category.component";
-import { ShopAreaComponent } from '../../shop/components/shop-area/shop-area.component';
 
 
 @Component({
   selector: 'app-home-two',
-  imports: [HeroSliderTwoComponent, HeaderTwoComponent, ShopCategoryComponent, ShopAreaComponent],
+  imports: [HeroSliderTwoComponent, HeaderTwoComponent, ShopCategoryComponent],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss'
 })
