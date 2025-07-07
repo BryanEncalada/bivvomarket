@@ -3,7 +3,9 @@ import { of,Observable } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { ProductService } from './product.service';
+
 import { IProduct } from '../types/IProduct';
+
 import product_data from '../data/product_data';
 
 
@@ -22,30 +24,10 @@ export class UtilsService {
   public modalId: string = 'product-modal-641e887d05f9ee1717e1348a';
   public product: IProduct = product_data[0];
 
-//   // Get blogs
-//   public get blogs(): Observable<IBlogType[]> {
-//     return of(blog_data);
-//   }
-
-//   // Get blog Filter
-//   public filterBlogs(): Observable<IBlogType[]> {
-//     return this.blogs.pipe(map(blogs => {
-//       return blogs;
-//     }));
-//   }
-
-
-//     // Get Products By id
-//     public getBlogById(id: string): Observable<IBlogType | undefined> {
-//       return this.blogs.pipe(map(items => {
-//         const blog = items.find(p => Number(p.id ) === Number(id));
-//         return blog;
-//       }));
-//     }
 
   constructor(
     private productService: ProductService,
-    //private cartService: CartService,
+
     private router: Router
   ) {
     this.router.events.subscribe(event => {
@@ -53,7 +35,7 @@ export class UtilsService {
         this.isSearchOpen = false;
         this.isProductModalOpen = false;
         this.openMobileMenus = false;
-        this.removeBackdropAndProductModal()
+        //this.removeBackdropAndProductModal()
       }
     });
   }
@@ -102,7 +84,7 @@ export class UtilsService {
     this.modalId = id;
     this.product = item;
     this.productService.handleImageActive(item.img);
-  //  this.cartService.initialOrderQuantity();
+   // this.cartService.initialOrderQuantity();
   }
 
    convertToURL(value: string): string {
