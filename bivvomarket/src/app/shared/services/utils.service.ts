@@ -3,14 +3,10 @@ import { of,Observable } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { ProductService } from './product.service';
-<<<<<<< Updated upstream
-import { IProduct } from '../types/IProduct';
-=======
 import { CartService } from './cart.service';
 import { IProduct } from '../types/IProduct';
 import IBlogType from '../types/blog-d-t';
 import blog_data from '../types/blog-data';
->>>>>>> Stashed changes
 import product_data from '../data/product_data';
 
 
@@ -29,32 +25,6 @@ export class UtilsService {
   public modalId: string = 'product-modal-641e887d05f9ee1717e1348a';
   public product: IProduct = product_data[0];
 
-<<<<<<< Updated upstream
-//   // Get blogs
-//   public get blogs(): Observable<IBlogType[]> {
-//     return of(blog_data);
-//   }
-
-//   // Get blog Filter
-//   public filterBlogs(): Observable<IBlogType[]> {
-//     return this.blogs.pipe(map(blogs => {
-//       return blogs;
-//     }));
-//   }
-
-
-//     // Get Products By id
-//     public getBlogById(id: string): Observable<IBlogType | undefined> {
-//       return this.blogs.pipe(map(items => {
-//         const blog = items.find(p => Number(p.id ) === Number(id));
-//         return blog;
-//       }));
-//     }
-
-  constructor(
-    private productService: ProductService,
-    //private cartService: CartService,
-=======
   // Get blogs
   public get blogs(): Observable<IBlogType[]> {
     return of(blog_data);
@@ -79,7 +49,6 @@ export class UtilsService {
   constructor(
     private productService: ProductService,
     private cartService: CartService,
->>>>>>> Stashed changes
     private router: Router
   ) {
     this.router.events.subscribe(event => {
@@ -87,11 +56,7 @@ export class UtilsService {
         this.isSearchOpen = false;
         this.isProductModalOpen = false;
         this.openMobileMenus = false;
-<<<<<<< Updated upstream
-        this.removeBackdropAndProductModal()
-=======
         //this.removeBackdropAndProductModal()
->>>>>>> Stashed changes
       }
     });
   }
@@ -140,11 +105,7 @@ export class UtilsService {
     this.modalId = id;
     this.product = item;
     this.productService.handleImageActive(item.img);
-<<<<<<< Updated upstream
-  //  this.cartService.initialOrderQuantity();
-=======
     this.cartService.initialOrderQuantity();
->>>>>>> Stashed changes
   }
 
    convertToURL(value: string): string {

@@ -19,17 +19,10 @@ export class NavManusComponent {
     const classes = [];
     if (item.hasDropdown && !item.megamenu) {
       classes.push('active', 'has-dropdown');
-<<<<<<< Updated upstream
-      
-    } else if (item.megamenu) {
-      classes.push('mega-menu', 'has-dropdown');
-     
-=======
       //console.log("classes.push('active', 'has-dropdown');")
     } else if (item.megamenu) {
       classes.push('mega-menu', 'has-dropdown');
         // console.log("classes.push('mega-menu', 'has-dropdown');")
->>>>>>> Stashed changes
     }
     return classes.join(' ');
   }
