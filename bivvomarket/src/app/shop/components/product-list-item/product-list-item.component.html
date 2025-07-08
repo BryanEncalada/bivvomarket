@@ -34,7 +34,7 @@
                     Add to Cart
                   </a>
                   <a *ngIf="isItemInCart(product)" routerLink="/shop/cart" class="add-cart-btn mr-10 cursor-pointer">
-                    View cart
+                    Ver carrito
                   </a>
                   <div class="product__action-2 transition-3 mr-20">
                       <a (click)="addToWishlist(product)" class="cursor-pointer" [class.active]="isItemInWishlist(product)" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist">

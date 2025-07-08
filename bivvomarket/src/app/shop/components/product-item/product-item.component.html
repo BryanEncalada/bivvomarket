@@ -2,7 +2,7 @@
   <div class="product__wrapper mb-45">
       <div class="product__thumb">
           <a [routerLink]="['/shop/shop-details', product.id]" class="w-img">
-              <img [src]="product.img" alt="product-img">
+              <img [src]="product.img" alt="product-img"  >
               <img class="product__thumb-2" [src]="product.thumb_img" alt="product-img">
           </a>
           <div class="product__action transition-3">
@@ -32,10 +32,10 @@
           </div>
           <div class="add-cart p-absolute transition-3">
               <a *ngIf="!isItemInCart(product)" (click)="addToCart(product)" class="cursor-pointer">
-                + Add to Cart
+                + Agregar a carrito
               </a>
               <a *ngIf="isItemInCart(product)" routerLink="/shop/cart" class="cursor-pointer">
-                View Cart
+                Ver carrito
               </a>
           </div>
       </div>
