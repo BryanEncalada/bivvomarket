@@ -227,7 +227,7 @@ const blog_data: IBlogType[] = [
 
 {
   id: 25,
-   img: '/assets/img/blog/2/blog-02.webp',
+   img: '/assets/img/slider/03/sliderBM01.webp',
   title: 'Barras energéticas de quinua',
   author: 'María López',
   date: 'Julio 8, 2025',
