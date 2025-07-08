@@ -3,15 +3,24 @@ import { BackToTopComponent } from './shared/components/back-to-top/back-to-top.
 import { NgModule } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { HomeTwoComponent } from './home/home-two/home-two.component';
+import { DynamicShopDetailsComponent } from './shop/components/dynamic-shop-details/dynamic-shop-details.component';
 
 export const routes: Routes = [
 
- {
+  {
     path: '',
     pathMatch: 'full',
     component: HomeTwoComponent,
     title: 'component: HomeTwoComponent',
 
+  }, {
+    path: 'shop/shop-details/:id',
+    component: DynamicShopDetailsComponent,
+    title: 'Shop Details Page'
+  },
+  {
+    path: '**',
+    redirectTo: '',
   }
 
 ];
@@ -26,4 +35,4 @@ export const routes: Routes = [
   declarations: [], // Add ResourcesComponent to declarations
   providers: [provideClientHydration()],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
