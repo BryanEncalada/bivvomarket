@@ -29,11 +29,11 @@ export class RecetasComponent {
   ngAfterViewInit() {
     if (this.blogSliderContainer) {
       this.blogSliderInstance = new Swiper('.blog__slider-active', {
-        slidesPerView: 2,
+        slidesPerView: 3,
         spaceBetween: 30,
         breakpoints: {
           '768': {
-            slidesPerView: 2,
+            slidesPerView: 3,
           },
           '576': {
             slidesPerView: 1,
