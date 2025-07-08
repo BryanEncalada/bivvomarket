@@ -20,7 +20,7 @@ export class RecetasComponent {
 
   public swiperInstance: Swiper | undefined;
   public productSliderInstance: Swiper | undefined;
-  public blog_items: IBlogType[] = blog_data.filter((b) => b.blog === 'home-7');
+  public blog_items: IBlogType[] = blog_data.filter((b) => b.blog === 'blog-receta');
 
   ngOnInit(): void {
     console.log('blog_items', this.blog_items);
