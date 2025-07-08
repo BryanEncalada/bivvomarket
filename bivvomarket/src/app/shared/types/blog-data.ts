@@ -227,7 +227,7 @@ const blog_data: IBlogType[] = [
 
 {
   id: 25,
-   img: '/assets/img/slider/03/sliderBM01.webp',
+   img: '/assets/img/blog/2/receta-BM01.png',
   title: 'Barras energéticas de quinua',
   author: 'María López',
   date: 'Julio 8, 2025',
@@ -237,7 +237,7 @@ const blog_data: IBlogType[] = [
 
 {
   id: 26,
- img: '/assets/img/blog/2/blog-06.webp',
+ img: '/assets/img/blog/2/receta-BM01.png',
   title: 'Desayuno crocante con quinua',
   author: 'Carlos Ruiz',
   date: 'Julio 8, 2025',
@@ -247,7 +247,7 @@ const blog_data: IBlogType[] = [
 
 {
   id: 27,
- img: '/assets/img/blog/2/blog-06.webp',
+ img: '/assets/img/blog/2/receta-BM01.png',
   title: 'Galletas de quinua y plátano',
   author: 'Ana Gómez',
   date: 'Julio 8, 2025',
