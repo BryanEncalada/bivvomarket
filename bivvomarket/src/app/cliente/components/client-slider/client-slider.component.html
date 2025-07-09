@@ -1,0 +1,25 @@
+<!-- brand__area start -->
+<div class="brand__area pb-90">
+    <div class="container custom-container-2">
+        <div class="client_slider p-relative">
+            <div class="brand__slider-active swiper-container" #brandSliderContainer>
+                <div class="swiper-wrapper">
+                    <div *ngFor="let logo of client_logos" class="brand__slider-item swiper-slide">
+                        <div class="brand__image">
+                            <img [src]="logo" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-nav">
+                <div class="owl-prev" (click)="brandSliderInstance?.slidePrev()">
+                    <button><i class="fal fa-angle-left"></i></button>
+                </div>
+                <div class="owl-next" (click)="brandSliderInstance?.slideNext()">
+                    <button><i class="fal fa-angle-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- brand__area end -->
