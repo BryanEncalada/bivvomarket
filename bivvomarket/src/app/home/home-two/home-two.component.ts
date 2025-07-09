@@ -6,10 +6,11 @@ import { ShopCategoryComponent } from "../../shop/shop-category/shop-category.co
 import { isPlatformBrowser } from '@angular/common';
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ShopAreaComponent } from "../../shop/components/shop-area/shop-area.component";
+import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
 
 @Component({
   selector: 'app-home-two',
-  imports: [HeroSliderTwoComponent, ShopCategoryComponent, ShopAreaComponent],
+  imports: [HeroSliderTwoComponent, ShopCategoryComponent, ShopAreaComponent, ClientSliderComponent],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss'
 })
