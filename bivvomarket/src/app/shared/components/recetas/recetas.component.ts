@@ -5,10 +5,11 @@ import blog_data from '../../types/blog-data';
 import IBlogType from '../../types/blog-d-t';
 import Swiper from 'swiper';
 import { EffectFade, Pagination } from 'swiper/modules';
+import { TituloSeccionComponent } from '../titulo-seccion/titulo-seccion.component';
 
 @Component({
   selector: 'app-recetas',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TituloSeccionComponent],
   templateUrl: './recetas.component.html',
   styleUrl: './recetas.component.scss',
 })

@@ -4,17 +4,17 @@
 
 .footer{
     &__bottom{
-        border-top: 1px solid $border-2;
+        border-top: 1px solid #fff;
         padding: 45px 0;
         &.footer__bottom-2{
             border-top: none;
             padding: 0;
         }
         &-inner{
-            border-top: 1px solid $border;
+            border-top: 1px solid #fff;
             padding: 45px 0;
             &-2{
-                border-top-color: #c1c1c1;
+                border-top-color: #fff;
             }
         }
         &-3{
@@ -34,10 +34,21 @@
                 color: $black;
             }
         }
+        & h1{
+            color: $white;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+        }
+        &-2{
+            & h1{
+                color: $black;
+            }
+        }
     }
     &__widget-content{
         & p{
-            color: #b4b3b3;
+            color: #fff;
             margin-bottom: 25px;
         }
         & .form-group{
@@ -113,13 +124,13 @@
                 & .icon{
                     & i{
                         line-height: 27px;
-                        color: #b4b3b3;
+                        color: #fff;
                         margin-right: 15px;
                     }
                 }
                 & .text{
                     & span{
-                        color: #b4b3b3;
+                        color: #fff;
                     }
                 }
             }
@@ -175,7 +186,7 @@
     &__copyright{
         & p{
             margin-bottom: 0;
-            color: #b4b3b3;
+            color: #fff;
             @media #{$md}{
                 margin-bottom: 30px;
             }
@@ -232,7 +243,7 @@
                     margin-right: 40px;
                 }
                 & a{
-                    color: #b4b3b3;
+                    color: #fff;
                     &:hover{
                         color: $theme-color;
                     }

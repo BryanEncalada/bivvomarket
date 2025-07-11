@@ -22,6 +22,12 @@
 		width: 100%;
 	}
 }
+.w-img2{
+	& img{
+		width: 90%;
+	
+	}
+}
 .m-img{
 	& img{
 		max-width: 100%;
@@ -213,7 +219,11 @@ p {
 }
 
 .footer-bg {
-	background: $footer-bg;
+	// background: $footer-bg;
+	// background: #8a8f6a;
+	//background-image: url('/assets/img/slider/05/slide113.webp');
+	background-image: url('/assets/img/slider/03/sliderBM01.webp');
+	
 }
 
 

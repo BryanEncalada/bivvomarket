@@ -113,7 +113,7 @@ const hero_slider_seven: IHeroSlider[] = [
   {
     id: 2,
     bgImg: '/assets/img/slider/05/slide112.webp',
-    sm_title:'Quick parcel delivery',
+    sm_title:'Quick parcel delivery', 
     title: "Creative theme <br/>Awesome.",
     subtitle: "Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.",
   },

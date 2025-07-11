@@ -1,9 +1,9 @@
 
   <div class="product__wrapper mb-45">
       <div class="product__thumb">
-          <a [routerLink]="['/shop/shop-details', product.id]" class="w-img">
-              <img [src]="product.img" alt="product-img"  >
-              <img class="product__thumb-2" [src]="product.thumb_img" alt="product-img">
+          <a [routerLink]="['/shop/shop-details', product.id]" class="w-img2">
+              <img [src]="product.img" alt="product-img" >
+              <img class="product__thumb-2" [src]="product.thumb_img" alt="product-img"  >
           </a>
           <div class="product__action transition-3">
               <a (click)="addToWishlist(product)" class="cursor-pointer" [class.active]="isItemInWishlist(product)" data-bs-toggle="tooltip" data-placement="top" title="Add to Wishlist">

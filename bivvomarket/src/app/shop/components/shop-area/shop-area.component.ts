@@ -8,10 +8,11 @@ import { ProductListItemComponent } from '../product-list-item/product-list-item
 import { FormsModule } from '@angular/forms';
 import { UtilsService } from '../../../shared/services/utils.service';
 import { ProductService } from '../../../shared/services/product.service';
+import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
 
 @Component({
   selector: 'app-shop-area',
-  imports: [NgClass, NgFor, NgIf, FormsModule, ProductItemComponent, ProductListItemComponent, PaginationComponent],
+  imports: [NgClass, NgFor, NgIf, FormsModule, ProductItemComponent, ProductListItemComponent, PaginationComponent, TituloSeccionComponent],
   templateUrl: './shop-area.component.html',
   styleUrl: './shop-area.component.scss'
 })
@@ -36,7 +37,6 @@ export class ShopAreaComponent {
   public pageSize: number = 12;
   public paginate: any = {}; // Pagination use only
   public sortBy: string = 'asc'; // Sorting Order
-
 
   constructor(
     public productService: ProductService,
