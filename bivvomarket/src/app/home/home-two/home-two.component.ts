@@ -18,7 +18,7 @@ import { ContactComponent } from '../../pages/contact/contact.component';
     HeroSliderTwoComponent,
     //ShopCategoryComponent,
     ShopAreaComponent,
-    //ClientSliderComponent,
+    ClientSliderComponent,
     VideoComponent,
     RecetasComponent,
     ContactComponent,
