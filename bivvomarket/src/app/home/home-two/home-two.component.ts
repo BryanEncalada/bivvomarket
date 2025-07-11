@@ -9,11 +9,26 @@ import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ShopAreaComponent } from '../../shop/components/shop-area/shop-area.component';
 import { VideoComponent } from '../../shared/components/video/video.component';
 import { RecetasComponent } from '../../shared/components/recetas/recetas.component';
+<<<<<<< HEAD
+import { ContactComponent } from '../../pages/contact/contact.component';
+
+@Component({
+  selector: 'app-home-two',
+  imports: [
+    HeroSliderTwoComponent,
+    HeaderTwoComponent,
+    ShopAreaComponent,
+    VideoComponent,
+    RecetasComponent,
+    ContactComponent,
+  ],
+=======
 import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
 
 @Component({
   selector: 'app-home-two',
   imports: [HeroSliderTwoComponent, ShopCategoryComponent, ShopAreaComponent, ClientSliderComponent, VideoComponent, RecetasComponent],
+>>>>>>> main
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
 })
