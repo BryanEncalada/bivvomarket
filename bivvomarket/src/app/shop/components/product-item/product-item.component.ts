@@ -5,13 +5,13 @@ import { WishlistService } from '../../../shared/services/wishlist.service';
 import { CompareService } from '../../../shared/services/compare.service';
 import { UtilsService } from '../../../shared/services/utils.service';
 import { NgIf,  } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterLink, RouterModule } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-product-item',
-  imports: [NgIf, RouterModule],
+  imports: [NgIf, RouterModule, RouterLink],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.scss'
 })

@@ -1,13 +1,13 @@
 // Swiper
 @use "swiper/css/bundle";
 
+// Otras hojas de estilo externas (de momento no se pueden migrar a @use)
+@use './assets/css/fontAwesome5Pro.css';
+@use './assets/css/ionicons.min.css';
+@use './assets/css/animate.min.css';
+
 // Bootstrap
 @use "bootstrap/dist/css/bootstrap.css" as *;
 
-// Otras hojas de estilo externas (de momento no se pueden migrar a @use)
-@import './assets/css/fontAwesome5Pro.css';
-@import './assets/css/ionicons.min.css';
-@import './assets/css/animate.min.css';
-
 // Estilos SCSS propios
-@import './assets/scss/main.scss';
+@use './assets/scss/main.scss';
