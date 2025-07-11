@@ -9,6 +9,7 @@ import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { ShopAreaComponent } from '../../shop/components/shop-area/shop-area.component';
 import { VideoComponent } from '../../shared/components/video/video.component';
 import { RecetasComponent } from '../../shared/components/recetas/recetas.component';
+import { ContactComponent } from '../../pages/contact/contact.component';
 
 @Component({
   selector: 'app-home-two',
@@ -18,6 +19,7 @@ import { RecetasComponent } from '../../shared/components/recetas/recetas.compon
     ShopAreaComponent,
     VideoComponent,
     RecetasComponent,
+    ContactComponent,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
