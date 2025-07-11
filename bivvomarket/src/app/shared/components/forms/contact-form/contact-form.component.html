@@ -1,0 +1,81 @@
+<form id="contact-form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-xl-6 col-lg-6">
+      <div class="contact__input mb-20">
+        <label>Nombre <span class="required">*</span></label>
+        <input type="text" id="name" formControlName="name" />
+        <span
+          *ngIf="name?.hasError('required') && (name?.touched || formSubmitted)"
+          class="text-danger"
+        >
+          El nombre es obligatorio
+        </span>
+      </div>
+    </div>
+    <div class="col-xl-6 col-lg-6">
+      <div class="contact__input mb-20">
+        <label>Correo electrónico <span class="required">*</span></label>
+        <input type="email" id="email" formControlName="email" />
+        <span
+          *ngIf="
+            (email?.hasError('required') && email?.touched) ||
+            (email?.hasError('email') && email?.dirty) ||
+            (formSubmitted && !email?.value)
+          "
+          class="text-danger"
+        >
+          El correo es obligatorio y debe tener un formato válido
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="contact__input mb-20">
+        <label>Asunto <span class="required">*</span></label>
+        <input type="text" id="subject" formControlName="subject" />
+        <span
+          *ngIf="
+            subject?.hasError('required') && (subject?.touched || formSubmitted)
+          "
+          class="text-danger"
+        >
+          El asunto es obligatorio
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="contact__input mb-45">
+        <label>Mensaje</label>
+        <textarea
+          cols="30"
+          rows="10"
+          id="message"
+          formControlName="message"
+        ></textarea>
+        <span
+          *ngIf="
+            message?.hasError('required') && (message?.touched || formSubmitted)
+          "
+          class="text-danger"
+        >
+          El mensaje es obligatorio
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="contact__submit">
+        <button type="submit" class="os-btn os-btn-black">
+          Enviar mensaje
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

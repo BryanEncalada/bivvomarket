@@ -1,10 +1,9 @@
-import { IMenuType, IMobileMenu } from "../types/menu-d-t";
+import { IMenuType, IMobileMenu } from '../types/menu-d-t';
 
-const menuData:IMenuType[] = [
+const menuData: IMenuType[] = [
   {
     link: '/',
     title: 'Inicio',
-
   },
   {
     link: '/pages/contact',
@@ -19,28 +18,26 @@ const menuData:IMenuType[] = [
       { link: '/home/home-style-5', title: 'Home Style 5' },
       { link: '/home/home-style-6', title: 'Home Style 6' },
       { link: '/home/home-style-7', title: 'Home Style 7' },
-    ]
-     
+    ],
   },
   {
     link: '/pages/contact',
     title: 'Recetas',
   },
-  
+
   {
-    link: '/pages/contact',
+    link: 'contact',
     title: 'Contacto',
   },
-]
+];
 
 export default menuData;
 
 // mobile menus
-export const mobile_menus:IMobileMenu[] = [
+export const mobile_menus: IMobileMenu[] = [
   {
     link: '/',
     title: 'Home',
-
   },
   {
     link: '/pages/contact',
@@ -50,9 +47,9 @@ export const mobile_menus:IMobileMenu[] = [
     link: '/pages/contact',
     title: 'Recetas',
   },
-  
+
   {
-    link: '/pages/contact',
+    link: 'contact',
     title: 'Contacto',
   },
 ];

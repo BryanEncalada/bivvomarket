@@ -4,35 +4,41 @@ import { NgModule } from '@angular/core';
 import { provideClientHydration } from '@angular/platform-browser';
 import { HomeTwoComponent } from './home/home-two/home-two.component';
 import { DynamicShopDetailsComponent } from './shop/components/dynamic-shop-details/dynamic-shop-details.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
-
   {
     path: '',
     pathMatch: 'full',
     component: HomeTwoComponent,
     title: 'component: HomeTwoComponent',
-
-  }, {
+  },
+  {
     path: 'shop/shop-details/:id',
     component: DynamicShopDetailsComponent,
-    title: 'Shop Details Page'
+    title: 'Shop Details Page',
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    title: 'Contacto',
   },
   {
     path: '**',
     redirectTo: '',
-  }
-
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    useHash: false,
-    anchorScrolling: 'enabled',
-    scrollPositionRestoration: 'enabled'
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: false,
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
+    }),
+  ],
   exports: [RouterModule],
   declarations: [], // Add ResourcesComponent to declarations
   providers: [provideClientHydration()],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

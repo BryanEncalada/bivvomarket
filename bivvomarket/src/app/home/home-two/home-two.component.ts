@@ -1,8 +1,8 @@
 import { IProduct } from '../../shared/types/IProduct';
 import { ProductService } from '../../shared/services/product.service';
 
-import { HeroSliderTwoComponent } from "../../shared/components/slider/hero-slider-two/hero-slider-two.component";
-import { ShopCategoryComponent } from "../../shop/shop-category/shop-category.component";
+import { HeroSliderTwoComponent } from '../../shared/components/slider/hero-slider-two/hero-slider-two.component';
+import { ShopCategoryComponent } from '../../shop/shop-category/shop-category.component';
 
 import { isPlatformBrowser } from '@angular/common';
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
@@ -10,10 +10,19 @@ import { ShopAreaComponent } from '../../shop/components/shop-area/shop-area.com
 import { VideoComponent } from '../../shared/components/video/video.component';
 import { RecetasComponent } from '../../shared/components/recetas/recetas.component';
 import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
+import { ContactComponent } from '../../pages/contact/contact.component';
 
 @Component({
   selector: 'app-home-two',
-  imports: [HeroSliderTwoComponent, ShopCategoryComponent, ShopAreaComponent, ClientSliderComponent, VideoComponent, RecetasComponent],
+  imports: [
+    HeroSliderTwoComponent,
+    //ShopCategoryComponent,
+    ShopAreaComponent,
+    //ClientSliderComponent,
+    VideoComponent,
+    RecetasComponent,
+    ContactComponent,
+  ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
 })
