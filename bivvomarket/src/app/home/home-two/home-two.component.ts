@@ -10,18 +10,18 @@ import { ShopAreaComponent } from '../../shop/components/shop-area/shop-area.com
 import { VideoComponent } from '../../shared/components/video/video.component';
 import { RecetasComponent } from '../../shared/components/recetas/recetas.component';
 import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
-import { ContactComponent } from '../../pages/contact/contact.component';
+import { ResenaComponent } from '../../cliente/components/resena/resena.component';
+
 
 @Component({
   selector: 'app-home-two',
   imports: [
     HeroSliderTwoComponent,
-    //ShopCategoryComponent,
     ShopAreaComponent,
     ClientSliderComponent,
     VideoComponent,
     RecetasComponent,
-    ContactComponent,
+    ResenaComponent
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',

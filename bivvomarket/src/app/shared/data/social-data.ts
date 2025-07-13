@@ -16,15 +16,10 @@ const social_links:ISocial[] = [
     name: "Twitter",
   },
   {
-    link: "https://www.behance.net/",
-    icon: "fab fa-behance",
-    name: "Behance",
-  },
-  {
-    link: "https://dribbble.com/",
-    icon: "fab fa-dribbble",
-    name: "Dribbble",
-  },
+    link: "https://www.instagram.com/bivvomarket/",
+    icon: "fab fa-instagram",
+    name: "Instagram",
+  }
 ]
 
 export default social_links;

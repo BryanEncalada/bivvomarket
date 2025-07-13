@@ -4,6 +4,7 @@ import { ProductService } from '../../../shared/services/product.service';
 import { CartService } from '../../../shared/services/cart.service';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import social_links, { ISocial } from '../../../shared/data/social-data';
 
 @Component({
   selector: 'app-product-details-upper',
@@ -17,10 +18,12 @@ export class ProductDetailsUpperComponent {
   @Input() bottomShow: boolean = true;
   @Input() style_2: boolean = false;
 
-    constructor(
+  public social_links: ISocial[] = social_links;
+
+  constructor(
     public productService: ProductService,
     public cartService: CartService
-  ) {}
+  ) { }
 
   ngOnInit() {
     if (this.product) {

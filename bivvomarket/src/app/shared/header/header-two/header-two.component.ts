@@ -1,25 +1,27 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { NavManusComponent } from "../nav-manus/nav-manus.component";
 import { CommonModule } from '@angular/common';
+import social_links, { ISocial } from '../../data/social-data';
+
 
 @Component({
   selector: 'app-header-two',
   templateUrl: './header-two.component.html',
   styleUrls: ['./header-two.component.scss'],
-  imports: [NavManusComponent,CommonModule]
+  imports: [NavManusComponent, CommonModule]
 
 })
 export class HeaderTwoComponent {
 
-  @Input () header_big = false;
-  @Input () white_bg = false;
-  @Input () transparent = false;
+  @Input() header_big = false;
+  @Input() white_bg = false;
+  @Input() transparent = false;
 
-
+  public social_links: ISocial[] = social_links;
   public sticky: boolean = false;
 
   constructor(
-   
+
   ) { }
 
   // sticky nav
