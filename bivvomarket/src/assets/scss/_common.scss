@@ -4,39 +4,41 @@
 
 /* 1. Theme default css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- body {
-	font-family: $pop;
-	font-size: 14px;
-	font-weight: normal;
-	color: $body-text-color;
-	line-height: 24px;
+body {
+  font-family: $pop;
+  font-size: 14px;
+  font-weight: normal;
+  color: $body-text-color;
+  line-height: 24px;
 }
 
-.w-img{
-	& img{
-		width: 100%;
-	}
+.w-img {
+  & img {
+    width: 100%;
+  }
 }
-.w-img2{
-	& img{
-		width: 90%;
-	
-	}
+.w-img2 {
+  & img {
+    width: 90%;
+  }
 }
-.m-img{
-	& img{
-		max-width: 100%;
-	}
+.m-img {
+  & img {
+    max-width: 100%;
+  }
 }
-@media (min-width: 1200px){
- .container, .container-lg, .container-md, .container-sm, .container-xl {
-
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
     max-width: 1140px;
   }
 }
@@ -222,10 +224,10 @@ p {
 }
 
 .footer-bg {
-	// background: $footer-bg;
-	// background: #8a8f6a;
-	//background-image: url('/assets/img/slider/05/slide113.webp');
-	background-image: url('/assets/img/slider/03/sliderBM01.webp');
+  // background: $footer-bg;
+  // background: #8a8f6a;
+  //background-image: url('/assets/img/slider/05/slide113.webp');
+  background-image: url("/assets/img/footer/BM_Foo01.png");
 }
 
 .dark-soft-bg {
