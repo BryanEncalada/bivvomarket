@@ -1,44 +1,55 @@
 <!-- blog__slider-area start -->
 <div class="blog__slider-area pt-100 pb-100">
-  <div class="container custom-container-2">
+  <!-- <div class="container custom-container-2"> -->
 
+  <app-titulo-seccion
+    [Titulo1]="'Nuestras recetas'"
+    [desc1]="
+      'Descubre ideas fáciles, nutritivas y deliciosas para aprovechar el cereal de quinua en tu día a día.'
+    "
+  >
+  </app-titulo-seccion>
 
-    <app-titulo-seccion [Titulo1]="'Nuestras recetas'"
-      [desc1]="'Descubre ideas fáciles, nutritivas y deliciosas para aprovechar el cereal de quinua en tu día a día.'">
-    </app-titulo-seccion>
-
-    <div class="row mt-40">
-      <div class="col-xl-12">
-        <div class="blog_slider">
-          <div class="blog_slider-area p-relative">
-            <div class="blog__slider-active swiper-container" #blogSliderContainer>
-              <div class="swiper-wrapper">
-                <div *ngFor="let blog of blog_items" class="blog__slider-item swiper-slide">
-                  <div class="blog-thumb m-img">
-                    <img [src]="blog.img" alt="blog-img" />
-                    <a class="btn" [routerLink]="['/pages/blog-details', blog.id]">
-                      <i class="fa fa-utensil-fork"></i>
-                    </a>
-                  </div>
-                  <div class="blog__post-content">
-                    <div class="blog__wrapper">
-                      <h5 class="blog__post-title">
-                        <a [routerLink]="['/pages/blog-details', blog.id]">{{
-                          blog.title
-                          }}</a>
-                      </h5>
-                    </div>
+  <div class="row mt-40">
+    <div class="col-xl-12">
+      <div class="blog_slider">
+        <div class="blog_slider-area p-relative">
+          <div
+            class="blog__slider-active swiper-container"
+            #blogSliderContainer
+          >
+            <div class="swiper-wrapper">
+              <div
+                *ngFor="let blog of blog_items"
+                class="blog__slider-item swiper-slide"
+              >
+                <div class="blog-thumb m-img">
+                  <img [src]="blog.img" alt="blog-img" />
+                  <a
+                    class="btn"
+                    [routerLink]="['/pages/blog-details', blog.id]"
+                  >
+                    <i class="fa fa-utensil-fork"></i>
+                  </a>
+                </div>
+                <div class="blog__post-content">
+                  <div class="blog__wrapper">
+                    <h5 class="blog__post-title">
+                      <a [routerLink]="['/pages/blog-details', blog.id]">{{
+                        blog.title
+                      }}</a>
+                    </h5>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="owl-nav">
-              <div class="owl-prev" (click)="blogSliderInstance?.slidePrev()">
-                <button><i class="fal fa-angle-left"></i></button>
-              </div>
-              <div class="owl-next" (click)="blogSliderInstance?.slideNext()">
-                <button><i class="fal fa-angle-right"></i></button>
-              </div>
+          </div>
+          <div class="owl-nav">
+            <div class="owl-prev" (click)="blogSliderInstance?.slidePrev()">
+              <button><i class="fal fa-angle-left"></i></button>
+            </div>
+            <div class="owl-next" (click)="blogSliderInstance?.slideNext()">
+              <button><i class="fal fa-angle-right"></i></button>
             </div>
           </div>
         </div>
@@ -46,4 +57,5 @@
     </div>
   </div>
 </div>
+<!-- </div> -->
 <!-- blog__slider-area end -->
