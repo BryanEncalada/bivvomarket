@@ -3,7 +3,7 @@ import IBlogType from '../types/blog-d-t';
 const blog_data: IBlogType[] = [
   {
     id: 25,
-    img: '/assets/img/blog/2/receta-BM02.png',
+    img: '/assets/img/blog/2/receta-BM03.png',
     title: 'Barras de quinua',
     author: 'María López',
     date: 'Julio 8, 2025',
@@ -13,7 +13,7 @@ const blog_data: IBlogType[] = [
 
   {
     id: 26,
-    img: '/assets/img/blog/2/receta-BM02.png',
+    img: '/assets/img/blog/2/receta-BM03.png',
     title: 'Crocante con quinua',
     author: 'Carlos Ruiz',
     date: 'Julio 8, 2025',
@@ -23,7 +23,7 @@ const blog_data: IBlogType[] = [
 
   {
     id: 27,
-    img: '/assets/img/blog/2/receta-BM02.png',
+    img: '/assets/img/blog/2/receta-BM03.png',
     title: 'Galletas de quinua',
     author: 'Ana Gómez',
     date: 'Julio 8, 2025',
@@ -33,7 +33,7 @@ const blog_data: IBlogType[] = [
 
   {
     id: 28,
-    img: '/assets/img/blog/2/receta-BM02.png',
+    img: '/assets/img/blog/2/receta-BM03.png',
     title: 'Galletas de quinua',
     author: 'Ana Gómez',
     date: 'Julio 8, 2025',
