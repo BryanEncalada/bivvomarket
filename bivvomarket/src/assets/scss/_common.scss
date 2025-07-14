@@ -303,6 +303,7 @@ p {
 .box-25 {
   padding-left: 25px;
   padding-right: 25px;
+
   @media #{$sm} {
     padding-left: 15px;
     padding-right: 15px;
