@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { of,Observable } from 'rxjs';
+import { of, Observable } from 'rxjs';
 import { NavigationEnd, Router } from '@angular/router';
-import { map } from 'rxjs/operators';
 import { ProductService } from './product.service';
-
+import { map } from 'rxjs/operators';
 import { IProduct } from '../types/IProduct';
 
 import product_data from '../data/product_data';
+import { CartService } from './cart.service';
+import IBlogType from '../types/blog-d-t';
+import blog_data from '../types/blog-data';
 
 
 @Injectable({
@@ -24,10 +26,30 @@ export class UtilsService {
   public modalId: string = 'product-modal-641e887d05f9ee1717e1348a';
   public product: IProduct = product_data[0];
 
+  // Get blogs
+  public get blogs(): Observable<IBlogType[]> {
+    return of(blog_data);
+  }
+
+  // Get blog Filter
+  public filterBlogs(): Observable<IBlogType[]> {
+    return this.blogs.pipe(map(blogs => {
+      return blogs;
+    }));
+  }
+
+
+  // Get Products By id
+  public getBlogById(id: string): Observable<IBlogType | undefined> {
+    return this.blogs.pipe(map(items => {
+      const blog = items.find(p => Number(p.id) === Number(id));
+      return blog;
+    }));
+  }
 
   constructor(
     private productService: ProductService,
-
+    private cartService: CartService,
     private router: Router
   ) {
     this.router.events.subscribe(event => {
@@ -35,14 +57,14 @@ export class UtilsService {
         this.isSearchOpen = false;
         this.isProductModalOpen = false;
         this.openMobileMenus = false;
-        //this.removeBackdropAndProductModal()
+        this.removeBackdropAndProductModal()
       }
     });
   }
 
 
   // open mobile sidebar
-  handleOpenMobileMenu () {
+  handleOpenMobileMenu() {
     this.openMobileMenus = !this.openMobileMenus;
   };
 
@@ -84,10 +106,12 @@ export class UtilsService {
     this.modalId = id;
     this.product = item;
     this.productService.handleImageActive(item.img);
-   // this.cartService.initialOrderQuantity();
+    this.cartService.initialOrderQuantity();
+
+    console.log(this.productService.activeImg, this.cartService.orderQuantity);
   }
 
-   convertToURL(value: string): string {
+  convertToURL(value: string): string {
     // Replace spaces and special characters with hyphens
     const converted_value = value
       .toLowerCase()
@@ -99,15 +123,22 @@ export class UtilsService {
   }
 
   removeBackdropAndProductModal() {
+
+    console.log('removeBackdropAndProductModal');
     const modalBackdrop = document.querySelector('.modal-backdrop');
     const product_modal = document.querySelector('.tp-product-modal.show') as HTMLElement;
     if (modalBackdrop) {
       modalBackdrop.remove();
       document.body.classList.remove('modal-open');
       document.body.removeAttribute('style');
+     
     }
-    if(product_modal){
+    if (product_modal) {
+     
       product_modal.style.display = 'none';
     }
+
+ console.log('removeBackdropAndProductModal 2');
+
   }
 }

@@ -59,7 +59,7 @@
         <span class="rating-no ml-10 rating-left">
           {{product.reviews.length}} rating(s)
         </span>
-        <span class="review rating-left"><a href="#">Add your Review</a></span>
+        <!-- <span class="review rating-left"><a href="#">Add your Review</a></span> -->
       </div>
       <div class="product__price-2 mb-25">
         <span>${{product.price.toFixed(2)}}</span>
@@ -100,8 +100,9 @@
             </div>
             <div class="pro-cart-btn">
               <a (click)="cartService.addCartProduct(product)" class="add-cart-btn mb-20 cursor-pointer">
-                + Agregar a carrito
+                <i class="fab fa-amazon"></i> Purchase on Amazon
               </a>
+
             </div>
           </div>
         </form>
@@ -114,7 +115,7 @@
         </div>
         <div class="product__share">
           <span>Compartir :</span>
-          
+
           <ul>
 
             <li *ngFor="let item of social_links">
