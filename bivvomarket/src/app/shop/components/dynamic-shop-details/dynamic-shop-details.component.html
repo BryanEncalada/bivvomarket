@@ -1,5 +1,9 @@
-  <!-- shop details area start -->
-  <div *ngIf="product">
-    <app-product-details-area [product]="product"></app-product-details-area>
-  </div>
-  <!-- shop details area end -->
+<!-- shop details area start -->
+<div *ngIf="product">
+  <app-product-details-area [product]="product"></app-product-details-area>
+</div>
+<!-- shop details area end -->
+
+<!-- related products start -->
+<app-related-products [brand]="product?.brand" [productId]="product?.id"></app-related-products>
+<!-- related products end -->
