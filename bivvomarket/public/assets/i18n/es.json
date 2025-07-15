@@ -1,4 +1,17 @@
 {
   "hello": "¡Hola!",
-  "description": "Bienvenido a nuestra tienda"
+  "description": "Bienvenido a nuestra tienda",
+  "Inicio": "Inicio",
+  "Producto": "Producto",
+  "Recetas": "Recetas",
+  "Contacto": "Contacto",
+  "ComprarAhora": "COMPRAR AHORA",
+  "SeccionProductosTit": "Nuestro productos",
+  "SeccionProductosSub": "Descubre nuestra variedad de productos orgánicos, saludables, frescos y libres de pesticidas.",
+  "ResultadoProdcMostrar": "Mostrando",
+  "ResultadoProdcProduct": "producto(s)",
+  "SeccionRecetasTit": "Nuestras recetas",
+  "SeccionRecetasSub": "Descubre ideas fáciles, nutritivas y deliciosas para aprovechar el cereal de quinua en tu día a día.",
+  "SeccionResenaTit": "Reseñas de nuestros clientes",
+  "SeccionResenaSub": "Conoce las experiencias reales de quienes disfrutan nuestros productos día a día. ¡Tu opinión también importa!"
 }

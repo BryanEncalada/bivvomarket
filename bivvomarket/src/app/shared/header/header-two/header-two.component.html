@@ -1,61 +1,52 @@
 <header>
-  <div
-    id="header-sticky"
-    [ngClass]="[
+  <div id="header-sticky" [ngClass]="[
       'header__area',
       transparent ? 'header__transparent' : '',
       header_big ? 'box-25' : !white_bg ? 'grey-bg' : '',
       sticky ? 'sticky' : ''
-    ]"
-  >
+    ]">
     <div [ngClass]="header_big ? 'container-fluid' : 'container'">
       <div class="row align-items-center">
-        <div
-          [ngClass]="
+        <div [ngClass]="
             header_big
               ? 'col-xl-2 col-lg-2 col-md-4 col-sm-4 col-12'
               : 'col-xl-3 col-lg-3 col-md-4 col-sm-4'
-          "
-        >
+          ">
           <div class="logo">
             <a routerLink="/home/home-style-1">
-              <img
-                src="/assets/img/logo/logoBM03.png"
-                width="100px"
-                alt="logo"
-              />
+              <img src="/assets/img/logo/logoBM03.png" width="100px" alt="logo" />
             </a>
           </div>
         </div>
 
-        <div
-          [ngClass]="
+        <div [ngClass]="
             header_big
               ? 'col-xl-7 col-lg-6 col-md-2 col-sm-1 col-2'
               : 'col-xl-9 col-lg-9 col-md-8 col-sm-8'
-          "
-        >
-          <div
-            class="header__right p-relative"
-            [ngClass]="{
+          ">
+          <div class="header__right p-relative" [ngClass]="{
               'd-flex justify-content-between align-items-center': !header_big
-            }"
-          >
-            <div
-              [ngClass]="{
+            }">
+            <div [ngClass]="{
                 'main-menu': true,
                 'main-menu-2': header_big,
                 'text-center': header_big,
                 'd-none d-lg-block': true
-              }"
-            >
+              }">
               <!-- nav menu start -->
               <app-nav-manus></app-nav-manus>
               <!-- nav menu end -->
             </div>
             <div class="header__action">
               <ul>
-
+                <li>
+                  <button (click)="changeLang('es')" class="btn-lang" style="padding-right: 3px;">
+                    <img src="assets/flags/es.svg" alt="Español" width="20" /> ES
+                  </button>
+                  <button (click)="changeLang('en')" class="btn-lang">
+                    <img src="assets/flags/us.svg" alt="English" width="20" /> EN
+                  </button>
+                </li>
                 <li *ngFor="let item of social_links">
                   <a class="cart cursor-pointer" href="{{item.link}}" target="_blank">
                     <i class="{{item.icon}}"></i>

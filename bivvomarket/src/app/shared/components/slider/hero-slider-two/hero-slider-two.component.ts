@@ -4,11 +4,12 @@ import { EffectFade, Pagination } from 'swiper/modules';
 import { IHeroSlider } from '../../../types/hero-slider-t';
 import { HeroSliderData } from '../../../data/hero-slider-data';
 import { CommonModule } from '@angular/common';
+import { TranslocoModule } from '@jsverse/transloco';
 
 
 @Component({
   selector: 'app-hero-slider-two',
- imports: [CommonModule],
+ imports: [CommonModule, TranslocoModule],
   templateUrl: './hero-slider-two.component.html',
   styleUrl: './hero-slider-two.component.scss'
 })

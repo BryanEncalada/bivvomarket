@@ -2,6 +2,7 @@ import { Component, HostListener, Input } from '@angular/core';
 import { NavManusComponent } from "../nav-manus/nav-manus.component";
 import { CommonModule } from '@angular/common';
 import social_links, { ISocial } from '../../data/social-data';
+import { TranslocoService } from '@jsverse/transloco';
 
 
 @Component({
@@ -20,9 +21,13 @@ export class HeaderTwoComponent {
   public social_links: ISocial[] = social_links;
   public sticky: boolean = false;
 
-  constructor(
+  constructor(private translocoService: TranslocoService) {
+    this.translocoService.setActiveLang('es');
+  }
 
-  ) { }
+  changeLang(lang: string) {
+    this.translocoService.setActiveLang(lang);
+  }
 
   // sticky nav
   @HostListener('window:scroll', ['$event']) onscroll() {

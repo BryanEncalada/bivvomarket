@@ -1,4 +1,17 @@
 {
-  "hello": "Hello!",
-  "description": "Welcome to our store"
+  "hello": "Hello! Enn",
+  "description": "Welcome to our store",
+  "Inicio": "Home",
+  "Producto": "Product",
+  "Recetas": "Recipes",
+  "Contacto": "Contact",
+  "ComprarAhora": "SHOP NOW",
+  "SeccionProductosTit": "Our Products",
+  "SeccionProductosSub": "Iscover our variety of organic, healthy, fresh, and pesticide-free products.",
+  "ResultadoProdcMostrar": "Showing",
+  "ResultadoProdcProduct": "product(s)",
+  "SeccionRecetasTit": "Our Recipes",
+  "SeccionRecetasSub": "Discover easy, nutritious, and delicious ideas to enjoy quinoa cereal in your daily life.",
+  "SeccionResenaTit": "Customer Reviews",
+  "SeccionResenaSub": "Discover real experiences from those who enjoy our products every day. Your opinion matters too!"
 }

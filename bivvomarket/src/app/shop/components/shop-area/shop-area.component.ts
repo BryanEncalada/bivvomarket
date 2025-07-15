@@ -9,10 +9,11 @@ import { FormsModule } from '@angular/forms';
 import { UtilsService } from '../../../shared/services/utils.service';
 import { ProductService } from '../../../shared/services/product.service';
 import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-shop-area',
-  imports: [NgClass, NgFor, NgIf, FormsModule, ProductItemComponent, ProductListItemComponent, PaginationComponent, TituloSeccionComponent],
+  imports: [NgClass, NgFor, NgIf, FormsModule, ProductItemComponent, ProductListItemComponent, PaginationComponent, TituloSeccionComponent, TranslocoModule],
   templateUrl: './shop-area.component.html',
   styleUrl: './shop-area.component.scss'
 })

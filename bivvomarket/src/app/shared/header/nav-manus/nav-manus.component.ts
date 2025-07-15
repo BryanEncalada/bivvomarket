@@ -3,10 +3,11 @@ import { IMenuType } from '../../types/menu-d-t';
 import menuData from '../../data/menu-data';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-nav-manus',
- imports: [CommonModule, RouterModule],
+ imports: [CommonModule, RouterModule, TranslocoModule],
   templateUrl: './nav-manus.component.html',
   styleUrl: './nav-manus.component.scss'
 })

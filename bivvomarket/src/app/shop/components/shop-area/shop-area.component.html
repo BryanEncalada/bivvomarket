@@ -1,7 +1,6 @@
-<section class="shop__area pt-100 pb-100"> 
+<section class="shop__area pt-100 pb-100">
 
-    <app-titulo-seccion [Titulo1]="'Nuestros productos'"
-        [desc1]="'Descubre nuestra variedad de productos orgánicos, saludables, frescos y libres de pesticidas.'">
+    <app-titulo-seccion [Titulo1]="'SeccionProductosTit' | transloco" [desc1]="'SeccionProductosSub' | transloco">
     </app-titulo-seccion>
 
     <div class="">
@@ -12,7 +11,8 @@
                     <div class="shop__header d-sm-flex justify-content-between align-items-center mb-40">
                         <div class="shop__header-left">
                             <div class="show-text">
-                                <span>Mostrando {{ paginate.totalItems }} productos </span>
+                                <span>{{ 'ResultadoProdcMostrar' |transloco}} {{ paginate.totalItems }} productos
+                                </span>
                             </div>
                         </div>
                         <div

@@ -6,10 +6,11 @@ import IBlogType from '../../types/blog-d-t';
 import Swiper from 'swiper';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { TituloSeccionComponent } from '../titulo-seccion/titulo-seccion.component';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-recetas',
-  imports: [CommonModule, RouterModule, TituloSeccionComponent],
+  imports: [CommonModule, RouterModule, TituloSeccionComponent, TranslocoModule],
   templateUrl: './recetas.component.html',
   styleUrl: './recetas.component.scss',
 })

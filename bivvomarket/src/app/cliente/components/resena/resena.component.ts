@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
+import { TranslocoModule } from '@jsverse/transloco';
 register();
 
 @Component({
   selector: 'app-resena',
-  imports: [NgFor, TituloSeccionComponent],
+  imports: [NgFor, TituloSeccionComponent, TranslocoModule],
   templateUrl: './resena.component.html',
   styleUrl: './resena.component.scss',
 })

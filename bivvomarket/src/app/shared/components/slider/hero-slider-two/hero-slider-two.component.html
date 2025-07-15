@@ -9,7 +9,7 @@
                         <div class="slider__content slider__content-3 pl-250" [class.slider__content-black]="item.isDark">
                              <h2 [innerHTML]="item.title"></h2>
                             <p>{{item.subtitle}}</p>
-                            <a href="#" [ngClass]="item.isDark ? 'os-btn-white' : 'os-btn-2'" class="os-btn">COMPRAR AHORA</a>
+                            <a href="#" [ngClass]="item.isDark ? 'os-btn-white' : 'os-btn-2'" class="os-btn">{{ 'ComprarAhora' |  transloco }}</a>
                         </div>
                     </div>
                 </div>

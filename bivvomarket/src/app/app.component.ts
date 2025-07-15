@@ -3,12 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderTwoComponent } from './shared/header/header-two/header-two.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ProductModalComponent } from './shared/modal/product-modal/product-modal.component';
-// import {
-//   TranslateService,
-//   TranslatePipe,
-//   TranslateDirective,
-//   TranslateModule
-// } from "@ngx-translate/core";
 
 @Component({
   standalone: true,
@@ -21,10 +15,5 @@ import { ProductModalComponent } from './shared/modal/product-modal/product-moda
 export class AppComponent {
   title = 'bivvomarket';
 
-  // constructor(private translate: TranslateService) {
-  //   this.translate.addLangs(['de', 'en']);
-  //   this.translate.setDefaultLang('en');
-  //   this.translate.use('en');
-  // }
 
 }
