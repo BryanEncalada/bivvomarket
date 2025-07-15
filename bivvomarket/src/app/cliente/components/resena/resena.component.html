@@ -1,5 +1,13 @@
 <!-- testimonial area start -->
 
+<app-titulo-seccion
+  [Titulo1]="'Reseñas de nuestros clientes'"
+  [desc1]="
+    'Conoce las experiencias reales de quienes disfrutan nuestros productos día a día. ¡Tu opinión también importa!'
+  "
+>
+</app-titulo-seccion>
+
 <section
   class="testimonial__area box-m-15 mb-50"
   style="background-image: url(/assets/img/testimonial/testimonial-bg02.png)"
@@ -25,8 +33,8 @@
               class="testimonial__item item-1 swiper-slide"
             >
               <div class="avater__info mb-15">
-                <h6>{{ item.name }}</h6>
-                <span>{{ item.title }}</span>
+                <span>{{ item.name }}</span>
+                <h4>{{ item.title }}</h4>
               </div>
               <p>{{ item.desc }}</p>
             </div>
