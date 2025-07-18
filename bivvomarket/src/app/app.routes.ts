@@ -5,6 +5,9 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { HomeTwoComponent } from './home/home-two/home-two.component';
 import { DynamicShopDetailsComponent } from './shop/components/dynamic-shop-details/dynamic-shop-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ShopDetailsComponent } from './shop/components/shop-details/shop-details.component';
+import { CartComponent } from './shop/components/cart/cart.component';
+import { CheckoutComponent } from './shop/components/checkout/checkout.component';
 
 export const routes: Routes = [
   {
@@ -19,9 +22,24 @@ export const routes: Routes = [
     title: 'Shop Details Page',
   },
   {
+    path:'shop-details',
+    component:ShopDetailsComponent,
+    title:'Shop Details Page'
+  }, 
+  {
     path: 'contact',
     component: ContactComponent,
     title: 'Contacto',
+  },
+  {
+    path:'shop/cart',
+    component:CartComponent,
+    title:'Shop Cart Page'
+  },
+   {
+    path:'shop/checkout',
+    component:CheckoutComponent,
+    title:'Check Out'
   },
   {
     path: '**',

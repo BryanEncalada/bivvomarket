@@ -499,7 +499,7 @@
         visibility: visible;
         opacity: 1;
         @include transform(scaleX(1));
-       
+
       }
 
       & .product__action {
@@ -1468,7 +1468,7 @@
 
 .table-content table td {
   border-top: medium none;
-  padding: 20px 10px;
+  padding: 5px 5px;
   vertical-align: middle;
   font-size: 16px;
 }
@@ -1506,7 +1506,7 @@
 }
 
 .coupon-all {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .coupon {
@@ -1575,7 +1575,7 @@
 }
 
 td.product-thumbnail img {
-  width: 125px;
+  width: 40px;
 }
 
 
@@ -1751,7 +1751,7 @@ p.checkout-coupon input[type="text"] {
 }
 
 .checkout-form-list {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .checkout-form-list label {
@@ -1764,7 +1764,7 @@ p.checkout-coupon input[type="text"] {
   background: #ffffff;
   border: 1px solid #eaedff;
   border-radius: 0;
-  height: 45px;
+  height: 30px;
   padding: 0 0 0 10px;
   width: 100%;
 }
@@ -1835,7 +1835,7 @@ p.checkout-coupon input[type="text"] {
 }
 
 .your-order {
-  padding: 30px 40px 45px;
+  padding: 30px 40px 25px;
   border: 3px solid #eaedff;
 }
 
@@ -1865,7 +1865,7 @@ p.checkout-coupon input[type="text"] {
   border-right: medium none;
   color: #6f7172;
   font-size: 14px;
-  padding: 15px 0;
+  padding: 10px 0;
   text-align: left;
 }
 
@@ -1924,7 +1924,8 @@ p.checkout-coupon input[type="text"] {
 }
 
 .payment-method {
-  margin-top: 40px;
+  margin-top: 15px;
+  
 }
 
 .panel-title>a {
@@ -1954,7 +1955,7 @@ p.checkout-coupon input[type="text"] {
   background: no-repeat;
   border: medium none;
   border-radius: 0;
-  color: #444;
+  color: white;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
@@ -1969,13 +1970,14 @@ p.checkout-coupon input[type="text"] {
   vertical-align: middle;
   white-space: nowrap;
   text-decoration: none;
+
 }
 
 .payment-method .card {
   background-color: #ffffff;
   border: 1px solid #eaedff;
   border-radius: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .payment-method .accordion .card:first-of-type {
@@ -1987,8 +1989,8 @@ p.checkout-coupon input[type="text"] {
 }
 
 .payment-method .card-header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaedff;
+  background-color: #1ebe5b;
+  border-bottom: 1px solid #1ebe5b;
 }
 
 .order-button-payment button {

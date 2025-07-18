@@ -398,6 +398,32 @@ p {
 }
 /* btn */
 
+.btn-whatsapp {
+  background-color: #25D366; /* color oficial de WhatsApp */
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  display: flex;               /* cambio aquí */
+  align-items: center;
+  justify-content: center;     /* centrado horizontal */
+  gap: 10px;
+  width: 100%;                 /* opcional si quieres que el botón ocupe todo el ancho */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebe5b;
+}
+
+.btn-whatsapp i {
+  font-size: 20px;
+}
+
+
 .os-btn {
   position: relative;
   display: inline-block;

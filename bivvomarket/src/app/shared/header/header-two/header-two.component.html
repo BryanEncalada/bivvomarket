@@ -52,6 +52,15 @@
                     <i class="{{item.icon}}"></i>
                   </a>
                 </li>
+                 <li>
+                  <a class="cart cursor-pointer">
+                    <i class="fas fa-cart-plus"></i>
+                    <span class="cart-number-2">{{cartService.totalPriceQuantity().quantity}}</span>
+                  </a>
+                  <!-- mini cart start -->
+                  <app-mini-cart></app-mini-cart>
+                  <!-- mini cart end -->
+                </li>
 
               </ul>
             </div>

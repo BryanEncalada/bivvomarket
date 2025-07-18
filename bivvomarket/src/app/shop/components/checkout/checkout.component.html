@@ -1,0 +1,240 @@
+<!-- checkout-area start -->
+<section class="checkout-area pt-20">
+    <div class="container">
+        <div *ngIf="cartService.getCartProducts().length === 0;else checkoutBlock" class="text-center pt-80 pb-30">
+            <h3 class="py-2">No items found in cart to checkout</h3>
+            <a routerLink="/shop" class="os-btn os-btn-black">
+                Return to shop
+            </a>
+        </div>
+
+        <ng-template #checkoutBlock>
+            <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="checkbox-form">
+                            <h3>Billing Details</h3>
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>First Name <span class="required">*</span></label>
+                                        <input type="text" id="firstName" placeholder="" formControlName="firstName" />
+                                        <!-- error message -->
+                                        <span
+                                            *ngIf="firstName?.hasError('required') && (firstName?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            First Name is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Last Name <span class="required">*</span></label>
+                                        <input type="text" id="lastName" placeholder="" formControlName="lastName" />
+                                        <!-- error message -->
+                                        <span
+                                            *ngIf="lastName?.hasError('required') && (lastName?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            Last Name is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Address <span class="required">*</span></label>
+                                        <input type="text" id="address" placeholder="Street address"
+                                            formControlName="address" />
+                                        <!-- error message -->
+                                        <span
+                                            *ngIf="address?.hasError('required') && (address?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            Address is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <input id="apartment" type="text" formControlName="apartment"
+                                            placeholder="Apartment, suite, unit etc. (optional)" />
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="checkout-form-list">
+                                        <label>Town / City <span class="required">*</span></label>
+                                        <input type="text" id="city" placeholder="Town / City" formControlName="city" />
+                                        <!-- error message -->
+                                        <span *ngIf="city?.hasError('required') && (city?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            City is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>State / County <span class="required">*</span></label>
+                                        <input type="text" id="state" placeholder="" formControlName="state" />
+                                        <!-- error message -->
+                                        <span *ngIf="state?.hasError('required') && (state?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            State is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Postcode / Zip <span class="required">*</span></label>
+                                        <input type="text" id="zipCode" placeholder="Postcode / Zip"
+                                            formControlName="zipCode" />
+                                        <!-- error message -->
+                                        <span
+                                            *ngIf="zipCode?.hasError('required') && (zipCode?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            ZipCode is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Email Address <span class="required">*</span></label>
+                                        <input type="email" placeholder="" id="email" formControlName="email" />
+                                        <!-- error msg start -->
+                                        <span
+                                            *ngIf="(email?.hasError('required') && email?.touched) || (email?.hasError('email') && email?.dirty) || (formSubmitted && !email?.value)"
+                                            class="text-danger">
+                                            Email is required and must be a valid email address
+                                        </span>
+                                        <!-- error msg end -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="checkout-form-list">
+                                        <label>Phone <span class="required">*</span></label>
+                                        <input type="text" placeholder="Phone" id="phone" formControlName="phone" />
+                                        <!-- error message -->
+                                        <span *ngIf="phone?.hasError('required') && (phone?.touched ||formSubmitted)"
+                                            class="text-danger">
+                                            Last Name is required
+                                        </span>
+                                        <!-- error message -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="different-address">
+                                <div class="order-notes">
+                                    <div class="checkout-form-list">
+                                        <label>Order Notes</label>
+                                        <textarea formControlName="orderNote" id="checkout-mess" cols="30" rows="10"
+                                            placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="your-order mb-5 ">
+                            <h3>Your order</h3>
+                            <div class="your-order-table table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 70%;" class="product-name">Product</th>
+                                            <th style="width: 30%;" class="product-total">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of cartService.getCartProducts()" class="cart_item">
+                                            <td class="product-name">
+                                                <i class="fas fa-circle" style="font-size: 6px; margin-right: 6px;"></i> {{item.title}} <strong class="product-quantity"> ×
+                                                    {{item.orderQuantity}}</strong>
+                                            </td>
+                                            <td class="product-total">
+                                                <span class="amount">${{item.price.toFixed(2)}}</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr class="cart-subtotal">
+                                            <th>Cart Subtotal</th>
+                                            <td>
+                                                <span
+                                                    class="amount">${{cartService.totalPriceQuantity().total.toFixed(2)}}</span>
+                                            </td>
+                                        </tr>
+
+                                        <tr class="order-total">
+                                            <th>Order Total</th>
+                                            <td><strong><span class="amount">
+                                                        ${{(cartService.totalPriceQuantity().total +
+                                                        shipCost).toFixed(2)}}
+                                                    </span></strong>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+
+                            <div class="payment-method">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="card">
+                                        <div class="card-header" id="headingOne">
+                                            <h5 class="mb-0">
+                                                <button class="btn-link" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Compra rápida por WhatsApp
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                Te ayudaremos a terminar tu compra por WhatsApp. Solo haz clic en el
+                                                botón para enviarnos tus datos y coordinaremos el pago contigo en
+                                                minutos.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="card">
+                                        <div class="card-header" id="headingThree">
+                                            <h5 class="mb-0">
+                                                <button class="btn-link collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                                    aria-expanded="false" aria-controls="collapseThree">
+                                                    PayPal
+                                                </button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                            data-bs-parent="#accordionExample">
+                                            <div class="card-body">
+                                                Pay via PayPal; you can pay with your credit card if you don’t have a
+                                                PayPal account.
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <div class="order-button-payment">
+
+                                    <button type="submit" class="btn-whatsapp">
+                                        <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
+                                    </button>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </ng-template>
+    </div>
+</section>
+<!-- checkout-area end -->

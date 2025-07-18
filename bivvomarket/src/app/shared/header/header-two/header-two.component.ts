@@ -3,13 +3,15 @@ import { NavManusComponent } from "../nav-manus/nav-manus.component";
 import { CommonModule } from '@angular/common';
 import social_links, { ISocial } from '../../data/social-data';
 import { TranslocoService } from '@jsverse/transloco';
+import { CartService } from '../../services/cart.service';
+import { MiniCartComponent } from '../mini-cart/mini-cart.component';
 
 
 @Component({
   selector: 'app-header-two',
   templateUrl: './header-two.component.html',
   styleUrls: ['./header-two.component.scss'],
-  imports: [NavManusComponent, CommonModule]
+  imports: [NavManusComponent, CommonModule, MiniCartComponent]
 
 })
 export class HeaderTwoComponent {
@@ -21,7 +23,7 @@ export class HeaderTwoComponent {
   public social_links: ISocial[] = social_links;
   public sticky: boolean = false;
 
-  constructor(private translocoService: TranslocoService) {
+  constructor(private translocoService: TranslocoService, public cartService: CartService,) {
     this.translocoService.setActiveLang('es');
   }
 
