@@ -26,6 +26,16 @@ export const routes: Routes = [
     title: 'Shop Details Page',
   },
   {
+    path: 'shop/cart',
+    component: CartComponent,
+    title: 'Shop Details Page',
+  },
+  {
+    path: 'shop/checkout',
+    component: CheckoutComponent,
+    title: 'Shop Details Page',
+  },
+  {
     path: 'shop-details',
     component: ShopDetailsComponent,
     title: 'Shop Details Page',

@@ -127,15 +127,15 @@
 
                   & .mini-cart-list{
                       &.slider-height_1{
-                       height: 150px;
+                       height: 50px;
                        overflow: hidden;
                       }
                       &.slider-height_2{
-                       height: 250px;
+                       height: 150px;
                        overflow: hidden;
                       }
                       &.slider-height{
-                       height: 350px;
+                       height: 250px;
                        overflow-y: scroll;
                       }
                       overflow: hidden;
@@ -150,7 +150,7 @@
                       }
                       & li{
                           display: block;
-                          margin-bottom: 30px;
+                          margin-bottom: 15px;
                           margin-left: 0;
                           overflow: hidden;
                           padding: 0;
@@ -158,7 +158,7 @@
                               margin-right: 15px;
                               & a{
                                   & img{
-                                      width: 75px;
+                                      width: 35px;
                                   }
                               }
                           }

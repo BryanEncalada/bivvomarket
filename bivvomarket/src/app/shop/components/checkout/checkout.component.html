@@ -18,26 +18,28 @@
 
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>First Name <span class="required">*</span></label>
-                                        <input type="text" id="firstName" placeholder="" formControlName="firstName" />
+                                        <label>{{ 'firstName' |transloco}} <span class="required">*</span></label>
+                                        <input type="text" id="firstName" placeholder="{{ 'firstName' |transloco}}"
+                                            formControlName="firstName" />
                                         <!-- error message -->
                                         <span
                                             *ngIf="firstName?.hasError('required') && (firstName?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            First Name is required
+                                            {{ 'firstNameRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Last Name <span class="required">*</span></label>
-                                        <input type="text" id="lastName" placeholder="" formControlName="lastName" />
+                                        <label>{{ 'lastName' |transloco}}<span class="required">*</span></label>
+                                        <input type="text" id="lastName" placeholder="{{ 'lastNamePH' |transloco}}"
+                                            formControlName="lastName" />
                                         <!-- error message -->
                                         <span
                                             *ngIf="lastName?.hasError('required') && (lastName?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            Last Name is required
+                                            {{ 'lastNameRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
@@ -45,14 +47,14 @@
 
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
-                                        <label>Address <span class="required">*</span></label>
-                                        <input type="text" id="address" placeholder="Street address"
+                                        <label>{{ 'address' |transloco}}<span class="required">*</span></label>
+                                        <input type="text" id="address" placeholder="{{ 'addressPH' |transloco}}"
                                             formControlName="address" />
                                         <!-- error message -->
                                         <span
                                             *ngIf="address?.hasError('required') && (address?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            Address is required
+                                            {{ 'addressRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
@@ -60,68 +62,70 @@
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
                                         <input id="apartment" type="text" formControlName="apartment"
-                                            placeholder="Apartment, suite, unit etc. (optional)" />
+                                            placeholder="{{ 'apartmentPH' |transloco}}" />
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="checkout-form-list">
-                                        <label>Town / City <span class="required">*</span></label>
-                                        <input type="text" id="city" placeholder="Town / City" formControlName="city" />
+                                        <label>{{ 'city' |transloco}}<span class="required">*</span></label>
+                                        <input type="text" id="city" placeholder="{{ 'cityPH' |transloco}}"
+                                            formControlName="city" />
                                         <!-- error message -->
                                         <span *ngIf="city?.hasError('required') && (city?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            City is required
+                                            {{ 'cityRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>State / County <span class="required">*</span></label>
-                                        <input type="text" id="state" placeholder="" formControlName="state" />
+                                        <label>{{ 'state' |transloco}}<span class="required">*</span></label>
+                                        <input type="text" id="state" placeholder="{{ 'statePH' |transloco}}"
+                                            formControlName="state" />
                                         <!-- error message -->
                                         <span *ngIf="state?.hasError('required') && (state?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            State is required
+                                            {{ 'stateRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Postcode / Zip <span class="required">*</span></label>
-                                        <input type="text" id="zipCode" placeholder="Postcode / Zip"
+                                        <label>{{ 'zipCode' |transloco}}<span class="required">*</span></label>
+                                        <input type="text" id="zipCode" placeholder="{{ 'zipCode' |transloco}} / Zip"
                                             formControlName="zipCode" />
                                         <!-- error message -->
                                         <span
                                             *ngIf="zipCode?.hasError('required') && (zipCode?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            ZipCode is required
+                                            {{ 'zipCodeRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Email Address <span class="required">*</span></label>
-                                        <input type="email" placeholder="" id="email" formControlName="email" />
+                                        <label>{{ 'email' |transloco}}<span class="required">*</span></label>
+                                        <input type="email" placeholder="{{ 'emailPH' |transloco}}" id="email" formControlName="email" />
                                         <!-- error msg start -->
                                         <span
                                             *ngIf="(email?.hasError('required') && email?.touched) || (email?.hasError('email') && email?.dirty) || (formSubmitted && !email?.value)"
                                             class="text-danger">
-                                            Email is required and must be a valid email address
+                                            {{ 'emailRequired' |transloco}}
                                         </span>
                                         <!-- error msg end -->
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
-                                        <label>Phone <span class="required">*</span></label>
-                                        <input type="text" placeholder="Phone" id="phone" formControlName="phone" />
+                                        <label>{{ 'Phone' |transloco}}<span class="required">*</span></label>
+                                        <input type="text" placeholder="{{ 'phonePH' |transloco}}" id="phone" formControlName="phone" />
                                         <!-- error message -->
                                         <span *ngIf="phone?.hasError('required') && (phone?.touched ||formSubmitted)"
                                             class="text-danger">
-                                            Last Name is required
+                                            {{ 'phoneRequired' |transloco}}
                                         </span>
                                         <!-- error message -->
                                     </div>
@@ -130,9 +134,9 @@
                             <div class="different-address">
                                 <div class="order-notes">
                                     <div class="checkout-form-list">
-                                        <label>Order Notes</label>
+                                        <label>{{ 'orderNote' |transloco}}</label>
                                         <textarea formControlName="orderNote" id="checkout-mess" cols="30" rows="10"
-                                            placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
+                                            placeholder="{{ 'orderNotePH' |transloco }}"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -152,7 +156,8 @@
                                     <tbody>
                                         <tr *ngFor="let item of cartService.getCartProducts()" class="cart_item">
                                             <td class="product-name">
-                                                <i class="fas fa-circle" style="font-size: 6px; margin-right: 6px;"></i> {{item.title}} <strong class="product-quantity"> ×
+                                                <i class="fas fa-circle" style="font-size: 6px; margin-right: 6px;"></i>
+                                                {{item.title}} <strong class="product-quantity"> ×
                                                     {{item.orderQuantity}}</strong>
                                             </td>
                                             <td class="product-total">
