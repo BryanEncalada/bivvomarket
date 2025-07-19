@@ -5,9 +5,14 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { HomeTwoComponent } from './home/home-two/home-two.component';
 import { DynamicShopDetailsComponent } from './shop/components/dynamic-shop-details/dynamic-shop-details.component';
 import { ContactComponent } from './pages/contact/contact.component';
+<<<<<<< Updated upstream
 import { ShopDetailsComponent } from './shop/components/shop-details/shop-details.component';
 import { CartComponent } from './shop/components/cart/cart.component';
 import { CheckoutComponent } from './shop/components/checkout/checkout.component';
+=======
+import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
+>>>>>>> Stashed changes
 
 export const routes: Routes = [
   {
@@ -32,6 +37,7 @@ export const routes: Routes = [
     title: 'Contacto',
   },
   {
+<<<<<<< Updated upstream
     path:'shop/cart',
     component:CartComponent,
     title:'Shop Cart Page'
@@ -40,6 +46,16 @@ export const routes: Routes = [
     path:'shop/checkout',
     component:CheckoutComponent,
     title:'Check Out'
+=======
+    path: 'terminos',
+    component: TermsAndConditionsComponent,
+    title: 'Terminos y condiciones',
+  },
+  {
+    path: 'privacidad',
+    component: PrivacyComponent,
+    title: 'Politica de privacidad',
+>>>>>>> Stashed changes
   },
   {
     path: '**',
