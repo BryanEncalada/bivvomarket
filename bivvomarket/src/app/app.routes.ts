@@ -36,16 +36,6 @@ export const routes: Routes = [
     title: 'Contacto',
   },
   {
-    path: 'shop/cart',
-    component: CartComponent,
-    title: 'Shop Cart Page',
-  },
-  {
-    path: 'shop/checkout',
-    component: CheckoutComponent,
-    title: 'Check Out',
-  },
-  {
     path: 'terminos',
     component: TermsAndConditionsComponent,
     title: 'Terminos y condiciones',
