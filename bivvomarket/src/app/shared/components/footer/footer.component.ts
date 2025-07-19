@@ -1,19 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import social_links, { ISocial } from '../../data/social-data';
-<<<<<<< Updated upstream
 import { WaveDividerComponent } from '../wave-divider/wave-divider.component';
 
 @Component({
   selector: 'app-footer',
   imports: [NgFor, WaveDividerComponent],
-=======
-import { RouterModule } from '@angular/router';
-
-@Component({
-  selector: 'app-footer',
-  imports: [NgFor, RouterModule],
->>>>>>> Stashed changes
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',
 })
