@@ -1,3 +1,8 @@
+<app-wave-divider
+  position="bottom"
+  color="#eb3a11"
+  height="60px"
+></app-wave-divider>
 <section class="footer__area footer-bg" [class.box-m-15]="box_style">
   <div class="footer__top pt-100 pb-60">
     <div class="container">
@@ -13,7 +18,12 @@
               </a>
             </div>
             <div class="footer__widget-content">
-              <p>Bivvo Market ha creado una forma fresca e innovadora para que los consumidores compren alimentos y refrigerios saludables. Nos referimos a comer alimentos ecológicos, de origen ético y ricos en nutrientes.</p>
+              <p>
+                Bivvo Market ha creado una forma fresca e innovadora para que
+                los consumidores compren alimentos y refrigerios saludables. Nos
+                referimos a comer alimentos ecológicos, de origen ético y ricos
+                en nutrientes.
+              </p>
               <div class="footer__contact">
                 <ul>
                   <li>
@@ -21,7 +31,10 @@
                       <i class="fal fa-map-marker-alt"></i>
                     </div>
                     <div class="text">
-                      <span>Add: 1234 Heaven Stress, Beverly Hill, Melbourne, USA.</span>
+                      <span
+                        >Add: 1234 Heaven Stress, Beverly Hill, Melbourne,
+                        USA.</span
+                      >
                     </div>
                   </li>
                   <li>
@@ -58,7 +71,6 @@
                   <li><a href="#">Productos</a></li>
                   <li><a href="#">Recetas</a></li>
                   <li><a href="#">Contacto</a></li>
-               
                 </ul>
               </div>
             </div>
@@ -82,8 +94,6 @@
             </div>
           </div>
         </div>
-        
-        
       </div>
     </div>
   </div>
@@ -92,7 +102,9 @@
       <div class="row">
         <div class="col-xl-6 col-lg-7">
           <div class="footer__copyright">
-            <p>Copyright ©<a routerLink="/home/home-style-1">Bivvo</a> all rights reserved. Powered by
+            <p>
+              Copyright ©<a routerLink="/home/home-style-1">Bivvo</a> all rights
+              reserved. Powered by
               <a routerLink="/home/home-style-1">Bivvo</a>
             </p>
           </div>
@@ -101,7 +113,9 @@
           <div class="footer__social f-right">
             <ul>
               <li *ngFor="let item of social_links">
-                <a [href]="item.link" target="_blank"><i [class]="item.icon"></i></a>
+                <a [href]="item.link" target="_blank"
+                  ><i [class]="item.icon"></i
+                ></a>
               </li>
             </ul>
           </div>

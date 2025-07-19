@@ -7,10 +7,17 @@ import Swiper from 'swiper';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { TituloSeccionComponent } from '../titulo-seccion/titulo-seccion.component';
 import { TranslocoModule } from '@jsverse/transloco';
+import { WaveDividerComponent } from '../wave-divider/wave-divider.component';
 
 @Component({
   selector: 'app-recetas',
-  imports: [CommonModule, RouterModule, TituloSeccionComponent, TranslocoModule],
+  imports: [
+    CommonModule,
+    RouterModule,
+    TituloSeccionComponent,
+    TranslocoModule,
+    WaveDividerComponent,
+  ],
   templateUrl: './recetas.component.html',
   styleUrl: './recetas.component.scss',
 })
@@ -22,7 +29,9 @@ export class RecetasComponent {
 
   public swiperInstance: Swiper | undefined;
   public productSliderInstance: Swiper | undefined;
-  public blog_items: IBlogType[] = blog_data.filter((b) => b.blog === 'blog-receta');
+  public blog_items: IBlogType[] = blog_data.filter(
+    (b) => b.blog === 'blog-receta'
+  );
 
   ngOnInit(): void {
     console.log('blog_items', this.blog_items);

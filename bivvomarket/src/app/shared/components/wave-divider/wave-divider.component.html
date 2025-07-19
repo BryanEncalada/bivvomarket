@@ -1,0 +1,23 @@
+<div
+  class="wave-divider"
+  [ngStyle]="{
+    overflow: 'hidden',
+    lineHeight: '0',
+    transform: position === 'top' ? 'rotate(180deg)' : 'none'
+  }"
+>
+  <svg
+    viewBox="0 0 1200 60"
+    preserveAspectRatio="none"
+    [ngStyle]="{
+      display: 'block',
+      width: '100%',
+      height: height
+    }"
+  >
+    <path
+      d="M0,20 C150,40 300,0 450,20 C600,40 750,0 900,20 C1050,40 1200,0 1200,0 L1200,60 L0,60 Z"
+      [attr.fill]="color"
+    ></path>
+  </svg>
+</div>

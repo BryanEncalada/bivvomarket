@@ -1,15 +1,22 @@
 <!-- blog__slider-area start -->
-<div class="blog__slider-area pt-100 pb-100">
+
+<app-wave-divider
+  position="bottom"
+  color="#fdd1c4"
+  height="60px"
+></app-wave-divider>
+<section
+  class="slider__area slider__area-2 p-relative pl-15 pr-15"
+  style="background-color: #fdd1c4"
+>
   <div class="container custom-container-2">
     <app-titulo-seccion
       [Titulo1]="'SeccionRecetasTit' | transloco"
-      [desc1]="
-        'SeccionRecetasSub' | transloco
-      "
+      [desc1]="'SeccionRecetasSub' | transloco"
     >
     </app-titulo-seccion>
 
-    <div class="row mt-40">
+    <div class="row">
       <div class="col-xl-12">
         <div class="blog_slider">
           <div class="blog_slider-area p-relative">
@@ -56,5 +63,12 @@
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<app-wave-divider
+  position="top"
+  color="#fdd1c4"
+  height="60px"
+></app-wave-divider>
+
 <!-- blog__slider-area end -->
