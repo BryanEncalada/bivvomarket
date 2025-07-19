@@ -1,10 +1,123 @@
+<!-- Lado derecho: iconos -->
+
 <section class="slider__area slider__area-2 p-relative pl-15 pr-15">
-  <div class="slider-active swiper-container" #heroSliderContainer>
-    <div class="video-container">
-      <video autoplay muted loop playsinline class="responsive-video">
-        <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
-        Tu navegador no soporta el video.
-      </video>
+  <app-wave-divider
+    position="bottom"
+    color="#fdd1c4"
+    height="60px"
+  ></app-wave-divider>
+  <section class="pantalla-dividida">
+    <!-- Lado izquierdo: video -->
+    <div class="lado izquierdo">
+      <div class="video-container">
+        <video autoplay muted loop playsinline class="responsive-video">
+          <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
+          Tu navegador no soporta el video.
+        </video>
+      </div>
     </div>
-  </div>
+
+    <!-- Lado derecho: iconos -->
+    <div class="lado derecho">
+      <div class="grid-iconos">
+        <div class="icono-box">
+          <!-- Ícono de hoja -->
+          <div class="icono-svg">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#eb3a11"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 12c-1-2-2-3-4-4 0 2 1 3 1 5"></path>
+              <path d="M12 12c1-2 3-3 4-4 0 2-1 3-1 5"></path>
+            </svg>
+          </div>
+          <h4>100% Natural & Organic</h4>
+          <p>No added sugar</p>
+        </div>
+
+        <div class="icono-box">
+          <!-- Ícono de gotas -->
+          <div class="icono-svg">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#eb3a11"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M8 16c0-2 2-4 4-6 2 2 4 4 4 6"></path>
+            </svg>
+          </div>
+          <h4>Hermetic Seal</h4>
+          <p>Keeps it fresh</p>
+        </div>
+
+        <div class="icono-box">
+          <!-- Ícono de sol -->
+          <div class="icono-svg">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#eb3a11"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <line x1="12" y1="2" x2="12" y2="4"></line>
+              <line x1="12" y1="20" x2="12" y2="22"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="2" y1="12" x2="4" y2="12"></line>
+              <line x1="20" y1="12" x2="22" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </div>
+          <h4>High Protein</h4>
+          <p>Source</p>
+        </div>
+
+        <div class="icono-box">
+          <!-- Ícono de medalla -->
+          <div class="icono-svg">
+            <svg
+              width="60"
+              height="60"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#eb3a11"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
+            </svg>
+          </div>
+          <h4>Premium</h4>
+          <p>Product</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <app-wave-divider
+    position="top"
+    color="#fdd1c4"
+    height="60px"
+  ></app-wave-divider>
 </section>
