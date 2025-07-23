@@ -25,7 +25,7 @@ const hero_slider_two: IHeroSlider[] = [
     subtitle:
       'HONEY QUINOA is a superfood based on 100% organic quinoa and natural honey',
   },
-];
+]; 
 
 export const HeroSliderData = {
   hero_slider_two,

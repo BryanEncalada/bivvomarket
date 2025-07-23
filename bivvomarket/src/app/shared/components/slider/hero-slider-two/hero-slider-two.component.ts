@@ -4,8 +4,9 @@ import { EffectFade, Pagination } from 'swiper/modules';
 import { IHeroSlider } from '../../../types/hero-slider-t';
 import { HeroSliderData } from '../../../data/hero-slider-data';
 import { CommonModule } from '@angular/common';
-import { TranslocoModule } from '@jsverse/transloco';
 import { WaveDividerComponent } from '../../wave-divider/wave-divider.component';
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
+import { combineLatest, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-hero-slider-two',
@@ -16,21 +17,42 @@ import { WaveDividerComponent } from '../../wave-divider/wave-divider.component'
 export class HeroSliderTwoComponent {
   @ViewChild('heroSliderContainer') heroSliderContainer!: ElementRef;
   public swiperInstance: Swiper | undefined;
-  public hero_slider_data: IHeroSlider[] = HeroSliderData.hero_slider_two;
+  public hero_slider_data: IHeroSlider[] = [];
+  private subscription!: Subscription;
+
+  constructor(private translocoService: TranslocoService) {
+
+  }
 
   ngAfterViewInit() {
-    if (this.heroSliderContainer) {
-      this.swiperInstance = new Swiper('.slider-active', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: false,
-        effect: 'fade',
-        modules: [Pagination, EffectFade],
-        pagination: {
-          clickable: true,
-          el: '.tp-slider-dot-2',
-        },
+
+    const ids = [1, 2, 3];
+    const observables = ids.map(id =>
+      this.translocoService.selectTranslateObject(`heroSlider.${id}`)
+    );
+
+    this.subscription = combineLatest(observables).subscribe(translations => {
+      this.hero_slider_data = translations.map((translation, index) => ({
+        id: ids[index],
+        ...translation,
+      }));
+
+      setTimeout(() => {
+
+        if (this.heroSliderContainer) {
+          this.swiperInstance = new Swiper('.slider-active', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            effect: 'fade',
+            modules: [Pagination, EffectFade],
+            pagination: {
+              clickable: true,
+              el: '.tp-slider-dot-2',
+            },
+          });
+        }
       });
-    }
+    });
   }
 }
