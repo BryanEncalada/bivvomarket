@@ -93,13 +93,22 @@ export class CheckoutComponent {
 
       let mensaje: string = 'Hola, estoy interesado en los siguientes productos:\n';
       for (const producto of productos) {
-        mensaje += ` *${producto.title} - ${producto.price}* \n`;
+        mensaje += ` *${producto.title} - ${producto.price}* \n\n`;
       }
 
       // Agregar datos del cliente desde el formulario
       const nombre = `*${this.checkoutForm.value.firstName}  ${this.checkoutForm.value.lastName}*`;
       const email = `*${this.checkoutForm.value.email}*`;
-      mensaje += `\nMi nombre es: ${nombre}\nMi correo es: ${email}`;
+      const celular = `*${this.checkoutForm.value.phone}*`;
+      const direcicon = `*${this.checkoutForm.value.address} - ${this.checkoutForm.value.apartment} - ${this.checkoutForm.value.city} - ${this.checkoutForm.value.state}*`
+      const detalle = `*${this.checkoutForm.value.orderNote}*`;
+
+
+      mensaje += `Mi nombre es: ${nombre}\n`
+      mensaje += `Mi correo es: ${email}\n`;
+      mensaje += `Mi celular es: ${celular}\n`;
+      mensaje += `Mi direccion es: ${direcicon}\n`;
+      mensaje += `Detalles del pedido: ${detalle}\n`;
 
       const telefono = '51941712238'; // Reemplaza con tu número, incluye el código de país
 

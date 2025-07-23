@@ -41,17 +41,17 @@ export const routes: Routes = [
     title: 'Shop Details Page',
   },
   {
-    path: 'contact',
+    path: 'pages/contact',
     component: ContactComponent,
     title: 'Contacto',
   },
   {
-    path: 'terminos',
+    path: 'pages/terminos',
     component: TermsAndConditionsComponent,
     title: 'Terminos y condiciones',
   },
   {
-    path: 'privacidad',
+    path: 'pages/privacidad',
     component: PrivacyComponent,
     title: 'Politica de privacidad',
   },

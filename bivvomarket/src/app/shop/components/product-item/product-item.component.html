@@ -33,13 +33,13 @@
             </div>
         </div>
         <div class="add-cart p-absolute transition-3">
-            <!-- <a *ngIf="!isItemInCart(product)" (click)="addToCart(product)" class="cursor-pointer">
+            <a *ngIf="!isItemInCart(product)" (click)="addToCart(product)" class="cursor-pointer">
                 + Agregar a carrito
-              </a>
-              <a *ngIf="isItemInCart(product)" routerLink="/shop/cart" class="cursor-pointer">
+            </a>
+            <a *ngIf="isItemInCart(product)" routerLink="/shop/cart" class="cursor-pointer">
                 Ver carrito
-              </a> -->
-            <span>${{product.price.toFixed(2)}}</span>
+            </a>
+
         </div>
     </div>
 </div>

@@ -26,7 +26,7 @@ const menuData: IMenuType[] = [
   },
 
   {
-    link: 'contact',
+    link: '/pages/contact',
     title: 'Contacto',
   },
 ];
