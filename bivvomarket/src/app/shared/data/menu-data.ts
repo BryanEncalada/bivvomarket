@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs';
 import { IMenuType, IMobileMenu } from '../types/menu-d-t';
+import { IProduct } from '../../shop/interface/iproduct';
 
 const menuData: IMenuType[] = [
   {
@@ -11,13 +13,18 @@ const menuData: IMenuType[] = [
     hasDropdown: true,
     megamenu: true,
     dropdownItems: [
-      { link: '/home/home-style-1', title: 'Home Style 1' },
-      { link: '/home/home-style-2', title: 'Home Style 2' },
-      { link: '/home/home-style-3', title: 'Home Style 3' },
-      { link: '/home/home-style-4', title: 'Home Style 4' },
-      { link: '/home/home-style-5', title: 'Home Style 5' },
-      { link: '/home/home-style-6', title: 'Home Style 6' },
-      { link: '/home/home-style-7', title: 'Home Style 7' },
+      { link: '//shop/shop-details/1', title: 'Cacao Pop de Quinoa' },
+      { link: '//shop/shop-details/2', title: 'Miel Pop de Quinoa' },
+      { link: '//shop/shop-details/3', title: 'Paletas Originales De Quinua' },
+      { link: '//shop/shop-details/4', title: 'Bundle pack (all 3 products)' },
+      { link: '//shop/shop-details/5', title: 'Paletas De Cacao Y Quinoa' },
+      { link: '//shop/shop-details/6', title: '3-Pack Honey Flavor' },
+      { link: '//shop/shop-details/7', title: 'Jarabe Frutado de Mango 1KG' },
+      { link: '//shop/shop-details/8', title: 'Jarabe Frutado de Fresa 1KG' },
+      {
+        link: '//shop/shop-details/9',
+        title: 'Jarabe Frutado de Maracuyá 1KG',
+      },
     ],
   },
   {

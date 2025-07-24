@@ -3,7 +3,12 @@
   <app-product-details-area [product]="product"></app-product-details-area>
 </div>
 <!-- shop details area end -->
-
+<div style="padding-top: 50px; padding-bottom: 100px">
+  <app-video></app-video>
+</div>
 <!-- related products start -->
-<app-related-products [brand]="product?.brand" [productId]="product?.id"></app-related-products>
+<app-related-products
+  [brand]="product?.brand"
+  [productId]="product?.id"
+></app-related-products>
 <!-- related products end -->

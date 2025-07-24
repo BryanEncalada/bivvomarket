@@ -7,16 +7,22 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../../shared/services/product.service';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
+import { BreadcrumbOneComponent } from '../../../shared/breadcrumb/breadcrumb-one/breadcrumb-one.component';
+import { VideoComponent } from '../../../shared/components/video/video.component';
 
 @Component({
   selector: 'app-dynamic-shop-details',
-  imports: [NgIf, ProductDetailsAreaComponent, RelatedProductsComponent],
+  imports: [
+    NgIf,
+    ProductDetailsAreaComponent,
+    RelatedProductsComponent,
+    VideoComponent,
+  ],
   templateUrl: './dynamic-shop-details.component.html',
-  styleUrl: './dynamic-shop-details.component.scss'
+  styleUrl: './dynamic-shop-details.component.scss',
 })
 export class DynamicShopDetailsComponent {
-
-public product: IProduct | null | undefined;
+  public product: IProduct | null | undefined;
 
   constructor(
     private route: ActivatedRoute,
@@ -44,5 +50,4 @@ public product: IProduct | null | undefined;
         }
       });
   }
-
 }

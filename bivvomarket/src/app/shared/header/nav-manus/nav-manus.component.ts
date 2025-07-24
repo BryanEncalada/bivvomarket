@@ -4,17 +4,32 @@ import menuData from '../../data/menu-data';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
+import { IProduct } from '../../../shop/interface/iproduct';
+import { ProductService } from '../../services/product.service';
+import { Response, response } from 'express';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav-manus',
- imports: [CommonModule, RouterModule, TranslocoModule],
+  imports: [CommonModule, RouterModule, TranslocoModule],
   templateUrl: './nav-manus.component.html',
-  styleUrl: './nav-manus.component.scss'
+  styleUrl: './nav-manus.component.scss',
 })
 export class NavManusComponent {
-  public menu_data:IMenuType[] = menuData;
+  public menu_data: IMenuType[] = menuData;
+  public products$: Observable<IProduct[]> | undefined;
 
-  bg: string = '/assets/img/bg/mega-menu-bg.jpg';
+  constructor(public productService: ProductService) {
+    this.products$ = this.productService.products;
+  }
+  sortBy(
+    response: Response<any, Record<string, any>>,
+    sortBy: any
+  ): IProduct[] {
+    throw new Error('Method not implemented.');
+  }
+
+  bg: string = '/assets/img/testimonial/testimonial-bg02_ant.png';
 
   getMenuClasses(item: IMenuType): string {
     const classes = [];
@@ -23,7 +38,7 @@ export class NavManusComponent {
       //console.log("classes.push('active', 'has-dropdown');")
     } else if (item.megamenu) {
       classes.push('mega-menu', 'has-dropdown');
-        // console.log("classes.push('mega-menu', 'has-dropdown');")
+      // console.log("classes.push('mega-menu', 'has-dropdown');")
     }
     return classes.join(' ');
   }
