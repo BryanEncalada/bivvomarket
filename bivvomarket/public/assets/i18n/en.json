@@ -7,7 +7,7 @@
   "Contacto": "Contact",
   "ComprarAhora": "SHOP NOW",
   "VerCarrito": "View Cart",
-  "CarritoVacio":"Your cart is empty",
+  "CarritoVacio": "Your cart is empty",
   "PagarAhora": "Checkout",
   "SeccionProductosTit": "Our Products",
   "SeccionProductosSub": "Iscover our variety of organic, healthy, fresh, and pesticide-free products.",
@@ -17,6 +17,9 @@
   "SeccionRecetasSub": "Discover easy, nutritious, and delicious ideas to enjoy quinoa cereal in your daily life.",
   "SeccionResenaTit": "Customer Reviews",
   "SeccionResenaSub": "Discover real experiences from those who enjoy our products every day. Your opinion matters too!",
+  "billingDetails": "Billing Details",
+  "noItems": "No items found in cart to checkout",
+  "returnToShop": "Return to shop",
   "firstName": "First Name",
   "lastName": "Last Name",
   "address": "Address",
@@ -45,5 +48,84 @@
   "zipCodeRequired": "Please enter your postal code.",
   "phoneRequired": "Please enter your phone number.",
   "emailRequired": "Please enter your email address.",
-  "emailInvalid": "The email format is not valid."
+  "emailInvalid": "The email format is not valid.",
+  "yourOrder": "Your Order",
+  "cartSubtotal": "Cart Subtotal",
+  "orderTotal": "Order Total",
+  "whatsappQuickBuy": "Quick purchase via WhatsApp",
+  "whatsappHelpText": "We’ll help you complete your purchase via WhatsApp. Just click the button to send us your details and we’ll coordinate payment with you in minutes.",
+  "whatsappButton": "Send order via WhatsApp",
+  "footer": {
+    "description": "Bivvo Market has created a fresh and innovative way for consumers to shop for healthy foods and snacks. We're talking about eating eco-friendly, ethically sourced, nutrient-rich food.",
+    "address": "Address: 1234 Heaven Stress, Beverly Hill, Melbourne, USA.",
+    "email": "Email: Contact@basictheme.com",
+    "phone": "Phone: (800) 123 456 789",
+    "ourPages": "Our Pages",
+    "home": "Home",
+    "products": "Products",
+    "recipes": "Recipes",
+    "contact": "Contact",
+    "ourLinks": "Our Links",
+    "privacy": "Privacy Policy",
+    "terms": "Terms and Conditions",
+    "copyright": "Copyright ©Bivvo all rights reserved. Powered by Bivvo"
+  },
+  "testimonials": {
+    "1": {
+      "name": "Ben W",
+      "title": "The perfect post-workout snack!",
+      "desc": "I was looking for something to munch on that satisfied my junk food cravings after working out. I'm so glad I found this."
+    },
+    "2": {
+      "name": "Ana B",
+      "title": "When Classic Tastes Better",
+      "desc": "The classic pop is classically delicious."
+    },
+    "3": {
+      "name": "Jen T",
+      "title": "Finally a healthy snack my kids love!",
+      "desc": "My kids are addicted to sweets, so I wanted them to eat something healthier. At first I was unsure, but once they tried the honey quinoa pop..."
+    },
+    "4": {
+      "name": "Su F",
+      "title": "Healthy, delicious… and totally addictive",
+      "desc": "I heard a lot about this quinoa pop from friends. Naturally, I had to give it a try. It's so good and healthy too. 10/10 would recommend to everyone."
+    }
+  },
+  "heroSlider": {
+    "1": {
+      "title": "QUINOA POP ORIGINAL<br />",
+      "subtitle": "QUINOA ORIGINAL is a 100% organic superfood with a high protein content",
+      "bgImg": "/assets/img/slider/03/sliderBM04.png",
+      "isDark": true
+    },
+    "2": {
+      "title": "QUINOA POP CACAO<br />",
+      "subtitle": "CACAO QUINOA is a superfood based on quinoa and 100% organic",
+      "bgImg": "/assets/img/slider/03/sliderBM05.png",
+      "isDark": true
+    },
+    "3": {
+      "title": "QUINOA POP COVERED WITH HONEY<br />",
+      "subtitle": "HONEY QUINOA is a superfood based on 100% organic quinoa and natural honey",
+      "bgImg": "/assets/img/slider/03/sliderBM06.png",
+      "isDark": true
+    }
+  },
+  "NuestroClientes": {
+    "Tit": "Our Clients",
+    "Sub": "Partners who trust in our quality."
+  },
+  "productItem": {
+    "add": "+ Add Cart",
+    "view": "View Cart"
+  },
+  "shopArea": {
+    "NoseEncontroProducto1": "Sorry! Couldn't find the product you were looking For!!!",
+    "NoseEncontroProducto2": "Please check if you have misspelt something or try searching with other words."
+  },
+  "relatedProducts": {
+    "Tit": "Related Products",
+    "Sub": "Explore our website to find the most popular items on the market right now."
+  }
 }

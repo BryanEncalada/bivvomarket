@@ -2,9 +2,9 @@
 <section class="checkout-area pt-20">
     <div class="container">
         <div *ngIf="cartService.getCartProducts().length === 0;else checkoutBlock" class="text-center pt-80 pb-30">
-            <h3 class="py-2">No items found in cart to checkout</h3>
+            <h3 class="py-2">{{ 'noItems' | transloco}}</h3>
             <a routerLink="/shop" class="os-btn os-btn-black">
-                Return to shop
+                {{ 'returnToShop' | transloco}}
             </a>
         </div>
 
@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="checkbox-form">
-                            <h3>Billing Details</h3>
+                            <h3>{{ 'billingDetails' | transloco}}</h3>
                             <div class="row">
 
                                 <div class="col-md-6">
@@ -108,7 +108,8 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>{{ 'email' |transloco}}<span class="required">*</span></label>
-                                        <input type="email" placeholder="{{ 'emailPH' |transloco}}" id="email" formControlName="email" />
+                                        <input type="email" placeholder="{{ 'emailPH' |transloco}}" id="email"
+                                            formControlName="email" />
                                         <!-- error msg start -->
                                         <span
                                             *ngIf="(email?.hasError('required') && email?.touched) || (email?.hasError('email') && email?.dirty) || (formSubmitted && !email?.value)"
@@ -121,7 +122,8 @@
                                 <div class="col-md-6">
                                     <div class="checkout-form-list">
                                         <label>{{ 'Phone' |transloco}}<span class="required">*</span></label>
-                                        <input type="text" placeholder="{{ 'phonePH' |transloco}}" id="phone" formControlName="phone" />
+                                        <input type="text" placeholder="{{ 'phonePH' |transloco}}" id="phone"
+                                            formControlName="phone" />
                                         <!-- error message -->
                                         <span *ngIf="phone?.hasError('required') && (phone?.touched ||formSubmitted)"
                                             class="text-danger">
@@ -144,12 +146,12 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="your-order mb-5 ">
-                            <h3>Your order</h3>
+                            <h3>{{ 'yourOrder' |transloco}}</h3>
                             <div class="your-order-table table-responsive">
                                 <table>
                                     <thead>
                                         <tr>
-                                            <th style="width: 70%;" class="product-name">Product</th>
+                                            <th style="width: 70%;" class="product-name">{{ 'Producto' |transloco}}</th>
                                             <th style="width: 30%;" class="product-total">Total</th>
                                         </tr>
                                     </thead>
@@ -167,7 +169,7 @@
                                     </tbody>
                                     <tfoot>
                                         <tr class="cart-subtotal">
-                                            <th>Cart Subtotal</th>
+                                            <th>{{ 'cartSubtotal' |transloco}}</th>
                                             <td>
                                                 <span
                                                     class="amount">${{cartService.totalPriceQuantity().total.toFixed(2)}}</span>
@@ -175,7 +177,7 @@
                                         </tr>
 
                                         <tr class="order-total">
-                                            <th>Order Total</th>
+                                            <th>{{ 'orderTotal' |transloco}}</th>
                                             <td><strong><span class="amount">
                                                         ${{(cartService.totalPriceQuantity().total +
                                                         shipCost).toFixed(2)}}
@@ -194,16 +196,14 @@
                                                 <button class="btn-link" type="button" data-bs-toggle="collapse"
                                                     data-bs-target="#collapseOne" aria-expanded="true"
                                                     aria-controls="collapseOne">
-                                                    Compra rápida por WhatsApp
+                                                    {{ 'whatsappQuickBuy' |transloco}}
                                                 </button>
                                             </h5>
                                         </div>
                                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                                             data-bs-parent="#accordionExample">
                                             <div class="card-body">
-                                                Te ayudaremos a terminar tu compra por WhatsApp. Solo haz clic en el
-                                                botón para enviarnos tus datos y coordinaremos el pago contigo en
-                                                minutos.
+                                                {{ 'whatsappHelpText' |transloco}}
                                             </div>
                                         </div>
                                     </div>
@@ -229,7 +229,7 @@
                                 <div class="order-button-payment">
 
                                     <button type="submit" class="btn-whatsapp">
-                                        <i class="fab fa-whatsapp"></i> Enviar pedido por WhatsApp
+                                        <i class="fab fa-whatsapp"></i>{{ 'whatsappButton' |transloco}}
                                     </button>
 
 

@@ -17,6 +17,9 @@
   "SeccionRecetasSub": "Descubre ideas fáciles, nutritivas y deliciosas para aprovechar el cereal de quinua en tu día a día.",
   "SeccionResenaTit": "Reseñas de nuestros clientes",
   "SeccionResenaSub": "Conoce las experiencias reales de quienes disfrutan nuestros productos día a día. ¡Tu opinión también importa!",
+  "billingDetails": "Detalles de Facturación",
+  "noItems": "No hay productos en el carrito para procesar el pedido",
+  "returnToShop": "Volver a la tienda",
   "firstName": "Nombres",
   "lastName": "Apellidos",
   "address": "Direccion",
@@ -45,5 +48,84 @@
   "zipCodeRequired": "Por favor ingresa tu código postal.",
   "phoneRequired": "Por favor ingresa tu número de teléfono.",
   "emailRequired": "Por favor ingresa tu correo electrónico.",
-  "emailInvalid": "El formato del correo electrónico no es válido."
+  "emailInvalid": "El formato del correo electrónico no es válido.",
+  "yourOrder": "Tu pedido",
+  "cartSubtotal": "Subtotal del carrito",
+  "orderTotal": "Total del pedido",
+  "whatsappQuickBuy": "Compra rápida por WhatsApp",
+  "whatsappHelpText": "Te ayudaremos a terminar tu compra por WhatsApp. Solo haz clic en el botón para enviarnos tus datos y coordinaremos el pago contigo en minutos.",
+  "whatsappButton": "Enviar pedido por WhatsApp",
+  "footer": {
+    "description": "Bivvo Market ha creado una forma fresca e innovadora para que los consumidores compren alimentos y refrigerios saludables. Nos referimos a comer alimentos ecológicos, de origen ético y ricos en nutrientes.",
+    "address": "Dirección: 1234 Heaven Stress, Beverly Hill, Melbourne, USA.",
+    "email": "Correo: Contact@basictheme.com",
+    "phone": "Teléfono: (800) 123 456 789",
+    "ourPages": "Nuestras Páginas",
+    "home": "Inicio",
+    "products": "Productos",
+    "recipes": "Recetas",
+    "contact": "Contacto",
+    "ourLinks": "Nuestros Enlaces",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "copyright": "Copyright ©Bivvo todos los derechos reservados. Desarrollado por Bivvo"
+  },
+  "testimonials": {
+    "1": {
+      "name": "Ben W",
+      "title": "¡El snack perfecto post entrenamiento!",
+      "desc": "Estaba buscando algo para picar que satisficiera mi antojo de comida chatarra después del entrenamiento. Estoy tan contenta de haber encontrado esto."
+    },
+    "2": {
+      "name": "Ana B",
+      "title": "Cuando lo Clásico Sabe Mejor",
+      "desc": "El pop clásico es clásicamente delicioso."
+    },
+    "3": {
+      "name": "Jen T",
+      "title": "¡Por fin un snack saludable que mis hijos aman!",
+      "desc": "Mis hijos son adictos a los dulces, así que quería que comieran algo saludable. Al principio dudaba un poco, pero una vez que probaron el pop de miel de quinoa..."
+    },
+    "4": {
+      "name": "Su F",
+      "title": "Saludable, delicioso… y totalmente adictivo",
+      "desc": "Escuché mucho sobre este pop de quinoa de mis amigos. Naturalmente, quería darle una oportunidad. Es tan bueno y saludable también. 10/10 lo recomendaré a todos."
+    }
+  },
+  "heroSlider": {
+    "1": {
+      "title": "QUINOA POP ORIGINAL<br />",
+      "subtitle": "QUINOA ORIGINAL es un superalimento 100% orgánico con alto contenido de proteína",
+      "bgImg": "/assets/img/slider/03/sliderBM04.png",
+      "isDark": true
+    },
+    "2": {
+      "title": "QUINOA POP CACAO<br />",
+      "subtitle": "QUINOA CACAO es un superalimento a base de quinoa y 100% orgánico",
+      "bgImg": "/assets/img/slider/03/sliderBM05.png",
+      "isDark": true
+    },
+    "3": {
+      "title": "QUINOA POP CUBIERTO CON MIEL<br />",
+      "subtitle": "QUINOA CON MIEL es un superalimento a base de quinoa 100% orgánica y miel natural",
+      "bgImg": "/assets/img/slider/03/sliderBM06.png",
+      "isDark": true
+    }
+  },
+  "NuestroClientes": {
+    "Tit": "Nuestros clientes",
+    "Sub": "Aliados que confían en nuestra calidad."
+  },
+  "productItem": {
+    "add": "+ Agregar a carrito",
+    "view": "Ver carrito"
+  },
+  "shopArea": {
+    "NoseEncontroProducto1": "¡Lo sentimos! No se pudo encontrar el producto que estabas buscando.",
+    "NoseEncontroProducto2": "Por favor, verifica si escribiste algo mal o intenta buscar con otras palabras."
+  },
+  "relatedProducts": {
+    "Tit": "Productos relacionado",
+    "Sub": "Explore nuestro sitio web para encontrar los artículos más populares en el mercado ahora."
+  }
 }

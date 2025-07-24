@@ -3,10 +3,11 @@ import { ProductItemComponent } from '../product-item/product-item.component';
 import { NgFor } from '@angular/common';
 import { IProduct } from '../../interface/iproduct';
 import { ProductService } from '../../../shared/services/product.service';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-related-products',
-  imports: [ProductItemComponent, NgFor],
+  imports: [ProductItemComponent, NgFor, TranslocoModule],
   templateUrl: './related-products.component.html',
   styleUrl: './related-products.component.scss'
 })

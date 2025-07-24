@@ -3,8 +3,13 @@ import { Component } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
-import { TranslocoModule } from '@jsverse/transloco';
+
 import { WaveDividerComponent } from '../../../shared/components/wave-divider/wave-divider.component';
+
+import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
+import { combineLatest, Subscription } from 'rxjs';
+
+
 register();
 
 @Component({
@@ -26,50 +31,50 @@ export class ResenaComponent {
     { id: 4, img: '/assets/img/testimonial/person-4.jpg' },
   ];
 
-  public testimonial_data = [
-    {
-      id: 1,
-      name: 'Ben W',
-      title: '¡El snack perfecto post entrenamiento!',
-      desc: 'Estaba buscando algo para picar que satisficiera mi antojo de comida chatarra después del entrenamiento. Estoy tan contenta de haber encontrado esto.',
-    },
-    {
-      id: 2,
-      name: 'Ana B',
-      title: 'Cuando lo Clásico Sabe Mejor',
-      desc: 'El pop clásico es clásicamente delicioso.',
-    },
-    {
-      id: 3,
-      name: 'Jen T',
-      title: '¡Por fin un snack saludable que mis hijos aman!',
-      desc: 'Mis hijos son adictos a los dulces, así que quería que comieran algo saludable. Al principio dudaba un poco, pero una vez que probaron el pop de miel de quinoa.',
-    },
-    {
-      id: 4,
-      name: 'Su F',
-      title: 'Saludable, delicioso… y totalmente adictivo',
-      desc: 'Escuché mucho sobre este pop de quinoa de mis amigos. naturalmente, quería darle una oportunidad. es tan bueno y saludable también. 10/10 recomendará a todos.',
-    },
-  ];
+  public testimonial_data: any[] = [];
+  private subscription!: Subscription;
 
-  ngOnInit() {
-    const swiper = new Swiper('.testimonial__nav', {
-      spaceBetween: 10,
-      slidesPerView: 3,
-      freeMode: true,
-      watchSlidesProgress: true,
+  constructor(private translocoService: TranslocoService) {
+
+  }
+
+  ngOnInit(): void {
+
+    const ids = [1, 2, 3, 4];
+    const observables = ids.map(id =>
+      this.translocoService.selectTranslateObject(`testimonials.${id}`)
+    );
+
+    this.subscription = combineLatest(observables).subscribe(translations => {
+      this.testimonial_data = translations.map((translation, index) => ({
+        id: ids[index],
+        ...translation,
+      }));
+
+      // Esperar al siguiente ciclo de renderizado
+      setTimeout(() => {
+        const navSwiper = new Swiper('.testimonial__nav', {
+          spaceBetween: 10,
+          slidesPerView: 3,
+          freeMode: true,
+          watchSlidesProgress: true,
+        });
+        new Swiper('.testimonial__wrapper', {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          thumbs: {
+            swiper: navSwiper,
+          },
+          pagination: {
+            clickable: true,
+            el: '.tp-slider-dot-3',
+          },
+        });
+      });
     });
-    new Swiper('.testimonial__wrapper', {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      thumbs: {
-        swiper: swiper,
-      },
-      pagination: {
-        clickable: true,
-        el: '.tp-slider-dot-3',
-      },
-    });
+
+
+
+
   }
 }

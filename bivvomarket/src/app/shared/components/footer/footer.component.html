@@ -1,8 +1,10 @@
+
 <app-wave-divider
   position="bottom"
   color="#E12A17"
   height="60px"
 ></app-wave-divider>
+
 <section class="footer__area footer-bg" [class.box-m-15]="box_style">
   <div class="footer__top pt-100 pb-60">
     <div class="container">
@@ -19,10 +21,7 @@
             </div>
             <div class="footer__widget-content">
               <p>
-                Bivvo Market ha creado una forma fresca e innovadora para que
-                los consumidores compren alimentos y refrigerios saludables. Nos
-                referimos a comer alimentos ecológicos, de origen ético y ricos
-                en nutrientes.
+                {{ 'footer.description' | transloco }}
               </p>
               <div class="footer__contact">
                 <ul>
@@ -31,10 +30,7 @@
                       <i class="fal fa-map-marker-alt"></i>
                     </div>
                     <div class="text">
-                      <span
-                        >Add: 1234 Heaven Stress, Beverly Hill, Melbourne,
-                        USA.</span
-                      >
+                      <span>{{ 'footer.address' | transloco }}</span>
                     </div>
                   </li>
                   <li>
@@ -42,7 +38,7 @@
                       <i class="fal fa-envelope-open-text"></i>
                     </div>
                     <div class="text">
-                      <span>Email: Contact&#64;basictheme.com</span>
+                      <span>{{ 'footer.email' | transloco }}</span>
                     </div>
                   </li>
                   <li>
@@ -50,7 +46,7 @@
                       <i class="fal fa-phone-alt"></i>
                     </div>
                     <div class="text">
-                      <span>Phone Number: (800) 123 456 789</span>
+                      <span>{{ 'footer.phone' | transloco }}</span>
                     </div>
                   </li>
                 </ul>
@@ -60,17 +56,22 @@
         </div>
 
         <div class="col-xl-3 col-lg-3 col-md-3 col-12">
+
+          <div class="footer__widget-title mb-75">
+          </div>
+
+
           <div class="footer__widget mb-30">
             <div class="footer__widget-title">
-              <h5>Nuestrar Paginas</h5>
+              <h5>{{ 'footer.ourPages' | transloco }}</h5>
             </div>
             <div class="footer__widget-content">
               <div class="footer__links">
                 <ul>
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="#">Productos</a></li>
-                  <li><a href="#">Recetas</a></li>
-                  <li><a routerLink="pages/contact">Contacto</a></li>
+                  <li><a routerLink="/">{{ 'footer.home' | transloco }}</a></li>
+                  <li><a href="#">{{ 'footer.products' | transloco }}</a></li>
+                  <li><a href="#">{{ 'footer.recipes' | transloco }}</a></li>
+                  <li><a routerLink="pages/contact">{{ 'footer.contact' | transloco }}</a></li>
                 </ul>
               </div>
             </div>
@@ -78,19 +79,21 @@
         </div>
 
         <div class="col-xl-3 col-lg-3 col-md-3 col-12">
+
+          <div class="footer__widget-title mb-75">
+          </div>
+
           <div class="footer__widget mb-30">
             <div class="footer__widget-title mb-25">
-              <h5>Nuestros enlaces</h5>
+              <h5>{{ 'footer.ourLinks' | transloco }}</h5>
             </div>
             <div class="footer__widget-content">
               <div class="footer__links">
                 <ul>
-                  <li>
-                    <a routerLink="pages/privacidad">Politica de privacidad</a>
-                  </li>
-                  <li>
-                    <a routerLink="pages/terminos">Terminos y condiciones</a>
-                  </li>
+
+                  <li><a routerLink="pages/privacidad">{{ 'footer.privacy' | transloco }}</a></li>
+                  <li><a routerLink="pages/terminos">{{ 'footer.terms' | transloco }}</a></li>
+
                   <!-- <li><a href="#">Preguntas Frecuentes</a></li>
                   <li><a href="#">Online Stores</a></li> -->
                 </ul>
@@ -107,8 +110,7 @@
         <div class="col-xl-6 col-lg-7">
           <div class="footer__copyright">
             <p>
-              Copyright ©<a routerLink="/home/home-style-1">Bivvo</a> all rights
-              reserved. Powered by
+              {{ 'footer.copyright' | transloco }}
               <a routerLink="/home/home-style-1">Bivvo</a>
             </p>
           </div>
@@ -117,9 +119,7 @@
           <div class="footer__social f-right">
             <ul>
               <li *ngFor="let item of social_links">
-                <a [href]="item.link" target="_blank"
-                  ><i [class]="item.icon"></i
-                ></a>
+                <a [href]="item.link" target="_blank"><i [class]="item.icon"></i></a>
               </li>
             </ul>
           </div>
