@@ -6,12 +6,13 @@ import { CompareService } from '../../../shared/services/compare.service';
 import { UtilsService } from '../../../shared/services/utils.service';
 import { NgIf,  } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
 
 
 
 @Component({
   selector: 'app-product-item',
-  imports: [NgIf, RouterModule, RouterLink],
+  imports: [NgIf, RouterModule, RouterLink, TranslocoModule],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.scss'
 })

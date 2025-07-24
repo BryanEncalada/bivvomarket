@@ -93,7 +93,7 @@
     }
   },
   "heroSlider": {
-    "1": {  
+    "1": {
       "title": "QUINOA POP ORIGINAL<br />",
       "subtitle": "QUINOA ORIGINAL is a 100% organic superfood with a high protein content",
       "bgImg": "/assets/img/slider/03/sliderBM04.png",
@@ -113,7 +113,19 @@
     }
   },
   "NuestroClientes": {
-  "Tit": "Our Clients",
-  "Sub": "Partners who trust in our quality."
-}
+    "Tit": "Our Clients",
+    "Sub": "Partners who trust in our quality."
+  },
+  "productItem": {
+    "add": "+ Add Cart",
+    "view": "View Cart"
+  },
+  "shopArea": {
+    "NoseEncontroProducto1": "Sorry! Couldn't find the product you were looking For!!!",
+    "NoseEncontroProducto2": "Please check if you have misspelt something or try searching with other words."
+  },
+  "relatedProducts": {
+    "Tit": "Related Products",
+    "Sub": "Explore our website to find the most popular items on the market right now."
+  }
 }

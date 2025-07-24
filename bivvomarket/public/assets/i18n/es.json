@@ -115,5 +115,17 @@
   "NuestroClientes": {
     "Tit": "Nuestros clientes",
     "Sub": "Aliados que confían en nuestra calidad."
+  },
+  "productItem": {
+    "add": "+ Agregar a carrito",
+    "view": "Ver carrito"
+  },
+  "shopArea": {
+    "NoseEncontroProducto1": "¡Lo sentimos! No se pudo encontrar el producto que estabas buscando.",
+    "NoseEncontroProducto2": "Por favor, verifica si escribiste algo mal o intenta buscar con otras palabras."
+  },
+  "relatedProducts": {
+    "Tit": "Productos relacionado",
+    "Sub": "Explore nuestro sitio web para encontrar los artículos más populares en el mercado ahora."
   }
 }
