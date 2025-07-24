@@ -3,14 +3,23 @@ import { Component } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
+
+import { WaveDividerComponent } from '../../../shared/components/wave-divider/wave-divider.component';
+
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { combineLatest, Subscription } from 'rxjs';
+
 
 register();
 
 @Component({
   selector: 'app-resena',
-  imports: [NgFor, TituloSeccionComponent, TranslocoModule],
+  imports: [
+    NgFor,
+    TituloSeccionComponent,
+    TranslocoModule,
+    WaveDividerComponent,
+  ],
   templateUrl: './resena.component.html',
   styleUrl: './resena.component.scss',
 })
