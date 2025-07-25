@@ -27,21 +27,15 @@ import { ResenaComponent } from '../../cliente/components/resena/resena.componen
   styleUrl: './home-two.component.scss',
 })
 export class HomeTwoComponent {
-  public big_item: IProduct | undefined;
-  public trending_products: IProduct[] = [];
-  public discount_products: IProduct[] = [];
+  //public big_item: IProduct | undefined;
+  //public trending_products: IProduct[] = [];
+  //public discount_products: IProduct[] = [];
 
   constructor(
     private productService: ProductService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    this.productService.products.subscribe((products) => {
-      this.big_item = products.find((p) => p.big_img);
-      this.trending_products = products.filter((p) => p.trending).slice(0, 6);
-      this.discount_products = products
-        .filter((p) => p.discount! > 0)
-        .slice(0, 12);
-    });
+    
   }
 
   async ngAfterViewInit() {

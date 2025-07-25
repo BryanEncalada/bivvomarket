@@ -3,6 +3,7 @@ export interface IMenuType {
   title:string,
   hasDropdown?:boolean,
   megamenu?:boolean,
+  href?:boolean,
   dropdownItems?:{
     link: string
     title: string,

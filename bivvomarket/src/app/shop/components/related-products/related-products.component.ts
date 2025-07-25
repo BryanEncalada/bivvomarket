@@ -1,9 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { NgFor } from '@angular/common';
-import { IProduct } from '../../interface/iproduct';
 import { ProductService } from '../../../shared/services/product.service';
 import { TranslocoModule } from '@jsverse/transloco';
+import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-related-products',

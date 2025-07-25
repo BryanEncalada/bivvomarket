@@ -1,17 +1,17 @@
-import { Observable } from 'rxjs';
 import { IMenuType, IMobileMenu } from '../types/menu-d-t';
-import { IProduct } from '../../shop/interface/iproduct';
 
 const menuData: IMenuType[] = [
   {
     link: '/',
     title: 'Inicio',
+
   },
   {
-    link: '/pages/contact',
+    link: '/#sProductos',
     title: 'Producto',
     hasDropdown: true,
     megamenu: true,
+    href: true,
     dropdownItems: [
       { link: '//shop/shop-details/1', title: 'Cacao Pop de Quinoa' },
       { link: '//shop/shop-details/2', title: 'Miel Pop de Quinoa' },
@@ -28,8 +28,9 @@ const menuData: IMenuType[] = [
     ],
   },
   {
-    link: '/pages/contact',
+    link: '/#sRecetas',
     title: 'Recetas',
+    href: true
   },
 
   {

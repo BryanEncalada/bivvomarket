@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interface/iproduct';
 import { ProductService } from '../../../shared/services/product.service';
 import { CartService } from '../../../shared/services/cart.service';
 import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import social_links, { ISocial } from '../../../shared/data/social-data';
+import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-product-details-upper',

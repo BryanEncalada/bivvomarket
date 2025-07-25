@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interface/iproduct';
 import { CartService } from '../../../shared/services/cart.service';
 import { WishlistService } from '../../../shared/services/wishlist.service';
 import { CompareService } from '../../../shared/services/compare.service';
@@ -7,6 +6,7 @@ import { UtilsService } from '../../../shared/services/utils.service';
 import { NgIf,  } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
+import { IProduct } from '../../../shared/types/IProduct';
 
 
 

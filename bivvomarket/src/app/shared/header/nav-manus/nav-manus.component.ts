@@ -4,10 +4,10 @@ import menuData from '../../data/menu-data';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
-import { IProduct } from '../../../shop/interface/iproduct';
 import { ProductService } from '../../services/product.service';
 import { Response, response } from 'express';
 import { Observable } from 'rxjs';
+import { IProduct } from '../../types/IProduct';
 
 @Component({
   selector: 'app-nav-manus',

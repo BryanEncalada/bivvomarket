@@ -2,13 +2,13 @@ import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { ProductDetailsAreaComponent } from '../product-details-area/product-details-area.component';
 import { RelatedProductsComponent } from '../related-products/related-products.component';
-import { IProduct } from '../../interface/iproduct';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../../shared/services/product.service';
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 import { BreadcrumbOneComponent } from '../../../shared/breadcrumb/breadcrumb-one/breadcrumb-one.component';
 import { VideoComponent } from '../../../shared/components/video/video.component';
+import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-dynamic-shop-details',

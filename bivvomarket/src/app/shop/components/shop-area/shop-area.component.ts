@@ -1,6 +1,5 @@
 import { NgClass, NgFor, NgIf, ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interface/iproduct';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PaginationComponent } from "../pagination/pagination.component";
 import { ProductItemComponent } from '../product-item/product-item.component';
@@ -10,6 +9,7 @@ import { UtilsService } from '../../../shared/services/utils.service';
 import { ProductService } from '../../../shared/services/product.service';
 import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
 import { TranslocoModule } from '@jsverse/transloco';
+import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-shop-area',
@@ -84,15 +84,6 @@ export class ShopAreaComponent {
             return (
               product.sizes &&
               product.sizes.some((size) => size.toLowerCase() === this.size)
-            );
-          });
-        }
-        // color Filter
-        if (this.color) {
-          this.products = this.products.filter((product) => {
-            return (
-              product.colors &&
-              product.colors.some((c) => c.split(' ').join('-').toLowerCase() === this.color)
             );
           });
         }

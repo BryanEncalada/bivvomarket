@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interface/iproduct';
 import { CartService } from '../../../shared/services/cart.service';
 import { WishlistService } from '../../../shared/services/wishlist.service';
 import { CompareService } from '../../../shared/services/compare.service';
 import { UtilsService } from '../../../shared/services/utils.service';
 import { RouterModule } from '@angular/router';
 import { NgFor, NgIf } from '@angular/common';
+import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-product-list-item',

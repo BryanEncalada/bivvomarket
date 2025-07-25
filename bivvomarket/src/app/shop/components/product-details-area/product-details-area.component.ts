@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { IProduct } from '../../interface/iproduct';
 import { ProductDetailsUpperComponent } from '../product-details-upper/product-details-upper.component';
 import { NgClass, NgFor, NgIf } from '@angular/common';
+import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-product-details-area',

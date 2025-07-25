@@ -24,6 +24,9 @@ export const routes: Routes = [
     path: 'shop/shop-details/:id',
     component: DynamicShopDetailsComponent,
     title: 'Shop Details Page',
+    data: {
+      prerender: false
+    }
   },
   {
     path: 'shop/cart',
