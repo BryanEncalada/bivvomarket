@@ -7,7 +7,6 @@ import Swiper from 'swiper';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { TituloSeccionComponent } from '../titulo-seccion/titulo-seccion.component';
 import { TranslocoModule } from '@jsverse/transloco';
-import { WaveDividerComponent } from '../wave-divider/wave-divider.component';
 
 @Component({
   selector: 'app-recetas',
@@ -16,7 +15,7 @@ import { WaveDividerComponent } from '../wave-divider/wave-divider.component';
     RouterModule,
     TituloSeccionComponent,
     TranslocoModule,
-    WaveDividerComponent,
+
   ],
   templateUrl: './recetas.component.html',
   styleUrl: './recetas.component.scss',

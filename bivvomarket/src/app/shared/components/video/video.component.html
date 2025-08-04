@@ -1,168 +1,158 @@
-<!-- Lado derecho: iconos -->
-<!-- <app-wave-divider
-  position="bottom"
-  color="#fdd1c4"
-  height="60px"
-  colorFondo="#eb3a11"
-></app-wave-divider> -->
-<section class="slider__area slider__area-2 p-relative">
-  <section class="pantalla-dividida">
-    <!-- Lado izquierdo: video -->
-    <!-- <div class="lado izquierdo">
-      <div class="video-container">
-        <video autoplay muted loop playsinline class="responsive-video">
-          <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
-          {{ "video.suport" | transloco }}
-        </video>
-      </div>
-    </div> -->
-
-    <div class="lado izquierdo">
-      <div class="imagen-container">
+<section
+  class="pantalla-dividida igual-altura"
+  [ngStyle]="{ backgroundColor: colorFondo }"
+>
+  <div class="container-xxl">
+    <div class="row g-4 align-items-stretch separar-columnas">
+      <!-- Lado izquierdo (sin fondo rojo) -->
+      <div
+        class="col-12 col-md-6 d-flex align-items-center justify-content-center px-4"
+      >
         <img
           src="assets/img/slider/03/sliderBM04.png"
           alt="Producto"
-          class="responsive-imagen"
+          class="img-fluid custom-product-img"
         />
       </div>
-    </div>
 
-    <!-- Lado derecho: iconos -->
+      <!-- Lado derecho -->
+      <div
+        class="col-12 col-md-6 d-flex align-items-center justify-content-center bg-derecho px-4"
+      >
+        <div class="grid-iconos">
+          <div class="icono-card">
+            <div class="icono-svg">
+              <!-- Ícono de hoja -->
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#eb3a11"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 12c-1-2-2-3-4-4 0 2 1 3 1 5"></path>
+                <path d="M12 12c1-2 3-3 4-4 0 2-1 3-1 5"></path>
+              </svg>
+            </div>
+            <h4>{{ "video.Natural" | transloco }}</h4>
+            <p>{{ "video.Sugar" | transloco }}</p>
+          </div>
 
-    <div class="lado derecho">
-      <div class="grid-iconos">
-        <div class="icono-card">
-          <div class="icono-svg">
-            <!-- Ícono de hoja -->
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eb3a11"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M12 12c-1-2-2-3-4-4 0 2 1 3 1 5"></path>
-              <path d="M12 12c1-2 3-3 4-4 0 2-1 3-1 5"></path>
-            </svg>
+          <div class="icono-card">
+            <div class="icono-svg">
+              <!-- Ícono de gotas -->
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#eb3a11"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 16c0-2 2-4 4-6 2 2 4 4 4 6"></path>
+              </svg>
+            </div>
+            <h4>{{ "video.Hermetic" | transloco }}</h4>
+            <p>{{ "video.Keeps" | transloco }}</p>
           </div>
-          <h4>{{ "video.Natural" | transloco }}</h4>
-          <p>{{ "video.Sugar" | transloco }}</p>
-        </div>
 
-        <div class="icono-card">
-          <div class="icono-svg">
-            <!-- Ícono de gotas -->
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eb3a11"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <path d="M8 16c0-2 2-4 4-6 2 2 4 4 4 6"></path>
-            </svg>
+          <div class="icono-card">
+            <div class="icono-svg">
+              <!-- Ícono de sol -->
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#eb3a11"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="12" y1="2" x2="12" y2="4"></line>
+                <line x1="12" y1="20" x2="12" y2="22"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="2" y1="12" x2="4" y2="12"></line>
+                <line x1="20" y1="12" x2="22" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </div>
+            <h4>{{ "video.High" | transloco }}</h4>
+            <p>{{ "video.Source" | transloco }}</p>
           </div>
-          <h4>{{ "video.Hermetic" | transloco }}</h4>
-          <p>{{ "video.Keeps" | transloco }}</p>
-        </div>
 
-        <div class="icono-card">
-          <div class="icono-svg">
-            <!-- Ícono de sol -->
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eb3a11"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="4"></circle>
-              <line x1="12" y1="2" x2="12" y2="4"></line>
-              <line x1="12" y1="20" x2="12" y2="22"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="2" y1="12" x2="4" y2="12"></line>
-              <line x1="20" y1="12" x2="22" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
+          <div class="icono-card">
+            <div class="icono-svg">
+              <!-- Ícono de medalla -->
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#eb3a11"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
+              </svg>
+            </div>
+            <h4>{{ "video.Premium" | transloco }}</h4>
+            <p>{{ "video.Product" | transloco }}</p>
           </div>
-          <h4>{{ "video.High" | transloco }}</h4>
-          <p>{{ "video.Source" | transloco }}</p>
-        </div>
-
-        <div class="icono-card">
-          <div class="icono-svg">
-            <!-- Ícono de medalla -->
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eb3a11"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="8" r="6"></circle>
-              <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
-            </svg>
+          <div class="icono-card">
+            <div class="icono-svg">
+              <!-- Ícono de medalla -->
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#eb3a11"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
+              </svg>
+            </div>
+            <h4>{{ "video.Premium" | transloco }}</h4>
+            <p>{{ "video.Product" | transloco }}</p>
           </div>
-          <h4>{{ "video.Premium" | transloco }}</h4>
-          <p>{{ "video.Product" | transloco }}</p>
-        </div>
-        <div class="icono-card">
-          <div class="icono-svg">
-            <!-- Ícono de medalla -->
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eb3a11"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="8" r="6"></circle>
-              <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
-            </svg>
+          <div class="icono-card">
+            <div class="icono-svg">
+              <!-- Ícono de medalla -->
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#eb3a11"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
+              </svg>
+            </div>
+            <h4>{{ "video.Premium" | transloco }}</h4>
+            <p>{{ "video.Product" | transloco }}</p>
           </div>
-          <h4>{{ "video.Premium" | transloco }}</h4>
-          <p>{{ "video.Product" | transloco }}</p>
-        </div>
-        <div class="icono-card">
-          <div class="icono-svg">
-            <!-- Ícono de medalla -->
-            <svg
-              width="60"
-              height="60"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#eb3a11"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="8" r="6"></circle>
-              <path d="M8 15l-2 5 6-3 6 3-2-5"></path>
-            </svg>
-          </div>
-          <h4>{{ "video.Premium" | transloco }}</h4>
-          <p>{{ "video.Product" | transloco }}</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 </section>

@@ -200,24 +200,11 @@
     &-item {
       & .blog-thumb {
         position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         &::before {
-          //   background-color: #d6e0d3;
-          background-color: rgba(214, 224, 211, 0.5);
-          position: absolute;
-          left: 25px;
-          right: 25px;
-          top: 25px;
-          bottom: 25px;
-          margin: auto;
-          -webkit-transform: scale(0);
-          -ms-transform: scale(0);
-          -o-transform: scale(0);
-          transform: scale(0);
-          display: block;
-          content: "";
-          -webkit-transition: all 0.35s ease 0s;
-          -o-transition: all 0.35s ease 0s;
-          transition: all 0.35s ease 0s;
+          border-radius: 20px;
         }
         & img {
           width: 100%;
@@ -316,9 +303,8 @@
     &-title {
       font-size: 18px;
       font-weight: 500;
-      line-height: 26px;
-      color: $white;
-      & a {
+
+      s & a {
         position: relative;
         &::before {
           background-color: $theme-2-color;

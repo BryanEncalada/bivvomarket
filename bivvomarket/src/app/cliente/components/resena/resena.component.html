@@ -1,21 +1,17 @@
 <!-- testimonial area start -->
 
-<app-titulo-seccion
-  [Titulo1]="'SeccionResenaTit' | transloco"
-  [desc1]="'SeccionResenaTit' | transloco"
->
-</app-titulo-seccion>
-
-<app-wave-divider
-  position="bottom"
-  color="#fdd1c4"
-  height="60px"
-></app-wave-divider>
 <section
-  class="slider__area slider__area-2 p-relative pl-15 pr-15"
-  style="background-image: url(/assets/img/testimonial/testimonial-bg02.png)"
+  class="slider__area slider__area-2 p-relative"
+  style="background-color: #fdd1c4"
 >
+  <!-- style="background-image: url(/assets/img/testimonial/testimonial-bg02.png)" -->
+
   <div class="container">
+    <app-titulo-seccion
+      [Titulo1]="'SeccionResenaTit' | transloco"
+      [desc1]="'SeccionResenaTit' | transloco"
+    >
+    </app-titulo-seccion>
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
         <div class="testimonial__nav swiper-container">
@@ -49,9 +45,4 @@
   </div>
 </section>
 
-<app-wave-divider
-  position="top"
-  color="#fdd1c4"
-  height="60px"
-></app-wave-divider>
 <!-- testimonial area end -->
