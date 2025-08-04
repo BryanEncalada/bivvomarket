@@ -1,4 +1,10 @@
-import { NgClass, NgFor, NgIf, ViewportScroller } from '@angular/common';
+import {
+  CommonModule,
+  NgClass,
+  NgFor,
+  NgIf,
+  ViewportScroller,
+} from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PaginationComponent } from '../pagination/pagination.component';
@@ -23,6 +29,7 @@ import { IProduct } from '../../../shared/types/IProduct';
     PaginationComponent,
     TituloSeccionComponent,
     TranslocoModule,
+    CommonModule,
   ],
   templateUrl: './shop-area.component.html',
   styleUrl: './shop-area.component.scss',
@@ -31,6 +38,7 @@ export class ShopAreaComponent {
   @Input() shop_right = false;
   @Input() shop_4_col = false;
   @Input() shop_3_col = false;
+  @Input() colorFondo: string = '#fdd1c4';
 
   public products: IProduct[] = [];
   public minPrice: number = 0;

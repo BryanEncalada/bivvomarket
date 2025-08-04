@@ -11,4 +11,5 @@ export class WaveDividerComponent {
   @Input() position: 'top' | 'bottom' = 'bottom';
   @Input() color: string = '#ffffff';
   @Input() height: string = '60px';
+  @Input() colorFondo: string = '#fdd1c4';
 }

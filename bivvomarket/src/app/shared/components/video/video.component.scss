@@ -54,28 +54,63 @@ body {
   padding: 2rem;
 }
 
+/* NUEVOS ICONOS */
 .grid-iconos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   text-align: center;
 }
 
-.icono-box svg {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 0.5rem;
+.icono-card {
+  background: #fffaf5;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.icono-box h4 {
-  font-weight: bold;
-  margin-bottom: 0.25rem;
+.icono-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.icono-svg {
+  background: #fff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px #eb3a11 inset;
+  transition: transform 0.3s ease;
+}
+
+.icono-card:hover .icono-svg {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.icono-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem;
   color: #201f1f;
 }
 
-.icono-box p {
+.icono-card p {
   font-size: 0.9rem;
   color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid-iconos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

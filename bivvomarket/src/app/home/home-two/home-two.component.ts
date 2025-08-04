@@ -4,14 +4,20 @@ import { ProductService } from '../../shared/services/product.service';
 import { HeroSliderTwoComponent } from '../../shared/components/slider/hero-slider-two/hero-slider-two.component';
 import { ShopCategoryComponent } from '../../shop/shop-category/shop-category.component';
 
-import { isPlatformBrowser } from '@angular/common';
-import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import {
+  Component,
+  AfterViewInit,
+  Inject,
+  PLATFORM_ID,
+  Input,
+} from '@angular/core';
 import { ShopAreaComponent } from '../../shop/components/shop-area/shop-area.component';
 import { VideoComponent } from '../../shared/components/video/video.component';
 import { RecetasComponent } from '../../shared/components/recetas/recetas.component';
 import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
 import { ResenaComponent } from '../../cliente/components/resena/resena.component';
-
+import { CaracteristicasComponent } from '../../shared/components/caracteristicas/caracteristicas.component';
 
 @Component({
   selector: 'app-home-two',
@@ -21,7 +27,9 @@ import { ResenaComponent } from '../../cliente/components/resena/resena.componen
     ClientSliderComponent,
     VideoComponent,
     RecetasComponent,
-    ResenaComponent
+    ResenaComponent,
+    CaracteristicasComponent,
+    CommonModule,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
@@ -34,9 +42,7 @@ export class HomeTwoComponent {
   constructor(
     private productService: ProductService,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {
-    
-  }
+  ) {}
 
   async ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {

@@ -1,0 +1,63 @@
+.grid-iconos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.icono-card {
+  background: #fffaf5;
+  padding: 2rem 1rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.icono-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.icono-svg {
+  background: #ffffff;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 3px #eb3a11 inset;
+  transition: transform 0.3s ease;
+}
+
+.icono-card:hover .icono-svg {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.icono-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0.25rem;
+  color: #222;
+}
+
+.icono-card p {
+  font-size: 0.9rem;
+  color: #708090;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .grid-iconos {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .icono-card {
+    padding: 1.5rem 1rem;
+  }
+}
