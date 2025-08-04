@@ -9,14 +9,14 @@ import { IProduct } from '../../../shared/types/IProduct';
   selector: 'app-related-products',
   imports: [ProductItemComponent, NgFor, TranslocoModule],
   templateUrl: './related-products.component.html',
-  styleUrl: './related-products.component.scss'
+  styleUrl: './related-products.component.scss',
 })
 export class RelatedProductsComponent {
-  @Input() productId: number | undefined;
+  @Input() productId: string | undefined;
   @Input() brand: string | undefined;
   public related_products: IProduct[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {}
 
   ngOnInit() {
     if (this.productId && this.brand) {
@@ -28,5 +28,4 @@ export class RelatedProductsComponent {
         });
     }
   }
-
 }

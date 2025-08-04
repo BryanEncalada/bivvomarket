@@ -3,28 +3,25 @@ import { CartService } from '../../../shared/services/cart.service';
 import { WishlistService } from '../../../shared/services/wishlist.service';
 import { CompareService } from '../../../shared/services/compare.service';
 import { UtilsService } from '../../../shared/services/utils.service';
-import { NgIf,  } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { RouterLink, RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { IProduct } from '../../../shared/types/IProduct';
-
-
 
 @Component({
   selector: 'app-product-item',
   imports: [NgIf, RouterModule, RouterLink, TranslocoModule],
   templateUrl: './product-item.component.html',
-  styleUrl: './product-item.component.scss'
+  styleUrl: './product-item.component.scss',
 })
 export class ProductItemComponent {
-
-@Input() product!: IProduct;
+  @Input() product!: IProduct;
 
   constructor(
     public cartService: CartService,
     public wishlistService: WishlistService,
     public compareService: CompareService,
-    public utilsService: UtilsService,
+    public utilsService: UtilsService
   ) {}
 
   // add to cart
@@ -32,8 +29,8 @@ export class ProductItemComponent {
     this.cartService.addCartProduct(item);
   }
 
-   // add to cart
-   addToWishlist(product: IProduct) {
+  // add to cart
+  addToWishlist(product: IProduct) {
     this.wishlistService.add_wishlist_product(product);
   }
 
@@ -44,14 +41,18 @@ export class ProductItemComponent {
 
   // Function to check if an item is in the cart
   isItemInCart(item: IProduct): boolean {
-    return this.cartService.getCartProducts().some((prd: IProduct) => prd.id === item.id);
+    return this.cartService
+      .getCartProducts()
+      .some((prd: IProduct) => prd._id === item._id);
   }
   isItemInWishlist(item: IProduct): boolean {
-    return this.wishlistService.getWishlistProducts().some((prd: IProduct) => prd.id === item.id);
+    return this.wishlistService
+      .getWishlistProducts()
+      .some((prd: IProduct) => prd._id === item._id);
   }
   isItemInCompare(item: IProduct): boolean {
-    return this.compareService.getCompareProducts().some((prd: IProduct) => prd.id === item.id);
+    return this.compareService
+      .getCompareProducts()
+      .some((prd: IProduct) => prd._id === item._id);
   }
-
-
 }

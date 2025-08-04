@@ -2,7 +2,7 @@ import { IProduct } from '../types/IProduct';
 
 const product_data: IProduct[] = [
   {
-    id: 1,
+    _id: 1,
     img: 'assets/img/shop/product/Bivvo11.JPG',
     //trending: true,
     //banner: true,
@@ -34,7 +34,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 2,
+    _id: 2,
     img: 'assets/img/shop/product/Bivvo19.JPG',
     //trending: true,
     related_images: [
@@ -64,7 +64,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 3,
+    _id: 3,
     img: 'assets/img/shop/product/Bivvo1.JPG',
     //trending: true,
     //banner: true,
@@ -95,7 +95,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 4,
+    _id: 4,
     img: 'assets/img/shop/product/Bivvo41-3.png',
     //trending: true,
     discount: 0,
@@ -127,7 +127,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 5,
+    _id: 5,
     img: 'assets/img/shop/product/Bivvo10_1.JPG',
     //trending: true,
     related_images: [
@@ -164,7 +164,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 6,
+    _id: 6,
     img: 'assets/img/shop/product/Bivvo61.png',
     //trending: true,
     related_images: [
@@ -200,7 +200,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 7,
+    _id: 7,
     img: 'assets/img/shop/product/Sypup01.png',
     //trending: true,
     related_images: [
@@ -240,7 +240,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 8,
+    _id: 8,
     img: 'assets/img/shop/product/Sypup02.png',
     //trending: true,
     related_images: [
@@ -280,7 +280,7 @@ const product_data: IProduct[] = [
     },
   },
   {
-    id: 9,
+    _id: 9,
     img: 'assets/img/shop/product/Sypup03.png',
     //trending: true,
     related_images: [

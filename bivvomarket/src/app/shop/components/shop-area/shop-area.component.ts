@@ -1,7 +1,7 @@
 import { NgClass, NgFor, NgIf, ViewportScroller } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PaginationComponent } from "../pagination/pagination.component";
+import { PaginationComponent } from '../pagination/pagination.component';
 import { ProductItemComponent } from '../product-item/product-item.component';
 import { ProductListItemComponent } from '../product-list-item/product-list-item.component';
 import { FormsModule } from '@angular/forms';
@@ -13,16 +13,24 @@ import { IProduct } from '../../../shared/types/IProduct';
 
 @Component({
   selector: 'app-shop-area',
-  imports: [NgClass, NgFor, NgIf, FormsModule, ProductItemComponent, ProductListItemComponent, PaginationComponent, TituloSeccionComponent, TranslocoModule],
+  imports: [
+    NgClass,
+    NgFor,
+    NgIf,
+    FormsModule,
+    ProductItemComponent,
+    ProductListItemComponent,
+    PaginationComponent,
+    TituloSeccionComponent,
+    TranslocoModule,
+  ],
   templateUrl: './shop-area.component.html',
-  styleUrl: './shop-area.component.scss'
+  styleUrl: './shop-area.component.scss',
 })
 export class ShopAreaComponent {
-
   @Input() shop_right = false;
   @Input() shop_4_col = false;
   @Input() shop_3_col = false;
-
 
   public products: IProduct[] = [];
   public minPrice: number = 0;
@@ -39,6 +47,9 @@ export class ShopAreaComponent {
   public paginate: any = {}; // Pagination use only
   public sortBy: string = 'asc'; // Sorting Order
 
+  public cssPillsGrid: boolean = true;
+  public cssPillsList: boolean = false;
+
   constructor(
     public productService: ProductService,
     public utilsService: UtilsService,
@@ -46,112 +57,95 @@ export class ShopAreaComponent {
     private router: Router,
     private viewScroller: ViewportScroller
   ) {
-
     this.maxPrice = this.productService.maxPrice;
     this.niceSelectOptions = this.productService.filterSelect;
 
     this.route.queryParams.subscribe((params) => {
+      this.pageNo = params['page'] ? +params['page'] : this.pageNo;
+      this.sortBy = params['sortBy'] ?? 'asc';
 
-      this.minPrice = params['minPrice'] ? params['minPrice'] : this.minPrice;
-      this.maxPrice = params['maxPrice'] ? params['maxPrice'] : this.maxPrice;
-      this.brand = params['brand'] ? params['brand'] : null;
-      this.category = params['category'] ? params['category'] : null;
-      this.subcategory = params['subcategory'] ? params['subcategory'] : null;
-      this.size = params['size'] ? params['size'] : null;
-      this.color = params['color'] ? params['color'] : null;
-      this.pageNo = params['page'] ? params['page'] : this.pageNo;
-      this.sortBy = params['sortBy'] ? params['sortBy'] : 'asc';
+      const queryParams = {
+        sort: this.getSortParam(this.sortBy),
+        category: params['category'] ?? null,
+        subcategory: params['subcategory'] ?? null,
+        brand: params['brand'] ?? null,
+        size: params['size'] ?? null,
+        color: params['color'] ?? null,
+        minPrice: params['minPrice'] ?? null,
+        maxPrice: params['maxPrice'] ?? null,
+      };
 
-      this.productService.filterProducts().subscribe((response) => {
-        // Sorting Filter
-        this.products = this.productService.sortProducts(response, this.sortBy);
+      this.productService
+        .getFilteredProducts(queryParams)
+        .subscribe((products) => {
+          this.products = products;
 
-        // Category Filter
-        if (this.category) {
-          this.products = this.products.filter(
-            (p) => this.utilsService.convertToURL(p.parentCategory) === this.category
+          // Paginación local
+          this.paginate = this.productService.getPager(
+            this.products.length,
+            this.pageNo,
+            this.pageSize
           );
-        }
-        // sub category Filter
-        if (this.subcategory) {
-          this.products = this.products.filter(
-            (p) => this.utilsService.convertToURL(p.category) === this.subcategory
+          this.products = this.products.slice(
+            this.paginate.startIndex,
+            this.paginate.endIndex + 1
           );
-        }
-        // size Filter
-        if (this.size) {
-          this.products = this.products.filter((product) => {
-            return (
-              product.sizes &&
-              product.sizes.some((size) => size.toLowerCase() === this.size)
-            );
-          });
-        }
-        // brand Filter
-        if (this.brand) {
-          this.products = this.products.filter((p) => p.brand.toLowerCase() === this.brand);
-        }
-
-        // Price Filter
-        this.products = this.products.filter(
-          (p) => p.price >= Number(this.minPrice) && p.price <= Number(this.maxPrice)
-        );
-
-        // Paginate Products
-        this.paginate = this.productService.getPager(this.products.length, Number(+this.pageNo), this.pageSize);
-        this.products = this.products.slice(this.paginate.startIndex, this.paginate.endIndex + 1);
-
-      });
-
-
-
-
-
+        });
     });
-
   }
 
   onSortingChange(value: string) {
-
     this.sortByFilter(value);
   }
 
   // SortBy Filter
   sortByFilter(value: string) {
-    this.router.navigate([], {
-      relativeTo: this.route,
-      queryParams: { sortBy: value ? value : null },
-      queryParamsHandling: 'merge', // preserve the existing query params in the route
-      skipLocationChange: false  // do trigger navigation
-    }).finally(() => {
-      this.viewScroller.setOffset([120, 120]);
-      this.viewScroller.scrollToAnchor('products'); // Anchore Link
-    });
+    this.router
+      .navigate([], {
+        relativeTo: this.route,
+        queryParams: { sortBy: value ? value : null },
+        queryParamsHandling: 'merge',
+        skipLocationChange: false,
+      })
+      .finally(() => {
+        this.viewScroller.setOffset([120, 120]);
+        this.viewScroller.scrollToAnchor('products');
+      });
   }
 
-  // product Pagination
+  // Pagination
   setPage(page: number) {
     this.router
       .navigate([], {
         relativeTo: this.route,
         queryParams: { page: page },
-        queryParamsHandling: 'merge', // preserve the existing query params in the route
-        skipLocationChange: false, // do trigger navigation
+        queryParamsHandling: 'merge',
+        skipLocationChange: false,
       })
       .finally(() => {
         this.viewScroller.setOffset([120, 120]);
-        this.viewScroller.scrollToAnchor('products'); // Anchore Link
+        this.viewScroller.scrollToAnchor('products');
       });
   }
 
-  public cssPillsGrid: boolean = true;
-  public cssPillsList: boolean = false;
-
-  onchange() {
-
-    this.cssPillsGrid = !this.cssPillsGrid;
-    this.cssPillsList = !this.cssPillsList;
-  
+  // Mapea el sortBy del frontend al backend
+  getSortParam(payload: string): string {
+    switch (payload) {
+      case 'asc':
+        return 'id_asc';
+      case 'sale':
+        return 'discount';
+      case 'low':
+        return 'price_asc';
+      case 'high':
+        return 'price_desc';
+      default:
+        return '';
+    }
   }
 
+  onchange() {
+    this.cssPillsGrid = !this.cssPillsGrid;
+    this.cssPillsList = !this.cssPillsList;
+  }
 }

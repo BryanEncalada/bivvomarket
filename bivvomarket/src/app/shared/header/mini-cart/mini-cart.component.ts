@@ -8,8 +8,8 @@ import { TranslocoModule } from '@jsverse/transloco';
   selector: 'app-mini-cart',
   imports: [NgIf, NgClass, NgFor, RouterLink, TranslocoModule],
   templateUrl: './mini-cart.component.html',
-  styleUrl: './mini-cart.component.scss'
+  styleUrl: './mini-cart.component.scss',
 })
 export class MiniCartComponent {
-constructor(public cartService: CartService) { }
+  constructor(public cartService: CartService) {}
 }
