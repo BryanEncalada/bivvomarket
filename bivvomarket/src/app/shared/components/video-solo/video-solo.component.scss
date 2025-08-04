@@ -5,17 +5,17 @@
 }
 
 .video-wrapper {
-  padding: 2rem 1rem;
+  padding: 2rem 1rem; /* ya correcto */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* ← ya no centrado verticalmente */
 }
 
 .video-frame {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 960px;
+
   width: 100%;
   aspect-ratio: 16 / 9;
   background-color: #fff;
