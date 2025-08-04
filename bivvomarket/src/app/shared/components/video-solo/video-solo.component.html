@@ -1,0 +1,24 @@
+<section class="video-banner-section">
+  <!-- SVG decoración arriba -->
+  <svg class="svg-top" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path fill="#eb3a11" d="M0,0 C480,100 960,0 1440,100 L1440,0 L0,0 Z"></path>
+  </svg>
+
+  <!-- Contenedor de video con padding -->
+  <div class="video-wrapper">
+    <div class="video-frame">
+      <video autoplay muted loop playsinline class="responsive-video">
+        <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
+        {{ "video.suport" | transloco }}
+      </video>
+    </div>
+  </div>
+
+  <!-- SVG decoración abajo -->
+  <svg class="svg-bottom" viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path
+      fill="#eb3a11"
+      d="M0,100 C480,0 960,100 1440,0 L1440,100 L0,100 Z"
+    ></path>
+  </svg>
+</section>

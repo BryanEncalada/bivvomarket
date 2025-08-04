@@ -2,13 +2,12 @@
   id="sProductos"
   class="slider__area slider__area-2 p-relative"
   [ngStyle]="{
-    'background-image': 'url(assets/img/shop/fondo.png)',
-    'background-size': 'cover',
-    'background-position': 'center',
-    'background-repeat': 'no-repeat'
+    backgroundColor: colorFondo,
   }"
 >
-  <div class="container custom-container-2">
+  <!-- //     backgroundColor: colorFondo,-->
+
+  <div class="container custom-container-2" [ngStyle]="{}">
     <app-titulo-seccion
       [Titulo1]="'SeccionProductosTit' | transloco"
       [desc1]="'SeccionProductosSub' | transloco"

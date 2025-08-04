@@ -18,6 +18,7 @@ import { RecetasComponent } from '../../shared/components/recetas/recetas.compon
 import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
 import { ResenaComponent } from '../../cliente/components/resena/resena.component';
 import { CaracteristicasComponent } from '../../shared/components/caracteristicas/caracteristicas.component';
+import { VideoSoloComponent } from '../../shared/components/video-solo/video-solo.component';
 
 @Component({
   selector: 'app-home-two',
@@ -30,6 +31,7 @@ import { CaracteristicasComponent } from '../../shared/components/caracteristica
     ResenaComponent,
     CaracteristicasComponent,
     CommonModule,
+    VideoSoloComponent,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
