@@ -20,14 +20,15 @@ import { ResenaComponent } from '../../cliente/components/resena/resena.componen
 import { CaracteristicasComponent } from '../../shared/components/caracteristicas/caracteristicas.component';
 import { VideoSoloComponent } from '../../shared/components/video-solo/video-solo.component';
 import { EspaciadorComponent } from '../../shared/components/espaciador/espaciador.component';
+import { Video2Component } from '../../shared/components/video2/video2.component';
 
 @Component({
   selector: 'app-home-two',
   imports: [
     HeroSliderTwoComponent,
     ShopAreaComponent,
-
     VideoComponent,
+    Video2Component,
     RecetasComponent,
     ResenaComponent,
     CaracteristicasComponent,

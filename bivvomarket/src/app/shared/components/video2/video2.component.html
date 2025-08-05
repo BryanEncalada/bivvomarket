@@ -3,9 +3,16 @@
 <section [ngStyle]="{ backgroundColor: colorFondo }">
   <div class="row g-4 align-items-center">
     <!-- Columna izquierda con imagen -->
+    <div class="col-12 col-md-6">
+      <app-icon-grid
+        [items]="iconosDerecha"
+        [height]="gridHeight"
+      ></app-icon-grid>
+    </div>
+
     <div class="col-12 col-md-6 d-flex justify-content-rigth icon-grid-padding">
       <img
-        src="assets/img/banner/banner03.png"
+        src="assets/img/banner/banner02.png"
         alt="Producto"
         class="img-fluid custom-product-img"
         style="height: 460px; width: 100%"
@@ -13,11 +20,5 @@
     </div>
 
     <!-- Columna derecha con iconos -->
-    <div class="col-12 col-md-6">
-      <app-icon-grid
-        [items]="iconosDerecha"
-        [height]="gridHeight"
-      ></app-icon-grid>
-    </div>
   </div>
 </section>
