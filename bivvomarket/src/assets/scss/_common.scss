@@ -392,8 +392,9 @@ p {
   padding-right: 0;
 }
 .custom-container-2 {
+  max-width: 1920px;
   @media (min-width: 1400px) {
-    max-width: 1220px;
+    max-width: 1920px;
   }
 }
 /* btn */
