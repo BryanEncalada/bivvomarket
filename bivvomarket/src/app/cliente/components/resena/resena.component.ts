@@ -9,17 +9,11 @@ import { WaveDividerComponent } from '../../../shared/components/wave-divider/wa
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { combineLatest, Subscription } from 'rxjs';
 
-
 register();
 
 @Component({
   selector: 'app-resena',
-  imports: [
-    NgFor,
-    TituloSeccionComponent,
-    TranslocoModule,
-    WaveDividerComponent,
-  ],
+  imports: [NgFor, TituloSeccionComponent, TranslocoModule],
   templateUrl: './resena.component.html',
   styleUrl: './resena.component.scss',
 })
@@ -34,18 +28,15 @@ export class ResenaComponent {
   public testimonial_data: any[] = [];
   private subscription!: Subscription;
 
-  constructor(private translocoService: TranslocoService) {
-
-  }
+  constructor(private translocoService: TranslocoService) {}
 
   ngOnInit(): void {
-
     const ids = [1, 2, 3, 4];
-    const observables = ids.map(id =>
+    const observables = ids.map((id) =>
       this.translocoService.selectTranslateObject(`testimonials.${id}`)
     );
 
-    this.subscription = combineLatest(observables).subscribe(translations => {
+    this.subscription = combineLatest(observables).subscribe((translations) => {
       this.testimonial_data = translations.map((translation, index) => ({
         id: ids[index],
         ...translation,
@@ -72,9 +63,5 @@ export class ResenaComponent {
         });
       });
     });
-
-
-
-
   }
 }

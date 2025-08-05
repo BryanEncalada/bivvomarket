@@ -19,19 +19,21 @@ import { ClientSliderComponent } from '../../cliente/components/client-slider/cl
 import { ResenaComponent } from '../../cliente/components/resena/resena.component';
 import { CaracteristicasComponent } from '../../shared/components/caracteristicas/caracteristicas.component';
 import { VideoSoloComponent } from '../../shared/components/video-solo/video-solo.component';
+import { EspaciadorComponent } from '../../shared/components/espaciador/espaciador.component';
 
 @Component({
   selector: 'app-home-two',
   imports: [
     HeroSliderTwoComponent,
     ShopAreaComponent,
-    ClientSliderComponent,
+
     VideoComponent,
     RecetasComponent,
     ResenaComponent,
     CaracteristicasComponent,
     CommonModule,
     VideoSoloComponent,
+    EspaciadorComponent,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',

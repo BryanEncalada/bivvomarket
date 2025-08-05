@@ -1,24 +1,35 @@
 <!-- testimonial area start -->
 
-<section
-  class="slider__area slider__area-2 p-relative"
+<svg
+  viewBox="0 0 1440 100"
+  preserveAspectRatio="none"
   style="background-color: #fdd1c4"
 >
-  <!-- style="background-image: url(/assets/img/testimonial/testimonial-bg02.png)" -->
+  <path
+    fill="#eb3a11"
+    d="M0,100 C480,20 960,100 1440,20 L1440,100 L0,100 Z"
+  ></path>
+</svg>
 
+<section
+  class="slider__area slider__area-2 p-relative"
+  style="background-color: #eb3a11"
+>
+  <!-- style="background-image: url(/assets/img/testimonial/testimonial-bg02.png)" -->
+  <app-titulo-seccion
+    [Titulo1]="'SeccionResenaTit' | transloco"
+    [desc1]="'SeccionResenaTit' | transloco"
+    colorFondo="#eb3a11"
+  >
+  </app-titulo-seccion>
   <div class="container">
-    <app-titulo-seccion
-      [Titulo1]="'SeccionResenaTit' | transloco"
-      [desc1]="'SeccionResenaTit' | transloco"
-    >
-    </app-titulo-seccion>
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
         <div class="testimonial__nav swiper-container">
           <div class="swiper-wrapper">
             <div
               *ngFor="let item of nav_data; let index = index"
-              class="testimonial__nav-thumb item-1 swiper-slide pt-100"
+              class="testimonial__nav-thumb item-1 swiper-slide"
             >
               <img [src]="item.img" alt="person" />
             </div>
@@ -45,4 +56,10 @@
   </div>
 </section>
 
-<!-- testimonial area end -->
+<svg
+  viewBox="0 0 1440 100"
+  preserveAspectRatio="none"
+  style="background-color: #fdd1c4"
+>
+  <path fill="#eb3a11" d="M0,100 L1440,0 L1440,0 L0,0 Z"></path>
+</svg>
