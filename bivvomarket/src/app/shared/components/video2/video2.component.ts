@@ -23,29 +23,42 @@ export class Video2Component {
       svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8 16c0-2 2-4 4-6 2 2 4 4 4 6" /></svg>`,
     },
   ];
-
-  iconosDerecha = [
-    {
-      title: 'Alto en proteínas',
-      subtitle: 'Fuente natural',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><line x1="12" y1="2" x2="12" y2="4" /><line x1="12" y1="20" x2="12" y2="22" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="2" y1="12" x2="4" y2="12" /><line x1="20" y1="12" x2="22" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>`,
-    },
-    {
-      title: 'Producto Premium',
-      subtitle: 'Calidad garantizada',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6" /><path d="M8 15l-2 5 6-3 6 3-2-5" /></svg>`,
-    },
-    {
-      title: 'Alto en proteínas',
-      subtitle: 'Fuente natural',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><line x1="12" y1="2" x2="12" y2="4" /><line x1="12" y1="20" x2="12" y2="22" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="2" y1="12" x2="4" y2="12" /><line x1="20" y1="12" x2="22" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>`,
-    },
-    {
-      title: 'Producto Premium',
-      subtitle: 'Calidad garantizada',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6" /><path d="M8 15l-2 5 6-3 6 3-2-5" /></svg>`,
-    },
-  ];
+iconosDerecha = [
+  {
+    title: 'Refrescante',
+    subtitle: 'Disfrútalo frío y natural',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 3h16v2H4z" /> <!-- tapa de vaso -->
+            <path d="M5 5h14v16H5z" /> <!-- vaso -->
+            <path d="M5 12h14" /> <!-- línea de jugo dentro -->
+         </svg>` // icono tipo vaso de jugo
+  },
+  {
+    title: 'Energético',
+    subtitle: 'Carga tu cuerpo de energía natural',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15 11 9 11 12 22 18 11 6 11 12 2" /> <!-- rayo estilizado -->
+         </svg>` // icono tipo rayo
+  },
+  {
+    title: 'Vitaminado',
+    subtitle: 'Llena tu día de vitaminas',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8" /> <!-- fruta redonda -->
+            <path d="M12 4v16" /> <!-- segmento vertical -->
+            <path d="M4 12h16" /> <!-- segmento horizontal -->
+         </svg>` // icono tipo fruta cortada
+  },
+  {
+    title: 'Saludable',
+    subtitle: 'Natural y sin añadidos',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8 2 4 6 4 10s4 8 8 8 8-4 8-8-4-8-8-8z" /> <!-- fruta entera -->
+            <path d="M12 10v4" /> <!-- semilla vertical -->
+            <path d="M10 12h4" /> <!-- semilla horizontal -->
+         </svg>` // icono tipo fruta saludable
+  },
+];
 
   gridHeight: string = '300px'; // altura inicial
 

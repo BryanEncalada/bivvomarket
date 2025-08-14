@@ -27,27 +27,43 @@ export class VideoComponent {
   ];
 
   iconosDerecha = [
-    {
-      title: 'Alto en proteínas',
-      subtitle: 'Fuente natural',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><line x1="12" y1="2" x2="12" y2="4" /><line x1="12" y1="20" x2="12" y2="22" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="2" y1="12" x2="4" y2="12" /><line x1="20" y1="12" x2="22" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>`,
-    },
-    {
-      title: 'Producto Premium',
-      subtitle: 'Calidad garantizada',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6" /><path d="M8 15l-2 5 6-3 6 3-2-5" /></svg>`,
-    },
-    {
-      title: 'Alto en proteínas',
-      subtitle: 'Fuente natural',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><line x1="12" y1="2" x2="12" y2="4" /><line x1="12" y1="20" x2="12" y2="22" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="2" y1="12" x2="4" y2="12" /><line x1="20" y1="12" x2="22" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>`,
-    },
-    {
-      title: 'Producto Premium',
-      subtitle: 'Calidad garantizada',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6" /><path d="M8 15l-2 5 6-3 6 3-2-5" /></svg>`,
-    },
-  ];
+  {
+    title: 'Energizante',
+    subtitle: 'Cómelo como cereal',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 3h8l-1 9H5l-1-9z" />
+            <path d="M9 22V12" />
+            <path d="M15 9h5l-1 13h-3l-1-13z" />
+            <path d="M18 22v-6" />
+         </svg>` // icono tipo "trigo/energía"
+  },
+  {
+    title: 'Portable',
+    subtitle: 'Llévalo contigo como un snack',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="8" width="18" height="8" rx="4" />
+            <path d="M7 8V6a5 5 0 0 1 10 0v2" />
+         </svg>` // icono tipo "bolsa o barra snack"
+  },
+  {
+    title: 'Refrescante',
+    subtitle: 'Mézclalo en un batido',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16l-1.5 14.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 4z" />
+            <path d="M10 4V2h4v2" />
+            <path d="M8 8h8" />
+         </svg>` // icono de vaso/batido
+  },
+  {
+    title: 'Nutritivo',
+    subtitle: 'Cómelo mezclado en yogur',
+    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3c-4.418 0-8 2.686-8 6v6c0 3.314 3.582 6 8 6s8-2.686 8-6V9c0-3.314-3.582-6-8-6z" />
+            <path d="M8 10h8" />
+         </svg>` // icono tipo tazón/yogur
+  },
+];
+
 
   gridHeight: string = '300px'; // altura inicial
 

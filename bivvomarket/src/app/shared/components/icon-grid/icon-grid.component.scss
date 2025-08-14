@@ -27,8 +27,11 @@
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
+
+
+
 .icono-svg {
-  background: #ffffff;
+  background: transparent;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -36,7 +39,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 0 3px #eb3a11 inset;
+ box-shadow: 0 0 0 3px #eb3a11 inset;
   transition: transform 0.3s ease;
 }
 
