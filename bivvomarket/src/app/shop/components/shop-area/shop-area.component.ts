@@ -58,6 +58,8 @@ export class ShopAreaComponent {
   public cssPillsGrid: boolean = true;
   public cssPillsList: boolean = false;
 
+  public errorMessage: string = '';
+
   constructor(
     public productService: ProductService,
     public utilsService: UtilsService,
@@ -98,7 +100,12 @@ export class ShopAreaComponent {
             this.paginate.startIndex,
             this.paginate.endIndex + 1
           );
-        });
+        },
+          (error) => {
+            // Captura del error
+            console.log(error)
+            this.errorMessage = error.message;
+          });
     });
   }
 
