@@ -33,14 +33,14 @@ export class ContactFormComponent {
   onSubmit() {
     this.formSubmitted = true;
     if (this.contactForm.valid) {
-      console.log('contact-form-value', this.contactForm.value);
+
       //this.toastrService.success(`Message sent successfully`);
 
       // Reset the form
       this.contactForm.reset();
       this.formSubmitted = false; // Reset formSubmitted to false
     }
-    console.log('contact-form', this.contactForm);
+
   }
 
   get name() {

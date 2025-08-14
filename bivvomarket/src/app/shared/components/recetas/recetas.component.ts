@@ -33,7 +33,7 @@ export class RecetasComponent {
   );
 
   ngOnInit(): void {
-    console.log('blog_items', this.blog_items);
+
   }
 
   ngAfterViewInit() {
