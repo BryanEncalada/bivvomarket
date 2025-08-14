@@ -33,7 +33,7 @@ const blog_data: IBlogType[] = [
 
   {
     id: 28,
-    img: '/assets/img/blog/2/receta-BM03.png',
+    img: '/assets/img/blog/2/receta-BM03.webp',
     title: 'Galletas de quinua',
     author: 'Ana Gómez',
     date: 'Julio 8, 2025',
