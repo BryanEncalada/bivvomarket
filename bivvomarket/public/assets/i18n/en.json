@@ -96,19 +96,19 @@
     "1": {
       "title": "QUINOA POP ORIGINAL<br />",
       "subtitle": "QUINOA ORIGINAL is a 100% organic superfood with a high protein content",
-      "bgImg": "/assets/img/slider/03/sliderBM04.png",
+      "bgImg": "/assets/img/slider/03/sliderBM04.webp",
       "isDark": true
     },
     "2": {
       "title": "QUINOA POP CACAO<br />",
       "subtitle": "CACAO QUINOA is a superfood based on quinoa and 100% organic",
-      "bgImg": "/assets/img/slider/03/sliderBM05.png",
+      "bgImg": "/assets/img/slider/03/sliderBM05.webp",
       "isDark": true
     },
     "3": {
       "title": "QUINOA POP COVERED WITH HONEY<br />",
       "subtitle": "HONEY QUINOA is a superfood based on 100% organic quinoa and natural honey",
-      "bgImg": "/assets/img/slider/03/sliderBM06.png",
+      "bgImg": "/assets/img/slider/03/sliderBM06.webp",
       "isDark": true
     }
   },
