@@ -14,7 +14,7 @@ export class ProductService {
   public filter_offcanvas: boolean = false;
   public pageSize: number = 9;
   // private apiUrl = 'http://localhost:3000/api/products';
-private apiUrl = 'http://app.enervym.com/api/products';
+private apiUrl = 'https://app.enervym.com/api/products';
 
 
 
