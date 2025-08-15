@@ -1,0 +1,65 @@
+/* Panel offcanvas: oculto por defecto y fuera de pantalla */
+.extra__info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(92vw, 360px);
+  max-width: 100%;
+  background: #fff;
+  transform: translate3d(
+    calc(100% + 8px),
+    0,
+    0
+  ); /* empuja un poco más para evitar línea */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  box-shadow: -24px 0 48px rgba(0, 0, 0, 0.12);
+  will-change: transform;
+  transition: transform 0.32s ease, opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1040;
+  overflow-y: auto;
+}
+
+/* Si decides mantener una clase “abierto” en vez de *ngIf */
+.extra__info.info-opened {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Overlay */
+.body-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1030;
+}
+.body-overlay.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Neutraliza plugins que fuerzan visibilidad (ej. .mm-menu) */
+.side-mobile-menu {
+  transform: none !important;
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* Forzar que NO se vea en desktop aunque alguien lo abra por error */
+@media (min-width: 992px) {
+  .extra__info {
+    display: none !important;
+  }
+}
+
+/* Bloquear scroll del body cuando está abierto */
+body.offcanvas-open {
+  overflow: hidden;
+}

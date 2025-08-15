@@ -17,6 +17,19 @@
               : 'col-xl-3 col-lg-3 col-md-4 col-sm-4'
           "
         >
+          <button
+            type="button"
+            class="mobile-menu-btn d-block d-lg-none"
+            (click)="utilsService.open()"
+            [attr.aria-label]="'Abrir menú'"
+            [attr.aria-controls]="'mobile-offcanvas'"
+            [attr.aria-expanded]="
+              utilsService.openMobileMenus ? 'true' : 'false'
+            "
+          >
+            <i class="fal fa-bars"></i>
+          </button>
+
           <div class="logo">
             <a routerLink="/home/home-style-1">
               <img
@@ -97,3 +110,5 @@
     </div>
   </div>
 </header>
+
+<app-offcanvas></app-offcanvas>

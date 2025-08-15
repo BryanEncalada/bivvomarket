@@ -7,7 +7,9 @@ export interface IProduct {
   discount?: number;
   status?: string;
   quantity: number;
-  related_images: string[];
+  //related_images: string[];
+  imagenes: imagenesArray[];
+
   orderQuantity?: number;
   sizes: string[];
   weight?: number;
@@ -22,4 +24,10 @@ export interface IProduct {
     details_list: string[];
     details_text_2: string;
   };
+}
+
+export interface imagenesArray {
+  id: number;
+  producto_id: string;
+  imagen: string;
 }

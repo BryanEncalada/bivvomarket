@@ -10,10 +10,9 @@ import { IProduct } from '../../../shared/types/IProduct';
   selector: 'app-product-details-upper',
   imports: [NgClass, NgIf, NgFor, RouterLink],
   templateUrl: './product-details-upper.component.html',
-  styleUrl: './product-details-upper.component.scss'
+  styleUrl: './product-details-upper.component.scss',
 })
 export class ProductDetailsUpperComponent {
-
   @Input() product!: IProduct;
   @Input() bottomShow: boolean = true;
   @Input() style_2: boolean = false;
@@ -23,12 +22,12 @@ export class ProductDetailsUpperComponent {
   constructor(
     public productService: ProductService,
     public cartService: CartService
-  ) { }
+  ) {}
 
   ngOnInit() {
     if (this.product) {
-      this.productService.activeImg = this.product.img;
+      console.log('aqui', this.product.imagenes);
+      this.productService.activeImg = this.product.imagenes[0].imagen;
     }
   }
-
 }

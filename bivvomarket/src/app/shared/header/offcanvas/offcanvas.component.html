@@ -1,0 +1,73 @@
+<!-- offcanvas.component.html -->
+<section *ngIf="utilsService.openMobileMenus" class="extra__info transition-3">
+  <div class="extra__info-inner">
+    <div class="extra__info-close text-end">
+      <button
+        type="button"
+        class="extra__info-close-btn cursor-pointer"
+        (click)="utilsService.close()"
+        aria-label="Cerrar menú"
+      >
+        <i class="fal fa-times"></i>
+      </button>
+    </div>
+
+    <nav
+      class="side-mobile-menu d-block d-lg-none"
+      role="navigation"
+      aria-label="Menú móvil"
+    >
+      <ul>
+        <ng-container *ngFor="let menu of mobile_menus; let i = index">
+          <li
+            *ngIf="menu.dropdownMenu?.length; else simpleItem"
+            class="menu-item-has-children has-droupdown"
+            [class.active]="activeMenu === menu.title"
+          >
+            <button
+              type="button"
+              class="menu-toggle"
+              (click)="
+                activeMenu = activeMenu === menu.title ? null : menu.title
+              "
+              [attr.aria-expanded]="activeMenu === menu.title"
+              [attr.aria-controls]="'submenu-' + i"
+            >
+              {{ menu.title }}
+            </button>
+            <ul
+              class="sub-menu"
+              [class.active]="activeMenu === menu.title"
+              [id]="'submenu-' + i"
+              role="menu"
+            >
+              <li *ngFor="let sub of menu.dropdownMenu">
+                <a
+                  [routerLink]="sub.link"
+                  (click)="utilsService.close()"
+                  role="menuitem"
+                  >{{ sub.title }}</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <ng-template #simpleItem>
+            <li>
+              <a [routerLink]="menu.link" (click)="utilsService.close()">{{
+                menu.title
+              }}</a>
+            </li>
+          </ng-template>
+        </ng-container>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<!-- Overlay -->
+<div
+  *ngIf="utilsService.openMobileMenus"
+  class="body-overlay transition-3 opened"
+  (click)="utilsService.close()"
+></div>

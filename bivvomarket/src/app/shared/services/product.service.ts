@@ -16,25 +16,37 @@ export class ProductService {
   // private apiUrl = 'http://localhost:3000/api/products';
   private apiUrl = 'https://app.enervym.com/api/products';
 
-
-
   // Get Products
   public get products(): Observable<IProduct[]> {
+    const all_products = product_data;
+
     return this.http.get<IProduct[]>(this.apiUrl);
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  activeImg: string | undefined;
+  activeImg: string | string[] | null = null;
 
   handleImageActive(img: string) {
     this.activeImg = img;
   }
 
+  handleImageActiveArray(imgData: string | { imagen: string }[]) {
+    if (typeof imgData === 'string') {
+      this.activeImg = imgData;
+    } else {
+      this.activeImg = imgData.map((item) => item.imagen).toString();
+    }
+  }
+
   // Get Products By id
   public getProductById(id: string): Observable<IProduct> {
+    console.log('produgetProductByIdctId', id);
+
     return this.http.get<IProduct>(`${this.apiUrl}/${id}`).pipe(
       tap((product) => {
+        console.log('IProduct', product);
+
         this.handleImageActive(product.img);
       })
     );

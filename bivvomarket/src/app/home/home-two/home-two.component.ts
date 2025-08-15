@@ -21,6 +21,7 @@ import { CaracteristicasComponent } from '../../shared/components/caracteristica
 import { VideoSoloComponent } from '../../shared/components/video-solo/video-solo.component';
 import { EspaciadorComponent } from '../../shared/components/espaciador/espaciador.component';
 import { Video2Component } from '../../shared/components/video2/video2.component';
+import { OffcanvasComponent } from '../../shared/header/offcanvas/offcanvas.component';
 
 @Component({
   selector: 'app-home-two',

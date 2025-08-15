@@ -11,16 +11,16 @@
         <nav>
           <div class="nav nav-tabs" id="product-details" role="tablist">
             <a
-              *ngFor="let img of product.related_images"
+              *ngFor="let img of product.imagenes"
               class="nav-item nav-link mb-1 cursor-pointer"
-              [class.active]="img === productService.activeImg"
             >
+              <!-- [class.active]="img === productService.activeImg" -->
               <div
                 class="product__nav-img w-img"
-                (click)="productService.handleImageActive(img)"
+                (click)="productService.handleImageActiveArray(img.imagen)"
               >
                 <img
-                  [src]="img"
+                  [src]="img.imagen"
                   alt="product-img"
                   style="width: 92px; height: 117px"
                 />
@@ -51,16 +51,16 @@
       <nav>
         <div class="nav nav-tabs" id="product-details" role="tablist">
           <a
-            *ngFor="let img of product.related_images"
+            *ngFor="let img of product.imagenes"
             class="nav-item nav-link cursor-pointer me-2"
-            [class.active]="img === productService.activeImg"
           >
+            <!-- [class.active]="img === productService.activeImg" -->
             <div
               class="product__nav-img w-img"
-              (click)="productService.handleImageActive(img)"
+              (click)="productService.handleImageActive(img.imagen)"
             >
               <img
-                [src]="img"
+                [src]="img.imagen"
                 alt="product-img"
                 style="width: 92px; height: 117px"
               />
@@ -106,9 +106,9 @@
         <!-- <span class="review rating-left"><a href="#">Add your Review</a></span> -->
       </div>
       <div class="product__price-2 mb-25">
-        <span>${{ product.price.toFixed(2) }}</span>
+        <span>${{ product.price }}</span>
         <span *ngIf="product.old_price" class="old-price"
-          >${{ product.old_price.toFixed(2) }}</span
+          >${{ product.old_price }}</span
         >
       </div>
       <div class="product__modal-des mb-30">

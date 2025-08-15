@@ -9,6 +9,7 @@ import { of } from 'rxjs';
 import { BreadcrumbOneComponent } from '../../../shared/breadcrumb/breadcrumb-one/breadcrumb-one.component';
 import { VideoComponent } from '../../../shared/components/video/video.component';
 import { IProduct } from '../../../shared/types/IProduct';
+import { Video2Component } from '../../../shared/components/video2/video2.component';
 
 @Component({
   selector: 'app-dynamic-shop-details',
@@ -17,6 +18,7 @@ import { IProduct } from '../../../shared/types/IProduct';
     ProductDetailsAreaComponent,
     RelatedProductsComponent,
     VideoComponent,
+    Video2Component,
   ],
   templateUrl: './dynamic-shop-details.component.html',
   styleUrl: './dynamic-shop-details.component.scss',
@@ -35,6 +37,7 @@ export class DynamicShopDetailsComponent {
       .pipe(
         switchMap((params) => {
           const productId = params.get('id');
+          console.log('productId', productId);
           if (productId) {
             return this.productService.getProductById(productId);
           }

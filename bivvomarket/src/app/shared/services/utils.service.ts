@@ -10,12 +10,10 @@ import { CartService } from './cart.service';
 import IBlogType from '../types/blog-d-t';
 import blog_data from '../types/blog-data';
 
-
 @Injectable({
   providedIn: 'root',
 })
 export class UtilsService {
-
   public videoUrl: string = 'https://www.youtube.com/embed/EW4ZYb3mCZk';
   public isVideoOpen: boolean = false;
   public isSearchOpen: boolean = false;
@@ -33,18 +31,21 @@ export class UtilsService {
 
   // Get blog Filter
   public filterBlogs(): Observable<IBlogType[]> {
-    return this.blogs.pipe(map(blogs => {
-      return blogs;
-    }));
+    return this.blogs.pipe(
+      map((blogs) => {
+        return blogs;
+      })
+    );
   }
-
 
   // Get Products By id
   public getBlogById(id: string): Observable<IBlogType | undefined> {
-    return this.blogs.pipe(map(items => {
-      const blog = items.find(p => Number(p.id) === Number(id));
-      return blog;
-    }));
+    return this.blogs.pipe(
+      map((items) => {
+        const blog = items.find((p) => Number(p.id) === Number(id));
+        return blog;
+      })
+    );
   }
 
   constructor(
@@ -52,21 +53,20 @@ export class UtilsService {
     private cartService: CartService,
     private router: Router
   ) {
-    this.router.events.subscribe(event => {
+    this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.isSearchOpen = false;
         this.isProductModalOpen = false;
         this.openMobileMenus = false;
-        this.removeBackdropAndProductModal()
+        this.removeBackdropAndProductModal();
       }
     });
   }
 
-
   // open mobile sidebar
-  handleOpenMobileMenu() {
-    this.openMobileMenus = !this.openMobileMenus;
-  };
+  // handleOpenMobileMenu() {
+  //   this.openMobileMenus = !this.openMobileMenus;
+  // }
 
   // modal video play
   playVideo(videoId: string) {
@@ -111,6 +111,18 @@ export class UtilsService {
     console.log(this.productService.activeImg, this.cartService.orderQuantity);
   }
 
+  open() {
+    this.openMobileMenus = true;
+    document.body.classList.add('offcanvas-open');
+  }
+  close() {
+    this.openMobileMenus = false;
+    document.body.classList.remove('offcanvas-open');
+  }
+  toggle() {
+    this.openMobileMenus ? this.close() : this.open();
+  }
+
   convertToURL(value: string): string {
     // Replace spaces and special characters with hyphens
     const converted_value = value
@@ -123,22 +135,20 @@ export class UtilsService {
   }
 
   removeBackdropAndProductModal() {
-
     console.log('removeBackdropAndProductModal');
     const modalBackdrop = document.querySelector('.modal-backdrop');
-    const product_modal = document.querySelector('.tp-product-modal.show') as HTMLElement;
+    const product_modal = document.querySelector(
+      '.tp-product-modal.show'
+    ) as HTMLElement;
     if (modalBackdrop) {
       modalBackdrop.remove();
       document.body.classList.remove('modal-open');
       document.body.removeAttribute('style');
-     
     }
     if (product_modal) {
-     
       product_modal.style.display = 'none';
     }
 
- console.log('removeBackdropAndProductModal 2');
-
+    console.log('removeBackdropAndProductModal 2');
   }
 }
