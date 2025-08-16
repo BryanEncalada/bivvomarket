@@ -8,7 +8,7 @@
 
 .icono-card {
   background: #fffaf5;
-  padding: 2rem 1rem;
+  padding: 1.2rem 1rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -18,7 +18,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  min-height: 220px;
+
   text-align: center;
 }
 
@@ -30,8 +30,8 @@
 .icono-svg {
   background: transparent;
   border-radius: 50%;
-  width: clamp(80px, 12vw, 100px); /* mínimo 80px, escala hasta 120px */
-  height: clamp(80px, 12vw, 100px);
+  width: clamp(80px, 12vw, 90px); /* mínimo 80px, escala hasta 120px */
+  height: clamp(80px, 12vw, 90px);
   margin: 0 auto 1rem auto;
   display: flex;
   align-items: center;
@@ -55,4 +55,42 @@
   font-size: 0.9rem;
   color: #708090;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  .grid-iconos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .icono-card {
+    padding: 0.2rem 2.4rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-iconos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .icono-card {
+    padding: 0.2rem 2.4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-iconos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .icono-card {
+    padding: 0.6rem 2.9rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid-iconos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .icono-card {
+    padding: 0.1rem 2rem;
+  }
 }

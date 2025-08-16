@@ -1,4 +1,4 @@
-<div class="grid-iconos" [ngStyle]="{ height: height }">
+<div class="grid-iconos">
   <div class="icono-card" *ngFor="let item of items">
     <div class="icono-svg" [innerHTML]="getSanitizedSvg(item.svg)"></div>
     <h4>{{ item.title }}</h4>

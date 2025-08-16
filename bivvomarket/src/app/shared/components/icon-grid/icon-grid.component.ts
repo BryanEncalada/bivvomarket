@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { DomSanitizer,SafeHtml } from '@angular/platform-browser';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-icon-grid',
@@ -18,10 +18,9 @@ export class IconGridComponent {
 
   @Input() height?: string;
 
-    constructor(private sanitizer: DomSanitizer) {}
+  constructor(private sanitizer: DomSanitizer) {}
 
-getSanitizedSvg(svg: string): SafeHtml {
+  getSanitizedSvg(svg: string): SafeHtml {
     return this.sanitizer.bypassSecurityTrustHtml(svg);
   }
-
 }

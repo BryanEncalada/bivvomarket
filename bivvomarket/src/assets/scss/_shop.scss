@@ -503,9 +503,12 @@
 
     &:hover {
       & .product__thumb-2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scaleX(1);
         visibility: visible;
         opacity: 1;
-        @include transform(scaleX(1));
       }
 
       & .product__action {

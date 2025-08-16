@@ -13,18 +13,6 @@ import { IconGridComponent } from '../icon-grid/icon-grid.component';
 })
 export class VideoComponent {
   @Input() colorFondo: string = '#fdd1c4';
-  iconosIzquierda = [
-    {
-      title: 'Natural',
-      subtitle: 'Sin azúcar',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 12c-1-2-2-3-4-4 0 2 1 3 1 5" /><path d="M12 12c1-2 3-3 4-4 0 2-1 3-1 5" /></svg>`,
-    },
-    {
-      title: 'Hermético',
-      subtitle: 'Conserva frescura',
-      svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8 16c0-2 2-4 4-6 2 2 4 4 4 6" /></svg>`,
-    },
-  ];
 
   iconosDerecha = [
     {
@@ -49,7 +37,7 @@ export class VideoComponent {
     },
   ];
 
-  gridHeight: string = '300px'; // altura inicial
+  gridHeight: string = '400px';
 
   ngOnInit(): void {
     this.calcularAlturaResponsive();
