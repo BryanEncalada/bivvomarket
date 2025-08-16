@@ -23,42 +23,28 @@ export class Video2Component {
       svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M8 16c0-2 2-4 4-6 2 2 4 4 4 6" /></svg>`,
     },
   ];
-iconosDerecha = [
-  {
-    title: 'Refrescante',
-    subtitle: 'Disfrútalo frío y natural',
-    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 3h16v2H4z" /> <!-- tapa de vaso -->
-            <path d="M5 5h14v16H5z" /> <!-- vaso -->
-            <path d="M5 12h14" /> <!-- línea de jugo dentro -->
-         </svg>` // icono tipo vaso de jugo
-  },
-  {
-    title: 'Energético',
-    subtitle: 'Carga tu cuerpo de energía natural',
-    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 15 11 9 11 12 22 18 11 6 11 12 2" /> <!-- rayo estilizado -->
-         </svg>` // icono tipo rayo
-  },
-  {
-    title: 'Vitaminado',
-    subtitle: 'Llena tu día de vitaminas',
-    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="8" /> <!-- fruta redonda -->
-            <path d="M12 4v16" /> <!-- segmento vertical -->
-            <path d="M4 12h16" /> <!-- segmento horizontal -->
-         </svg>` // icono tipo fruta cortada
-  },
-  {
-    title: 'Saludable',
-    subtitle: 'Natural y sin añadidos',
-    svg: `<svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#eb3a11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2C8 2 4 6 4 10s4 8 8 8 8-4 8-8-4-8-8-8z" /> <!-- fruta entera -->
-            <path d="M12 10v4" /> <!-- semilla vertical -->
-            <path d="M10 12h4" /> <!-- semilla horizontal -->
-         </svg>` // icono tipo fruta saludable
-  },
-];
+  iconosDerecha = [
+    {
+      title: 'Refrescante',
+      subtitle: 'Disfrútalo frío y natural',
+      svg: `<svg  xmlns="http://www.w3.org/2000/svg"  stroke="#eb3a11"  width="54"  height="54"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-bottle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 5h4v-2a1 1 0 0 0 -1 -1h-2a1 1 0 0 0 -1 1v2z" /><path d="M14 3.5c0 1.626 .507 3.212 1.45 4.537l.05 .07a8.093 8.093 0 0 1 1.5 4.694v6.199a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2v-6.2c0 -1.682 .524 -3.322 1.5 -4.693l.05 -.07a7.823 7.823 0 0 0 1.45 -4.537" /><path d="M7 14.803a2.4 2.4 0 0 0 1 -.803a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 1 -.805" /></svg>`, // icono tipo vaso de jugo
+    },
+    {
+      title: 'Energético',
+      subtitle: 'Carga tu cuerpo de energía natural',
+      svg: `<svg  xmlns="http://www.w3.org/2000/svg"  stroke="#eb3a11"  width="54"  height="54"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-barbell"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 12h1" /><path d="M6 8h-2a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h2" /><path d="M6 7v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-10a1 1 0 0 0 -1 -1h-1a1 1 0 0 0 -1 1z" /><path d="M9 12h6" /><path d="M15 7v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-10a1 1 0 0 0 -1 -1h-1a1 1 0 0 0 -1 1z" /><path d="M18 8h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2" /><path d="M22 12h-1" /></svg>`, // icono tipo rayo
+    },
+    {
+      title: 'Vitaminado',
+      subtitle: 'Llena tu día de vitaminas',
+      svg: `<svg  xmlns="http://www.w3.org/2000/svg"  stroke="#eb3a11"  width="54"  height="54"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-stretching"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 5m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M5 20l5 -.5l1 -2" /><path d="M18 20v-5h-5.5l2.5 -6.5l-5.5 1l1.5 2" /></svg>`, // icono tipo fruta cortada
+    },
+    {
+      title: 'Saludable',
+      subtitle: 'Natural y sin añadidos',
+      svg: `<svg  xmlns="http://www.w3.org/2000/svg"   stroke="#eb3a11"  width="54"  height="54"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-heartbeat"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 13.572l-7.5 7.428l-2.896 -2.868m-6.117 -8.104a5 5 0 0 1 9.013 -3.022a5 5 0 1 1 7.5 6.572" /><path d="M3 13h2l2 3l2 -6l1 3h3" /></svg>`, // icono tipo fruta saludable
+    },
+  ];
 
   gridHeight: string = '300px'; // altura inicial
 
