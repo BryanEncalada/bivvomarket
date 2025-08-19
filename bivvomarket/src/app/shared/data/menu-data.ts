@@ -4,11 +4,10 @@ const menuData: IMenuType[] = [
   {
     link: '/',
     title: 'Inicio',
-
   },
   {
     link: '/#sProductos',
-    title: 'Producto',
+    title: 'Productos',
     hasDropdown: true,
     megamenu: true,
     href: true,
@@ -30,7 +29,7 @@ const menuData: IMenuType[] = [
   {
     link: '/#sRecetas',
     title: 'Recetas',
-    href: true
+    href: true,
   },
 
   {
