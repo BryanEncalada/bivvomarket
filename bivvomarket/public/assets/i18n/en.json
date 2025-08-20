@@ -18,6 +18,12 @@
   "SeccionResenaTit": "Customer Reviews",
   "SeccionResenaSub": "Discover real experiences from those who enjoy our products every day. Your opinion matters too!",
   "billingDetails": "Billing Details",
+
+  "about-Mision": "Mission",
+  "about-target": "Vision",
+  "about-values": "Our Values",
+  "about-Us": "About Us",
+
   "noItems": "No items found in cart to checkout",
   "returnToShop": "Return to shop",
   "firstName": "First Name",

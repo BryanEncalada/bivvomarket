@@ -1,0 +1,108 @@
+<main>
+  <section style="background-color: #fdd1c4">
+    <div style="margin: 0 50px; padding-top: 50px">
+      <app-titulo-seccion
+        id="sRecetas"
+        [Titulo1]="'about-Us' | transloco"
+      ></app-titulo-seccion>
+
+      <div class="grid-iconos pt-20">
+        <!-- Card Historia -->
+        <div class="icono-card pt-20">
+          <div class="icono-svg">
+            <!-- Aquí puedes poner un SVG o ícono -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#225e26"
+              width="54"
+              height="54"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-book"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+              <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+              <path d="M3 6l0 13" />
+              <path d="M12 6l0 13" />
+              <path d="M21 6l0 13" />
+            </svg>
+          </div>
+          <h4>Nuestra Historia</h4>
+          <p>
+            Nuestra historia nace del deseo de compartir lo mejor de la tierra:
+            la quinua y los frutos naturales. Inspirados en la tradición y en un
+            estilo de vida saludable, decidimos crear productos que nutran el
+            cuerpo y respeten el medio ambiente. Desde el inicio trabajamos con
+            productores locales, valorando su esfuerzo y fomentando prácticas
+            sostenibles. Hoy seguimos creciendo, con la misma esencia: ofrecer
+            alimentos auténticos que transmitan confianza, bienestar y un
+            compromiso real con las personas y el planeta.
+          </p>
+        </div>
+
+        <!-- Card Misión -->
+        <div class="icono-card">
+          <div class="icono-svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#225e26"
+              width="54"
+              height="54"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-target"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" />
+              <path d="M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0 -10 0" />
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            </svg>
+          </div>
+          <h4>Nuestra Misión</h4>
+          <p>
+            Nuestra misión es llevar a cada familia productos naturales de
+            quinua y jugos frescos que aporten energía, salud y sabor. Queremos
+            promover un estilo de vida consciente, brindando opciones nutritivas
+            y sostenibles que cuiden a las personas y respeten al medio
+            ambiente. Trabajamos junto a comunidades locales, fortaleciendo la
+            producción responsable y fomentando relaciones justas. Cada producto
+            refleja nuestro compromiso con la calidad, el bienestar y un futuro
+            más saludable para quienes confían en nosotros y para el planeta.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 align-items-center pt-100">
+        <app-titulo-seccion
+          [Titulo1]="'about-values' | transloco"
+        ></app-titulo-seccion>
+
+        <!-- Columna izquierda con imagen -->
+        <div
+          class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-4 d-flex justify-content-rigth icon-grid-padding"
+        >
+          <img
+            src="assets/img/banner/banner03.webp"
+            alt="Producto"
+            class="img-fluid custom-product-img"
+            style="height: auto; width: 100%"
+          />
+        </div>
+
+        <div class="col-12 col-md-6 pb-mobile">
+          <app-icon-grid
+            [items]="iconosDerecha"
+            [height]="gridHeight"
+          ></app-icon-grid>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

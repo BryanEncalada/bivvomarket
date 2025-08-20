@@ -6,6 +6,10 @@ const menuData: IMenuType[] = [
     title: 'Inicio',
   },
   {
+    link: '/pages/nosotros',
+    title: 'Nosotros',
+  },
+  {
     link: '/#sProductos',
     title: 'Productos',
     hasDropdown: true,
@@ -45,6 +49,11 @@ export const mobile_menus: IMobileMenu[] = [
   {
     link: '/',
     title: 'Home',
+  },
+
+  {
+    link: '/pages/nosotros',
+    title: 'Nosotros',
   },
   {
     link: '/pages/contact',

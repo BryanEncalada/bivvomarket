@@ -11,6 +11,7 @@ import { CartComponent } from './shop/components/cart/cart.component';
 import { CheckoutComponent } from './shop/components/checkout/checkout.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
+import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
 export const routes: Routes = [
   {
@@ -46,6 +47,11 @@ export const routes: Routes = [
     path: 'pages/contact',
     component: ContactComponent,
     title: 'Contáctanos | Bivvo Market',
+  },
+  {
+    path: 'pages/nosotros',
+    component: NosotrosComponent,
+    title: 'Sobre nosotros | Bivvo Market',
   },
   {
     path: 'pages/terminos',
