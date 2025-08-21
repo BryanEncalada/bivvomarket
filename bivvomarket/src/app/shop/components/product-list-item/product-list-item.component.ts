@@ -21,7 +21,11 @@ export class ProductListItemComponent {
     public wishlistService: WishlistService,
     public compareService: CompareService,
     public utilsService: UtilsService
-  ) {}
+  ) {
+
+console.log(this.product);
+
+  }
 
   // add to cart
   addToCart(item: IProduct) {
