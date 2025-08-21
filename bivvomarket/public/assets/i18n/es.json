@@ -101,19 +101,19 @@
     "1": {
       "title": "QUINOA POP ORIGINAL<br />",
       "subtitle": "QUINOA ORIGINAL es un superalimento 100% orgánico con alto contenido de proteína",
-      "bgImg": "/assets/img/slider/03/sliderBM04.webp",
+      "bgImg": "/assets/img/slider/03/2.2_2.webp",
       "isDark": true
     },
     "2": {
       "title": "QUINOA POP CACAO<br />",
       "subtitle": "QUINOA CACAO es un superalimento a base de quinoa y 100% orgánico",
-      "bgImg": "/assets/img/slider/03/sliderBM05.webp",
+      "bgImg": "/assets/img/slider/03/2.1_2.webp",
       "isDark": true
     },
     "3": {
       "title": "QUINOA POP CUBIERTO CON MIEL<br />",
       "subtitle": "QUINOA CON MIEL es un superalimento a base de quinoa 100% orgánica y miel natural",
-      "bgImg": "/assets/img/slider/03/sliderBM06.webp",
+      "bgImg": "/assets/img/slider/03/2.3_2.webp",
       "isDark": true
     }
   },
