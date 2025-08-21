@@ -2,15 +2,13 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import Swiper from 'swiper';
 import { EffectFade, Pagination } from 'swiper/modules';
 import { IHeroSlider } from '../../../types/hero-slider-t';
-import { HeroSliderData } from '../../../data/hero-slider-data';
 import { CommonModule } from '@angular/common';
-import { WaveDividerComponent } from '../../wave-divider/wave-divider.component';
 import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 import { combineLatest, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-hero-slider-two',
-  imports: [CommonModule, TranslocoModule, WaveDividerComponent],
+  imports: [CommonModule, TranslocoModule],
   templateUrl: './hero-slider-two.component.html',
   styleUrl: './hero-slider-two.component.scss',
 })

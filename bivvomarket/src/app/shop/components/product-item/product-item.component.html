@@ -1,8 +1,11 @@
+
 <div class="product__wrapper mb-45">
+  {{product.img}}
   <div class="product__thumb">
     <a [routerLink]="['/shop/shop-details', product._id]" class="w-img2">
       <img [src]="product.img" alt="product-img" />
       <img class="product__thumb-2" [src]="product.thumb_img" alt="product-img" />
+     
     </a>
     <div class="product__action transition-3">
       <!--  <a
