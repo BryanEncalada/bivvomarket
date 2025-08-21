@@ -11,5 +11,5 @@ import { Component, Input } from '@angular/core';
 })
 export class EspaciadorComponent {
   @Input() color: string = 'transparent'; // Puedes pasar cualquier color
-  @Input() height: string = '2rem'; // Ej: '50px', '5vh', '2rem', etc.
+  @Input() height: string = '1rem'; // Ej: '50px', '5vh', '2rem', etc.
 }

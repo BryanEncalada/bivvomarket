@@ -596,6 +596,7 @@ p {
 .section {
   &__title {
     position: relative;
+
     &::after {
       border-top: 1px solid $border;
       content: "";
@@ -628,6 +629,7 @@ p {
       text-transform: uppercase;
       color: $black;
       font-weight: 700;
+
       @media #{$sm,$xs} {
         font-size: 20px;
       }
@@ -651,8 +653,8 @@ p {
           position: absolute;
           content: "";
           top: 13px;
-          border-top: 1px solid #eb3a11;
-          border-bottom: 1px solid #eb3a11;
+          border-top: 1px solid #225e26;
+          border-bottom: 1px solid #225e26;
           @media #{$xs} {
             display: none;
           }

@@ -11,7 +11,7 @@ export class TituloSeccionComponent {
   @Input() Titulo1!: string;
   @Input() desc1!: string;
   @Input() colorFondo: string = '#fdd1c4';
-  @Input() colorTexto: string = '#000000';
+  @Input() colorTexto: string = '#225e26';
   ngOnInit() {
     console.log(this.Titulo1);
   }
