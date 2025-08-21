@@ -13,9 +13,9 @@ import { ProductListItemComponent } from '../product-list-item/product-list-item
 import { FormsModule } from '@angular/forms';
 import { UtilsService } from '../../../shared/services/utils.service';
 import { ProductService } from '../../../shared/services/product.service';
-import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
 import { TranslocoModule } from '@jsverse/transloco';
 import { IProduct } from '../../../shared/types/IProduct';
+import { TituloSeccionComponent } from "../../../shared/components/titulo-seccion/titulo-seccion.component";
 
 @Component({
   selector: 'app-shop-area',
@@ -27,10 +27,10 @@ import { IProduct } from '../../../shared/types/IProduct';
     ProductItemComponent,
     ProductListItemComponent,
     PaginationComponent,
-    TituloSeccionComponent,
     TranslocoModule,
     CommonModule,
-  ],
+    TituloSeccionComponent
+],
   templateUrl: './shop-area.component.html',
   styleUrl: './shop-area.component.scss',
 })
@@ -114,18 +114,35 @@ export class ShopAreaComponent {
   }
 
   // SortBy Filter
-  sortByFilter(value: string) {
-    this.router
-      .navigate([], {
-        relativeTo: this.route,
-        queryParams: { sortBy: value ? value : null },
-        queryParamsHandling: 'merge',
-        skipLocationChange: false,
-      })
-      .finally(() => {
-        this.viewScroller.setOffset([120, 120]);
-        this.viewScroller.scrollToAnchor('products');
-      });
+  //sortByFilter(value: string) {
+    // this.router
+    //   .navigate([], {
+    //     relativeTo: this.route,
+    //     queryParams: { sortBy: value ? value : null },
+    //     queryParamsHandling: 'merge',
+    //     skipLocationChange: false,
+    //   })
+    //   .finally(() => {
+    //     this.viewScroller.setOffset([120, 120]);
+    //     this.viewScroller.scrollToAnchor('products');
+    //   });
+  //}
+
+   sortByFilter(sortValue: string) {
+    switch (sortValue) {
+
+      case 'high':
+        this.products.sort((a, b) => b.price - a.price);
+        break;
+
+      case 'low':
+        this.products.sort((a, b) => a.price - b.price);
+        break;
+
+      default: // asc o el "Default Sorting"
+        this.products.sort((a, b) => a.title.localeCompare(b.title));
+        break;
+    }
   }
 
   // Pagination

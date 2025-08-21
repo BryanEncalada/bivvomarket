@@ -2,11 +2,7 @@
   <div class="product__thumb">
     <a [routerLink]="['/shop/shop-details', product._id]" class="w-img2">
       <img [src]="product.img" alt="product-img" />
-      <img
-        class="product__thumb-2"
-        [src]="product.thumb_img"
-        alt="product-img"
-      />
+      <img class="product__thumb-2" [src]="product.thumb_img" alt="product-img" />
     </a>
     <div class="product__action transition-3">
       <!--  <a
@@ -24,54 +20,45 @@
                 <i class="fal fa-sliders-h"></i>
             </a> -->
       <!-- Button trigger modal -->
-      <a
-        class="cursor-pointer"
-        data-bs-toggle="modal"
-        [attr.data-bs-target]="'#' + utilsService.modalId"
-        (click)="
+      <a class="cursor-pointer" data-bs-toggle="modal" [attr.data-bs-target]="'#' + utilsService.modalId" (click)="
           utilsService.handleOpenModal('product-modal-' + product._id, product)
-        "
-      >
+        ">
         <i class="fal fa-search"></i>
       </a>
     </div>
     <div *ngIf="product.discount || product.new" class="product__sale">
       <span *ngIf="product.new || product.discount" class="new">new</span>
-      <span *ngIf="product.discount" class="percent"
-        >-{{ product.discount }}%</span
-      >
+      <span *ngIf="product.discount" class="percent">-{{ product.discount }}%</span>
     </div>
   </div>
   <div class="product__content p-relative">
     <div class="product__content-inner">
       <h4>
-        <a
-          [routerLink]="['/shop/shop-details', product._id]"
-          [innerHTML]="product.title"
-        ></a>
+        <a [routerLink]="['/shop/shop-details', product._id]" [innerHTML]="product.title"></a>
       </h4>
       <div class="product__price">
         <span>${{ product.price }}</span>
-        <span *ngIf="product.old_price" class="old-price"
-          >${{ product.old_price }}</span
-        >
+        <span *ngIf="product.old_price" class="old-price">${{ product.old_price }}</span>
       </div>
     </div>
+
     <div class="add-cart p-absolute transition-3">
-      <a
-        *ngIf="!isItemInCart(product)"
-        (click)="addToCart(product)"
-        class="cursor-pointer"
-      >
+      <a *ngIf="!isItemInCart(product)" (click)="addToCart(product)" class="cursor-pointer">
         {{ "productItem.add" | transloco }}
       </a>
-      <a
-        *ngIf="isItemInCart(product)"
-        routerLink="/shop/cart"
-        class="cursor-pointer"
-      >
+      <a *ngIf="isItemInCart(product)" routerLink="/shop/cart" class="cursor-pointer">
         {{ "productItem.view" | transloco }}
       </a>
     </div>
+
+
+    <!-- <div class="add-cart p-absolute transition-3">
+      <a *ngIf="!isItemInCart(product)" (click)="addToCart(product)" class="cursor-pointer">
+        {{ "productItem.add" | transloco }}
+      </a>
+      <a *ngIf="isItemInCart(product)" routerLink="/shop/cart" class="cursor-pointer">
+        {{ "productItem.view" | transloco }}
+      </a>
+    </div> -->
   </div>
 </div>
