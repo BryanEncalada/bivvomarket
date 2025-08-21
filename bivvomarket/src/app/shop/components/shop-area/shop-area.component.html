@@ -1,9 +1,7 @@
-
-
 <section class="shop__area pt-100 pb-100">
 
   <app-titulo-seccion [Titulo1]="'SeccionProductosTit' | transloco" [desc1]="'SeccionProductosSub' | transloco">
-</app-titulo-seccion>
+  </app-titulo-seccion>
 
   <div class="container">
     <div class="row">
@@ -14,15 +12,16 @@
           <div class="shop__header d-sm-flex justify-content-between align-items-center mb-40">
             <div class="shop__header-left">
               <div class="show-text">
-                <span>Showing 1–{{ products.length }} of {{ paginate.totalItems }} results </span>
+                <span>{{ "ResultadoProdcMostrar" | transloco }}
+                  {{ paginate.totalItems }} productos </span>
               </div>
             </div>
             <div class="shop__header-right d-flex align-items-center justify-content-between justify-content-sm-end">
               <div class="sort-wrapper mr-30 pr-25 p-relative">
                 <select [(ngModel)]="sortBy" (ngModelChange)="onSortingChange($event)">
-                  <option value="asc">Default Sorting</option>
-                  <option value="high">Price High To Low</option>
-                  <option value="low">Price Low To High</option>
+                  <option value="asc">Listado por defecto</option>
+                  <option value="high">Precio mas alto al bajo</option>
+                  <option value="low">Precio mas bajo al alto</option>
                 </select>
               </div>
               <ul class="nav nav-pills" id="pills-tab" role="tablist">
@@ -41,9 +40,9 @@
           <!-- if no item in product  -->
           <div *ngIf="products.length === 0" class="cartmini__empty text-center mt-80">
             <img src="/assets/img/shop/empty-cart.png" alt="empty-cart-img" />
-            <h4>Sorry! Couldn't find the product you were looking For!!!</h4>
-            <p>Please check if you have misspelt something or try searching with other words.</p>
-            <a routerLink="/shop" class="os-btn os-btn-3">Continue Shopping</a>
+            <h4>{{ "shopArea.NoseEncontroProducto1" | transloco }}</h4>
+            <p>{{ "shopArea.NoseEncontroProducto2" | transloco }}</p>
+
           </div>
 
           <div class="tab-content" id="pills-tabContent">

@@ -21,15 +21,11 @@ export class ProductListItemComponent {
     public wishlistService: WishlistService,
     public compareService: CompareService,
     public utilsService: UtilsService
-  ) {
-
-console.log(this.product);
-
-  }
+  ) {  }
 
   ngOnInit(): void {
     console.log(
-      '📦 Product recibido en ProductListItemComponent:',
+      'Product recibido en ProductListItemComponent:',
       this.product
     );
   }

@@ -46,12 +46,12 @@ export class CartService {
     } else {
       this.cart_products.map((item: IProduct) => {
         if (item._id === payload._id) {
-          if (typeof item.orderQuantity !== 'undefined') {
-            if (item.quantity >= item.orderQuantity + this.orderQuantity) {
-              item.orderQuantity =
+          if (typeof item.order_quantity !== 'undefined') {
+            if (item.quantity >= item.order_quantity + this.orderQuantity) {
+              item.order_quantity =
                 this.orderQuantity !== 1
-                  ? this.orderQuantity + item.orderQuantity
-                  : item.orderQuantity + 1;
+                  ? this.orderQuantity + item.order_quantity
+                  : item.order_quantity + 1;
               //this.toastrService.success(`${this.orderQuantity} ${item.title} added to cart`);
             } else {
               //this.toastrService.success(`No more quantity available for this product!`);
@@ -69,19 +69,19 @@ export class CartService {
   public totalPriceQuantity() {
     return this.cart_products.reduce(
       (cartTotal: { total: number; quantity: number }, cartItem: IProduct) => {
-        const { price, orderQuantity, discount } = cartItem;
-        if (typeof orderQuantity !== 'undefined') {
+        const { price, order_quantity, discount } = cartItem;
+        if (typeof order_quantity !== 'undefined') {
           if (discount && discount > 0) {
             // Calculate the item total with discount
             const itemTotal =
-              (price - (price * discount) / 100) * orderQuantity;
+              (price - (price * discount) / 100) * order_quantity;
             cartTotal.total += itemTotal;
           } else {
             // Calculate the item total without discount
-            const itemTotal = price * orderQuantity;
+            const itemTotal = price * order_quantity;
             cartTotal.total += itemTotal;
           }
-          cartTotal.quantity += orderQuantity;
+          cartTotal.quantity += order_quantity;
         }
         return cartTotal;
       },
@@ -109,9 +109,9 @@ export class CartService {
   quantityDecrement(payload: IProduct) {
     this.cart_products.map((item: IProduct) => {
       if (item._id === payload._id) {
-        if (typeof item.orderQuantity !== 'undefined') {
-          if (item.orderQuantity > 1) {
-            item.orderQuantity = item.orderQuantity - 1;
+        if (typeof item.order_quantity !== 'undefined') {
+          if (item.order_quantity > 1) {
+            item.order_quantity = item.order_quantity - 1;
             //this.toastrService.info(`Decrement Quantity For ${item.title}`);
           }
         }
