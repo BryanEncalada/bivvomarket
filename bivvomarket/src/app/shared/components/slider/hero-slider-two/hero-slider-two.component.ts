@@ -18,25 +18,21 @@ export class HeroSliderTwoComponent {
   public hero_slider_data: IHeroSlider[] = [];
   private subscription!: Subscription;
 
-  constructor(private translocoService: TranslocoService) {
-
-  }
+  constructor(private translocoService: TranslocoService) {}
 
   ngAfterViewInit() {
-
     const ids = [1, 2, 3];
-    const observables = ids.map(id =>
+    const observables = ids.map((id) =>
       this.translocoService.selectTranslateObject(`heroSlider.${id}`)
     );
 
-    this.subscription = combineLatest(observables).subscribe(translations => {
+    this.subscription = combineLatest(observables).subscribe((translations) => {
       this.hero_slider_data = translations.map((translation, index) => ({
         id: ids[index],
         ...translation,
       }));
 
       setTimeout(() => {
-
         if (this.heroSliderContainer) {
           this.swiperInstance = new Swiper('.slider-active', {
             slidesPerView: 1,

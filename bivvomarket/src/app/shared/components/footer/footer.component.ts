@@ -7,7 +7,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-footer',
-  imports: [NgFor, RouterModule, WaveDividerComponent, TranslocoModule],
+  imports: [NgFor, RouterModule, TranslocoModule],
 
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',

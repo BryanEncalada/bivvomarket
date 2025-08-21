@@ -15,10 +15,6 @@ import { ResenaComponent } from '../../cliente/components/resena/resena.componen
     IconGridComponent,
     TituloSeccionComponent,
     TranslocoModule,
-
-    VideoComponent,
-    EspaciadorComponent,
-    ResenaComponent,
   ],
   templateUrl: './nosotros.component.html',
   styleUrl: './nosotros.component.scss',
