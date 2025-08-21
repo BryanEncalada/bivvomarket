@@ -40,7 +40,7 @@
                 </td>
                 <td class="product-quantity">
                   <div class="cart-plus-minus">
-                    <input type="text" [value]="item.orderQuantity" readonly />
+                    <input type="text" [value]="item.order_quantity" readonly />
                     <div
                       (click)="cartService.quantityDecrement(item)"
                       class="dec qtybutton"
@@ -57,7 +57,7 @@
                 </td>
                 <td class="product-subtotal">
                   <span class="amount">
-                    ${{ (item.price * item.orderQuantity!).toFixed(2) }}
+                    ${{ (item.price * item.order_quantity!).toFixed(2) }}
                   </span>
                 </td>
                 <td class="product-remove">
