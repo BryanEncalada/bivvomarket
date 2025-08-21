@@ -27,6 +27,13 @@ console.log(this.product);
 
   }
 
+  ngOnInit(): void {
+    console.log(
+      '📦 Product recibido en ProductListItemComponent:',
+      this.product
+    );
+  }
+
   // add to cart
   addToCart(item: IProduct) {
     this.cartService.addCartProduct(item);
