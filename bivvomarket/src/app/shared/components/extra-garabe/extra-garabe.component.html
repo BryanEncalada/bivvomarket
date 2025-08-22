@@ -1,0 +1,71 @@
+<app-espaciador height="6rem"></app-espaciador>
+<app-titulo-seccion
+  id="sRecetas"
+  [Titulo1]="'SeccionRecetasTit' | transloco"
+  [desc1]="'SeccionRecetasSub' | transloco"
+>
+</app-titulo-seccion>
+<app-espaciador height="2rem"></app-espaciador>
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Card 1 -->
+    <div class="col-12 col-md-6">
+      <div class="card card-colored card-1 shadow-sm h-100">
+        <div
+          class="ratio rounded-3 overflow-hidden"
+          style="--bs-aspect-ratio: 177.8%"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center w-100 h-100 p-2"
+          >
+            <video
+              class="video-el"
+              autoplay
+              muted
+              playsinline
+              loop
+              poster="assets/poster01.jpg"
+              title="Video 1"
+            >
+              <source src="assets/video/video02.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+          </div>
+        </div>
+        <!-- <div class="card-body py-3 text-center">
+          <h6 class="mb-0">Video 1 — Producto</h6>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-12 col-md-6">
+      <div class="card card-colored card-2 shadow-sm h-100">
+        <div
+          class="ratio rounded-3 overflow-hidden"
+          style="--bs-aspect-ratio: 177.8%"
+        >
+          <div
+            class="d-flex align-items-center justify-content-center w-100 h-100 p-2"
+          >
+            <video
+              class="video-el"
+              autoplay
+              muted
+              playsinline
+              loop
+              poster="assets/poster02.jpg"
+              title="Video 2"
+            >
+              <source src="assets/video/video01.mp4" type="video/mp4" />
+              Tu navegador no soporta video HTML5.
+            </video>
+          </div>
+        </div>
+        <!-- <div class="card-body py-3 text-center">
+          <h6 class="mb-0">Video 2 — Receta</h6>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

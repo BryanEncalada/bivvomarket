@@ -10,6 +10,7 @@ import { BreadcrumbOneComponent } from '../../../shared/breadcrumb/breadcrumb-on
 import { VideoComponent } from '../../../shared/components/video/video.component';
 import { IProduct } from '../../../shared/types/IProduct';
 import { Video2Component } from '../../../shared/components/video2/video2.component';
+import { ExtraGarabeComponent } from '../../../shared/components/extra-garabe/extra-garabe.component';
 
 @Component({
   selector: 'app-dynamic-shop-details',
@@ -19,6 +20,7 @@ import { Video2Component } from '../../../shared/components/video2/video2.compon
     RelatedProductsComponent,
     VideoComponent,
     Video2Component,
+    ExtraGarabeComponent,
   ],
   templateUrl: './dynamic-shop-details.component.html',
   styleUrl: './dynamic-shop-details.component.scss',
