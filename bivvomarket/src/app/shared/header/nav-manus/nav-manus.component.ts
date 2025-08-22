@@ -29,7 +29,7 @@ export class NavManusComponent {
     throw new Error('Method not implemented.');
   }
 
-  bg: string = '/assets/img/testimonial/testimonial-bg02_ant.png';
+  bg: string = 'red';
 
   getMenuClasses(item: IMenuType): string {
     const classes = [];

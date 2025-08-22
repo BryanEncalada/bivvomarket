@@ -1,11 +1,12 @@
 <section class="video-banner-section">
-  <!-- Contenedor de video con padding -->
-  <div class="video-wrapper">
-    <div class="video-frame">
-      <video autoplay muted loop playsinline class="responsive-video">
-        <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
-        {{ "video.suport" | transloco }}
-      </video>
-    </div>
+  <div class="video-frame">
+    <video autoplay muted playsinline loop class="responsive-video">
+      <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Fallback / accesibilidad fuera del <video> -->
+    <span class="visually-hidden">
+      {{ "video.support" | transloco }}
+    </span>
   </div>
 </section>

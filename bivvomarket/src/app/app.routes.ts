@@ -12,6 +12,7 @@ import { CheckoutComponent } from './shop/components/checkout/checkout.component
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
+import { ProductComponent } from './pages/product/product.component';
 
 export const routes: Routes = [
   {
@@ -62,6 +63,11 @@ export const routes: Routes = [
     path: 'pages/privacidad',
     component: PrivacyComponent,
     title: 'Política de privacidad | Bivvo Market',
+  },
+  {
+    path: 'pages/producto',
+    component: ProductComponent,
+    title: 'Productos | Bivvo Market',
   },
   {
     path: '**',
