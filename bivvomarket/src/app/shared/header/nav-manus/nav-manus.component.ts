@@ -21,15 +21,21 @@ export class NavManusComponent {
 
   constructor(public productService: ProductService) {
     this.products$ = this.productService.products;
-  }
-  sortBy(
-    response: Response<any, Record<string, any>>,
-    sortBy: any
-  ): IProduct[] {
-    throw new Error('Method not implemented.');
+
+    // Llenar dinámicamente el menú "Productos"
+    this.products$.subscribe((prods) => {
+      const productosMenu = this.menu_data.find((m) => m.title === 'Productos');
+
+      if (productosMenu) {
+        productosMenu.dropdownItems = prods.map((p) => ({
+          link: `/shop/shop-details/${p._id}`, // ajusta según tu API
+          title: p.title, // ajusta según tu modelo
+        }));
+      }
+    });
   }
 
-  bg: string = 'red';
+  bg: string = '#f5f5f5';
 
   getMenuClasses(item: IMenuType): string {
     const classes = [];
