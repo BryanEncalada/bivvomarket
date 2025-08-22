@@ -1,6 +1,6 @@
 import { Component, DestroyRef, inject, Input } from '@angular/core';
 import { ProductItemComponent } from '../product-item/product-item.component';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 import { ProductService } from '../../../shared/services/product.service';
 import { TranslocoModule } from '@jsverse/transloco';
 import { IProduct } from '../../../shared/types/IProduct';
@@ -8,7 +8,7 @@ import { catchError, map, of, take, tap } from 'rxjs';
 
 @Component({
   selector: 'app-related-products',
-  imports: [ProductItemComponent, NgFor, TranslocoModule],
+  imports: [ProductItemComponent, NgFor, TranslocoModule, NgIf],
   templateUrl: './related-products.component.html',
   styleUrl: './related-products.component.scss',
 })
