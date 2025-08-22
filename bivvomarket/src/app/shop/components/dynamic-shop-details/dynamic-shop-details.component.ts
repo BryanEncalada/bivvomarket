@@ -39,7 +39,7 @@ export class DynamicShopDetailsComponent {
       .pipe(
         switchMap((params) => {
           const productId = params.get('id');
-          console.log('productId', productId);
+          console.log('productId', params);
           if (productId) {
             return this.productService.getProductById(productId);
           }

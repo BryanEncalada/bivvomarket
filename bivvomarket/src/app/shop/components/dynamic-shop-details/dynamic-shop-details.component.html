@@ -13,7 +13,13 @@
 ></app-related-products>
 <!-- related products end -->
 
+<!-- <div class="mt-3 p-2 bg-light border">
+  <p><strong>Debug brand:</strong> {{ product?.brand }}</p>
+  <p><strong>Debug id (_id):</strong> {{ product?._id }}</p>
+</div> -->
+
 <div style="padding-top: 50px; padding-bottom: 0px">
   <app-video2></app-video2>
 </div>
-<app-extra-garabe> </app-extra-garabe>
+
+<app-extra-garabe *ngIf="product?.category === 'syrup'"></app-extra-garabe>
