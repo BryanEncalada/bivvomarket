@@ -2,8 +2,8 @@
   <div class="row">
     <div class="col-xl-4 col-lg-4">
       <div class="product__thumb">
-        <a [routerLink]="['/shop/shop-details', product._id]" class="w-img">
-          <img [src]="product.img" alt="product-img" />
+        <a [routerLink]="['/shop/shop-details', product._id]" class="w-img"   >
+          <img [src]="product.img" alt="product-img"  />
           <img
             class="product__thumb-2"
             [src]="product.thumb_img"
@@ -37,7 +37,7 @@
             <ul>
               <li
                 *ngFor="let list of product.detallesLista">
-                <span>{{ list }}</span>
+                <span>{{ list.detalle }}</span>
               </li>
             </ul>
           </div>
