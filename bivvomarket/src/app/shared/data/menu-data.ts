@@ -10,25 +10,12 @@ const menuData: IMenuType[] = [
     title: 'Nosotros',
   },
   {
-    link: '/#sProductos',
+    link: '/pages/producto',
     title: 'Productos',
     hasDropdown: true,
     megamenu: true,
     href: true,
-    dropdownItems: [
-      { link: '//shop/shop-details/1', title: 'Cacao Pop de Quinoa' },
-      { link: '//shop/shop-details/2', title: 'Miel Pop de Quinoa' },
-      { link: '//shop/shop-details/3', title: 'Paletas Originales De Quinua' },
-      { link: '//shop/shop-details/4', title: 'Bundle pack (all 3 products)' },
-      { link: '//shop/shop-details/5', title: 'Paletas De Cacao Y Quinoa' },
-      { link: '//shop/shop-details/6', title: '3-Pack Honey Flavor' },
-      { link: '//shop/shop-details/7', title: 'Jarabe Frutado de Mango 1KG' },
-      { link: '//shop/shop-details/8', title: 'Jarabe Frutado de Fresa 1KG' },
-      {
-        link: '//shop/shop-details/9',
-        title: 'Jarabe Frutado de Maracuyá 1KG',
-      },
-    ],
+    dropdownItems: [],
   },
   {
     link: '/#sRecetas',
@@ -56,7 +43,7 @@ export const mobile_menus: IMobileMenu[] = [
     title: 'Nosotros',
   },
   {
-    link: '/pages/contact',
+    link: '/pages/producto',
     title: 'Producto',
   },
   {
