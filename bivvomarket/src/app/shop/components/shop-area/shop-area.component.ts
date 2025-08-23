@@ -67,7 +67,7 @@ export class ShopAreaComponent {
     private router: Router,
     private viewScroller: ViewportScroller
   ) {
-    
+
     this.niceSelectOptions = this.productService.filterSelect;
 
     this.route.queryParams.subscribe((params) => {
@@ -140,7 +140,7 @@ export class ShopAreaComponent {
         break;
 
       default: // asc o el "Default Sorting"
-        this.products.sort((a, b) => a.title.localeCompare(b.title));
+        this.products.sort((a, b) => a.category.localeCompare(b.category));
         break;
     }
   }

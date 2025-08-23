@@ -38,7 +38,7 @@
     </ul>
     <div class="total-price d-flex justify-content-between mb-30">
       <span>Subtotal:</span>
-      <span>${{ cartService.totalPriceQuantity().total }}</span>
+      <span>${{ cartService.totalPriceQuantity().total | number:'1.2-2' }}</span>
     </div>
     <div class="checkout-link">
       <a routerLink="/shop/cart" class="os-btn">{{

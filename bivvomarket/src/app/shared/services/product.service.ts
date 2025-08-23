@@ -50,13 +50,9 @@ export class ProductService {
   // Get related Products
   public getRelatedProducts(productId: string, brand: string): Observable<IProduct[]> {
 
-    console.log('----------->', brand, productId)
 
     return this.products.pipe(
       map((items) => {
-
-
-
         return items.filter(
           (p) =>
             p.category == brand &&
