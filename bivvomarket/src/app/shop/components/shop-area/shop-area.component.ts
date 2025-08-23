@@ -67,7 +67,7 @@ export class ShopAreaComponent {
     private router: Router,
     private viewScroller: ViewportScroller
   ) {
-    this.maxPrice = this.productService.maxPrice;
+    
     this.niceSelectOptions = this.productService.filterSelect;
 
     this.route.queryParams.subscribe((params) => {

@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
-import { of, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { IProduct } from '../types/IProduct';
-import product_data from '../data/product_data';
 import { HttpClient, HttpParams } from '@angular/common/http';
 
-const all_products = product_data;
+
 
 @Injectable({
   providedIn: 'root',
@@ -18,12 +17,10 @@ export class ProductService {
 
   // Get Products
   public get products(): Observable<IProduct[]> {
-    const all_products = product_data;
-
     return this.http.get<IProduct[]>(this.apiUrl);
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   activeImg: string | string[] | null = null;
 
@@ -51,28 +48,32 @@ export class ProductService {
     );
   }
   // Get related Products
-  public getRelatedProducts(
-    productId: string,
-    brand: string
-  ): Observable<IProduct[]> {
+  public getRelatedProducts(productId: string, brand: string): Observable<IProduct[]> {
+
+    console.log('----------->', brand, productId)
+
     return this.products.pipe(
       map((items) => {
+
+
+
         return items.filter(
           (p) =>
-            p.brand.toLowerCase().includes(brand.toLowerCase()) &&
-            p._id !== productId
+            p.category == brand &&
+            p._id != productId
         );
       })
     );
   }
 
   // Get max price
-  public get maxPrice(): number {
-    const max_price = all_products.reduce((max, product) => {
-      return product.price > max ? product.price : max;
-    }, 0);
-    return max_price;
-  }
+  // public get maxPrice(): number {
+  //   const max_price = all_products.reduce((max, product) => {
+  //     return product.price > max ? product.price : max;
+  //   }, 0);
+  //   return max_price;
+  // }
+
   // shop filterSelect
   public filterSelect = [
     { value: 'asc', text: 'Default Sorting' },

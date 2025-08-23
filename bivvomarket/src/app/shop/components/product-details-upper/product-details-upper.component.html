@@ -1,29 +1,17 @@
 <div class="row">
-  <div
-    [ngClass]="
+  <div [ngClass]="
       style_2
         ? 'col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12'
         : 'col-xl-6 col-lg-6'
-    "
-  >
+    ">
     <div *ngIf="!style_2" class="product__modal-box d-flex">
       <div class="product__modal-nav mr-20">
         <nav>
           <div class="nav nav-tabs" id="product-details" role="tablist">
-            <a
-              *ngFor="let img of product.imagenes"
-              class="nav-item nav-link mb-1 cursor-pointer"
-            >
+            <a *ngFor="let img of product.imagenes" class="nav-item nav-link mb-1 cursor-pointer">
               <!-- [class.active]="img === productService.activeImg" -->
-              <div
-                class="product__nav-img w-img"
-                (click)="productService.handleImageActiveArray(img.imagen)"
-              >
-                <img
-                  [src]="img.imagen"
-                  alt="product-img"
-                  style="width: 92px; height: 117px"
-                />
+              <div class="product__nav-img w-img" (click)="productService.handleImageActiveArray(img.imagen)">
+                <img [src]="img.imagen" alt="product-img" style="width: 92px; height: 117px" />
               </div>
             </a>
           </div>
@@ -34,9 +22,7 @@
           <img [src]="productService.activeImg" alt="product-img" />
           <div *ngIf="product.discount || product.new" class="product__sale">
             <span *ngIf="product.new || product.discount" class="new">new</span>
-            <span *ngIf="product.discount" class="percent"
-              >-{{ product.discount }}%</span
-            >
+            <span *ngIf="product.discount" class="percent">-{{ product.discount }}%</span>
           </div>
         </div>
       </div>
@@ -51,20 +37,10 @@
       <nav>
         <div class="nav nav-tabs" id="product-details" role="tablist">
 
-          <a
-            *ngFor="let img of product.imagenes"
-            class="nav-item nav-link cursor-pointer me-2"
-          >
+          <a *ngFor="let img of product.imagenes" class="nav-item nav-link cursor-pointer me-2">
             <!-- [class.active]="img === productService.activeImg" -->
-            <div
-              class="product__nav-img w-img"
-              (click)="productService.handleImageActive(img.imagen)"
-            >
-              <img
-                [src]="img.imagen"
-                alt="product-img"
-                style="width: 92px; height: 117px"
-              />
+            <div class="product__nav-img w-img" (click)="productService.handleImageActive(img.imagen)">
+              <img [src]="img.imagen" alt="product-img" style="width: 92px; height: 117px" />
             </div>
           </a>
         </div>
@@ -72,18 +48,16 @@
     </div>
   </div>
 
-  <div
-    [ngClass]="
+  <div [ngClass]="
       style_2
         ? 'col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12'
         : 'col-xl-6 col-lg-6'
-    "
-  >
+    ">
     <div class="product__modal-content product__modal-content-2">
       <h4>
         <a [routerLink]="['/shop/shop-details', product._id]">{{
           product.title
-        }}</a>
+          }}</a>
       </h4>
       <div class="rating rating-shop mb-15">
         <ul>
@@ -108,63 +82,31 @@
       </div>
       <div class="product__price-2 mb-25">
         <span>${{ product.price }}</span>
-        <span *ngIf="product.old_price" class="old-price"
-          >${{ product.old_price }}</span
-        >
+        <span *ngIf="product.old_price" class="old-price">${{ product.old_price }}</span>
       </div>
       <div class="product__modal-des mb-30">
         <p>{{ product.sm_desc }}</p>
       </div>
       <div class="product__modal-form mb-30">
         <form action="#">
-          <!-- <div class="product__modal-input size mb-20">
-              <label>Size <i class="fas fa-star-of-life"></i></label>
-              <select>
-                <option>- Please select -</option>
-                <option *ngFor="let size of product.sizes">{{size}}</option>
-              </select>
-            </div>
-            <div class="product__modal-input color mb-20">
-              <label>Color <i class="fas fa-star-of-life"></i></label>
-              <select>
-                <option>- Please select -</option>
-                <option *ngFor="let clr of product.colors">{{clr}}</option>
-              </select>
-            </div>
-            <div class="product__modal-required mb-5">
-              <span>Repuired Fiields *</span>
-            </div>-->
           <div class="pro-quan-area d-sm-flex align-items-center">
             <div class="product-quantity-title">
               <label>Cantidad</label>
             </div>
             <div class="product-quantity mr-20 mb-20">
               <div class="cart-plus-minus">
-                <input
-                  type="text"
-                  [value]="cartService.orderQuantity"
-                  disabled
-                  readonly
-                />
-                <div (click)="cartService.decrement()" class="dec qtybutton">
+                <input type="text" [value]="cartService.getCantProductCard(product)" disabled readonly />
+
+
+                <div (click)="cartService.quantityDecrement(product)" class="dec qtybutton">
                   -
                 </div>
-                <div (click)="cartService.increment()" class="inc qtybutton">
+                <div (click)="cartService.addCartProduct(product)" class="inc qtybutton">
                   +
                 </div>
               </div>
             </div>
-            <div class="pro-cart-btn">
-              <!-- <a (click)="cartService.addCartProduct(product)" class="add-cart-btn mb-20 cursor-pointer">
-                <i class="fab fa-amazon"></i> + Add to Cart
-              </a> -->
-              <a
-                (click)="cartService.addCartProduct(product)"
-                class="add-cart-btn mb-20 cursor-pointer"
-              >
-                Add to Cart
-              </a>
-            </div>
+
           </div>
         </form>
       </div>
@@ -172,20 +114,14 @@
       <div *ngIf="bottomShow">
         <div class="product__tag mb-25">
           <span>Categoria:</span>
-          <span
-            ><a class="cursor-pointer">{{ product.category }}</a></span
-          >
+          <span><a class="cursor-pointer">{{ product.category }}</a></span>
         </div>
         <div class="product__share">
           <span>Compartir :</span>
 
           <ul>
             <li *ngFor="let item of social_links">
-              <a
-                class="cart cursor-pointer"
-                href="{{ item.link }}"
-                target="_blank"
-              >
+              <a class="cart cursor-pointer" href="{{ item.link }}" target="_blank">
                 <i class="{{ item.icon }}"></i>
               </a>
             </li>
