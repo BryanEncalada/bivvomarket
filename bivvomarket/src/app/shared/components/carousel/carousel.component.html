@@ -1,0 +1,166 @@
+<div class="row g-4 align-items-center pt-120">
+  <div class="container my-4">
+    <app-titulo-seccion
+      [Titulo1]="'about-values' | transloco"
+    ></app-titulo-seccion>
+    <!-- Lado derecho: iconos -->
+    <div class="lado derecho">
+      <!-- [ngStyle]="{
+    backgroundColor: colorFondo
+  }" -->
+      <div class="grid-iconos">
+        <!-- Ícono 1: Natural -->
+        <div class="icono-card">
+          <div class="icono-svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#225e26"
+              width="54"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-eye"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+              <path
+                d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"
+              />
+            </svg>
+          </div>
+          <h4>Transparencia</h4>
+          <p>
+            Compartimos con claridad el origen y la calidad de nuestros
+            productos, generando confianza
+          </p>
+        </div>
+
+        <!-- Ícono 2: Hermético -->
+        <!-- <div class="icono-box"> -->
+        <div class="icono-card">
+          <div class="icono-svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#225e26"
+              width="54"
+              height="54"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-globe"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 9a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+              <path d="M5.75 15a8.015 8.015 0 1 0 9.25 -13" />
+              <path d="M11 17v4" />
+              <path d="M7 21h8" />
+            </svg>
+          </div>
+          <h4>Innovación Natural</h4>
+          <p>
+            Buscamos nuevas formas de ofrecer productos saludables sin perder la
+            esencia de lo orgánico
+          </p>
+        </div>
+
+        <!-- Ícono 3: Alto en Proteínas -->
+        <div class="icono-card">
+          <div class="icono-svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#225e26"
+              width="54"
+              height="54"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-hearts"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path
+                d="M14.017 18l-2.017 2l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 0 1 8.153 5.784"
+              />
+              <path
+                d="M15.99 20l4.197 -4.223a2.81 2.81 0 0 0 0 -3.948a2.747 2.747 0 0 0 -3.91 -.007l-.28 .282l-.279 -.283a2.747 2.747 0 0 0 -3.91 -.007a2.81 2.81 0 0 0 -.007 3.948l4.182 4.238z"
+              />
+            </svg>
+          </div>
+          <h4>Salud Integral</h4>
+          <p>
+            Promovemos una nutrición consciente que fortalece cuerpo y mente de
+            manera natural
+          </p>
+        </div>
+
+        <!-- Ícono 4: Premium -->
+        <div class="icono-card">
+          <div class="icono-svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              stroke="#225e26"
+              stroke="#225e26"
+              width="54"
+              height="54"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-plant"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 15h10v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2v-4z" />
+              <path d="M12 9a6 6 0 0 0 -6 -6h-3v2a6 6 0 0 0 6 6h3" />
+              <path d="M12 11a6 6 0 0 1 6 -6h3v1a6 6 0 0 1 -6 6h-3" />
+              <path d="M12 15l0 -6" />
+            </svg>
+          </div>
+          <h4>Respeto por la Naturaleza</h4>
+          <p>
+            Protegemos los recursos naturales, apostando por prácticas
+            responsables y ecológicas
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 cols (xs), 3 cols (md), 4 cols (lg) -->
+    <div class="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-4">
+      <div class="col" *ngFor="let img of images; trackBy: trackBySrc">
+        <div class="card shadow-sm h-100">
+          <picture>
+            <!-- si hay webp, úsalo -->
+            <source
+              *ngIf="img.webp"
+              [attr.srcset]="img.webp"
+              type="image/webp"
+            />
+            <img
+              class="card-img-top rounded"
+              [src]="img.src"
+              [alt]="img.alt || img.title || 'Imagen'"
+              loading="lazy"
+              decoding="async"
+              [attr.width]="img.width || null"
+              [attr.height]="img.height || null"
+              [style.height.px]="imageHeight"
+            />
+          </picture>
+
+          <!-- <div class="card-body py-2">
+          <h6 class="card-title mb-1" *ngIf="img.title">{{ img.title }}</h6>
+          <p class="card-text small text-muted mb-0" *ngIf="img.caption">
+            {{ img.caption }}
+          </p>
+        </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

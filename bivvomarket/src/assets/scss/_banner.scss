@@ -544,13 +544,9 @@
     }
 
     & img {
-      width: 100%;
-      text-align: center;
-      align-items: center;
-      transition: all 0.3s ease-in;
-      border: 0px solid red;
-      width: 240x;
-      height: 125px;
+      width: 30%;
+
+      transition: all 0.1s ease-in;
     }
   }
 }

@@ -33,7 +33,7 @@ import { ExtraGarabeComponent } from '../../shared/components/extra-garabe/extra
     ShopAreaComponent,
     VideoComponent,
     Video2Component,
-    RecetasComponent,
+
     ResenaComponent,
     CaracteristicasComponent,
     CommonModule,

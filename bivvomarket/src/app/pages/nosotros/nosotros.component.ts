@@ -7,14 +7,18 @@ import { BreadcrumbOneComponent } from '../../shared/breadcrumb/breadcrumb-one/b
 import { VideoComponent } from '../../shared/components/video/video.component';
 import { EspaciadorComponent } from '../../shared/components/espaciador/espaciador.component';
 import { ResenaComponent } from '../../cliente/components/resena/resena.component';
+import { CarouselComponent } from '../../shared/components/carousel/carousel.component';
+import { ClientSliderComponent } from '../../cliente/components/client-slider/client-slider.component';
 
 @Component({
   selector: 'app-nosotros',
   imports: [
     CommonModule,
-    IconGridComponent,
+
     TituloSeccionComponent,
     TranslocoModule,
+
+    CarouselComponent,
   ],
   templateUrl: './nosotros.component.html',
   styleUrl: './nosotros.component.scss',

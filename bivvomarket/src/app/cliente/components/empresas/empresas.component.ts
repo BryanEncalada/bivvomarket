@@ -16,7 +16,7 @@ interface FotoItem {
     CommonModule,
     TituloSeccionComponent,
     TranslocoModule,
-    EspaciadorComponent,
+
     TranslocoModule,
   ],
   templateUrl: './empresas.component.html',
