@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../../shared/services/cart.service';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
-  imports: [NgIf, NgFor, RouterLink],
+  imports: [NgIf, NgFor, RouterLink, CommonModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

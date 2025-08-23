@@ -135,7 +135,7 @@ export class UtilsService {
   }
 
   removeBackdropAndProductModal() {
-    console.log('removeBackdropAndProductModal');
+
     const modalBackdrop = document.querySelector('.modal-backdrop');
     const product_modal = document.querySelector(
       '.tp-product-modal.show'
@@ -149,6 +149,5 @@ export class UtilsService {
       product_modal.style.display = 'none';
     }
 
-    console.log('removeBackdropAndProductModal 2');
   }
 }

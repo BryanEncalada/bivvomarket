@@ -22,10 +22,10 @@ export class RelatedProductsComponent {
 
   private destroyRef = inject(DestroyRef);
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    console.group('[RelatedProductsComponent] ngOnInit');
+    //console.group('[RelatedProductsComponent] ngOnInit');
 
     // 1) Log de entradas
     console.log('Inputs =>', {
@@ -46,16 +46,16 @@ export class RelatedProductsComponent {
       .pipe(
         // 2) Log de respuesta cruda del servicio
         tap((items) => {
-          console.group('[Stage] Servicio .products');
-          console.log('Tipo:', Array.isArray(items) ? 'Array' : typeof items);
-          console.log(
-            'Total items recibidos:',
-            Array.isArray(items) ? items.length : 'N/A'
-          );
-          if (Array.isArray(items) && items.length) {
-            console.log('Ejemplo[0]:', items[0]);
-          }
-          console.groupEnd();
+          //console.group('[Stage] Servicio .products');
+          //console.log('Tipo:', Array.isArray(items) ? 'Array' : typeof items);
+          // console.log(
+          //   'Total items recibidos:',
+          //   Array.isArray(items) ? items.length : 'N/A'
+          // );
+          // if (Array.isArray(items) && items.length) {
+          //   console.log('Ejemplo[0]:', items[0]);
+          // }
+          //console.groupEnd();
         }),
 
         // 3) Mapeo + logs del filtrado
@@ -67,9 +67,9 @@ export class RelatedProductsComponent {
 
           const currentId = this.productId ?? null;
 
-          console.group('[Stage] Filtrado');
-          console.log('brand objetivo:', this.brand);
-          console.log('productId actual (a excluir):', currentId);
+          // console.group('[Stage] Filtrado');
+          // console.log('brand objetivo:', this.brand);
+          // console.log('productId actual (a excluir):', currentId);
 
           // Log de marcas e ids (primeros N para no saturar)
           const sample = items.slice(0, 10).map((p, i) => ({
@@ -77,7 +77,7 @@ export class RelatedProductsComponent {
             brand: (p as any).brand,
             id: getId(p),
           }));
-          console.table(sample);
+          //console.table(sample);
 
           const filtered = items.filter((p) => {
             const okBrand = (p as any).brand === this.brand;
@@ -92,17 +92,17 @@ export class RelatedProductsComponent {
             return okBrand && okNotSame;
           });
 
-          console.log(
-            'Coincidencias por brand (antes de slice):',
-            filtered.length
-          );
+          // console.log(
+          //   'Coincidencias por brand (antes de slice):',
+          //   filtered.length
+          // );
 
           const top4 = filtered.slice(0, 4);
-          console.log('Tomados (slice 0..4):', top4.length);
-          if (top4.length) {
-            console.log('top4[0]:', top4[0]);
-          }
-          console.groupEnd();
+          //console.log('Tomados (slice 0..4):', top4.length);
+          // if (top4.length) {
+          //   console.log('top4[0]:', top4[0]);
+          // }
+          // console.groupEnd();
 
           return top4;
         }),
@@ -110,16 +110,16 @@ export class RelatedProductsComponent {
         // 4) Logs de error de la cadena RxJS
         catchError((err) => {
           this.errorMsg = 'No se pudieron cargar los productos relacionados.';
-          console.group('[Stage] catchError');
-          console.error('HTTP/Service error =>', err);
-          console.groupEnd();
+          // console.group('[Stage] catchError');
+          // console.error('HTTP/Service error =>', err);
+          // console.groupEnd();
           return of([] as IProduct[]);
         })
       )
       .subscribe({
         next: (products) => {
-          console.group('[Stage] subscribe(next)');
-          console.log('Productos resultantes:', products.length);
+          //console.group('[Stage] subscribe(next)');
+          //console.log('Productos resultantes:', products.length);
           if (products.length) {
             console.table(
               products.map((p) => ({
@@ -135,14 +135,14 @@ export class RelatedProductsComponent {
           this.loading = false;
         },
         error: (err) => {
-          console.group('[Stage] subscribe(error)');
-          console.error('Sorpresa: error en subscribe =>', err);
-          console.groupEnd();
+          // console.group('[Stage] subscribe(error)');
+          // console.error('Sorpresa: error en subscribe =>', err);
+          // console.groupEnd();
           this.loading = false;
         },
         complete: () => {
-          console.log('[Stage] subscribe(complete)');
-          console.groupEnd();
+          // console.log('[Stage] subscribe(complete)');
+          // console.groupEnd();
         },
       });
   }

@@ -41,11 +41,10 @@ export class ProductService {
 
   // Get Products By id
   public getProductById(id: string): Observable<IProduct> {
-    console.log('produgetProductByIdctId', id);
+    //console.log('produgetProductByIdctId', id);
 
     return this.http.get<IProduct>(`${this.apiUrl}/${id}`).pipe(
       tap((product) => {
-        console.log('IProduct', product);
 
         this.handleImageActive(product.img);
       })

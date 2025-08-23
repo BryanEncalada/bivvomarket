@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-mini-cart',
-  imports: [NgIf, NgClass, NgFor, RouterLink, TranslocoModule],
+  imports: [NgIf, NgClass, NgFor, RouterLink, TranslocoModule, CommonModule],
   templateUrl: './mini-cart.component.html',
   styleUrl: './mini-cart.component.scss',
 })

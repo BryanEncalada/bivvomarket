@@ -26,7 +26,7 @@ export class ProductDetailsUpperComponent {
 
   ngOnInit() {
     if (this.product) {
-      console.log('aqui', this.product.imagenes);
+      //console.log('aqui', this.product.imagenes);
       this.productService.activeImg = this.product.imagenes[0].imagen;
     }
   }

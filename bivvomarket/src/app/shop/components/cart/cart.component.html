@@ -1,10 +1,7 @@
 <!-- Cart Area Strat-->
 <section class="cart-area pt-40 pb-40">
   <div class="container">
-    <div
-      *ngIf="cartService.getCartProducts().length === 0"
-      class="text-center pt-50"
-    >
+    <div *ngIf="cartService.getCartProducts().length === 0" class="text-center pt-50">
       <h3>No Cart Items Found</h3>
       <a routerLink="/shop" class="os-btn os-btn-black">Continue Shopping</a>
     </div>
@@ -33,24 +30,18 @@
                 <td class="product-name">
                   <a [routerLink]="['/shop/shop-details', item._id]">{{
                     item.title
-                  }}</a>
+                    }}</a>
                 </td>
                 <td class="product-price">
-                  <span class="amount">${{ item.price.toFixed(2) }}</span>
+                  <span class="amount">${{ item.price | number:'1.2-2' }}</span>
                 </td>
                 <td class="product-quantity">
                   <div class="cart-plus-minus">
                     <input type="text" [value]="item.order_quantity" readonly />
-                    <div
-                      (click)="cartService.quantityDecrement(item)"
-                      class="dec qtybutton"
-                    >
+                    <div (click)="cartService.quantityDecrement(item)" class="dec qtybutton">
                       -
                     </div>
-                    <div
-                      (click)="cartService.addCartProduct(item)"
-                      class="inc qtybutton"
-                    >
+                    <div (click)="cartService.addCartProduct(item)" class="inc qtybutton">
                       +
                     </div>
                   </div>
@@ -61,10 +52,7 @@
                   </span>
                 </td>
                 <td class="product-remove">
-                  <a
-                    (click)="cartService.removeCartProduct(item)"
-                    class="cursor-pointer"
-                  >
+                  <a (click)="cartService.removeCartProduct(item)" class="cursor-pointer">
                     <i class="fa fa-times"></i>
                   </a>
                 </td>
@@ -84,12 +72,7 @@
                     </div>
                   </form> -->
               <div class="coupon2">
-                <button
-                  (click)="cartService.clear_cart()"
-                  class="os-btn os-btn-black"
-                  name="update_cart"
-                  type="submit"
-                >
+                <button (click)="cartService.clear_cart()" class="os-btn os-btn-black" name="update_cart" type="submit">
                   Clear cart
                 </button>
               </div>
@@ -102,25 +85,13 @@
               <h2>Cart totals</h2>
               <ul class="mb-20">
                 <li>
-                  Subtotal
-                  <span
-                    >${{
-                      cartService.totalPriceQuantity().total.toFixed(2)
-                    }}</span
-                  >
-                </li>
-                <li>
                   Total
-                  <span
-                    >${{
-                      cartService.totalPriceQuantity().total.toFixed(2)
-                    }}</span
-                  >
+                  <span>${{
+                    cartService.totalPriceQuantity().total
+                    }}</span>
                 </li>
               </ul>
-              <a class="os-btn" routerLink="/shop/checkout"
-                >Proceed to checkout</a
-              >
+              <a class="os-btn" routerLink="/shop/checkout">Proceed to checkout</a>
             </div>
           </div>
         </div>

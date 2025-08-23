@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../../shared/services/cart.service';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NgFor, NgIf } from '@angular/common';
+import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-checkout',
-  imports: [ReactiveFormsModule, NgIf, NgFor, TranslocoModule],
+  imports: [ReactiveFormsModule, NgIf, NgFor, TranslocoModule, CommonModule],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss'
 })
@@ -68,7 +68,7 @@ export class CheckoutComponent {
       address: new FormControl(null, Validators.required),
       city: new FormControl(null, Validators.required),
       state: new FormControl(null, Validators.required),
-      apartment: new FormControl(null, Validators.required),
+      apartment: new FormControl(null ),
       zipCode: new FormControl(null, Validators.required),
       phone: new FormControl(null, Validators.required),
       orderNote: new FormControl(null),

@@ -428,7 +428,7 @@
   &__product-thumb {
     text-align: center;
 
- 
+
 
   }
 
@@ -478,7 +478,7 @@
         color: $black;
         position: relative;
         font-size: 14px;
-        
+
         &::after {
           position: absolute;
           content: '';
@@ -525,7 +525,7 @@
         opacity: 1;
         bottom: -30px;
       }
-      
+
     }
   }
 
@@ -546,6 +546,23 @@
     border: 0px solid red;
     width: 100%;
     height: 208px;
+
+    &-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      @include transform(scaleX(0));
+    }
+  }
+
+  &__thumbF {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+    border: 0px solid red;
+    width: 100%;
 
     &-2 {
       position: absolute;

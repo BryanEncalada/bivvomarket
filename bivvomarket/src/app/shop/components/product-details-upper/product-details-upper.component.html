@@ -30,7 +30,7 @@
         </nav>
       </div>
       <div class="mb-20">
-        <div class="product__modal-img product__thumb w-img">
+        <div class="product__modal-img product__thumbF w-img">
           <img [src]="productService.activeImg" alt="product-img" />
           <div *ngIf="product.discount || product.new" class="product__sale">
             <span *ngIf="product.new || product.discount" class="new">new</span>
@@ -50,7 +50,7 @@
       </div>
       <nav>
         <div class="nav nav-tabs" id="product-details" role="tablist">
-         
+
           <a
             *ngFor="let img of product.imagenes"
             class="nav-item nav-link cursor-pointer me-2"
@@ -130,7 +130,7 @@
                 <option>- Please select -</option>
                 <option *ngFor="let clr of product.colors">{{clr}}</option>
               </select>
-            </div> 
+            </div>
             <div class="product__modal-required mb-5">
               <span>Repuired Fiields *</span>
             </div>-->
