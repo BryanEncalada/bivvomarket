@@ -23,6 +23,8 @@ import { EspaciadorComponent } from '../../shared/components/espaciador/espaciad
 import { Video2Component } from '../../shared/components/video2/video2.component';
 import { OffcanvasComponent } from '../../shared/header/offcanvas/offcanvas.component';
 import { HeaderTwoComponent } from '../../shared/header/header-two/header-two.component';
+import { EmpresasComponent } from '../../cliente/components/empresas/empresas.component';
+import { ExtraGarabeComponent } from '../../shared/components/extra-garabe/extra-garabe.component';
 
 @Component({
   selector: 'app-home-two',
@@ -37,6 +39,8 @@ import { HeaderTwoComponent } from '../../shared/header/header-two/header-two.co
     CommonModule,
     VideoSoloComponent,
     EspaciadorComponent,
+    EmpresasComponent,
+    ExtraGarabeComponent,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
