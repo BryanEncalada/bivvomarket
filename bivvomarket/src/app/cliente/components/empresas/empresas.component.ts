@@ -30,6 +30,16 @@ export class EmpresasComponent {
       caption: 'La Sanahoria',
     },
     {
+      src: 'assets/img/empresa/madrenaturaperu.jpg',
+      alt: 'Madre Natura Peru',
+      caption: 'Madre Natura Peru',
+    },
+    {
+      src: 'assets/img/empresa/nunaorganica.jpg',
+      alt: 'Nuna Organica',
+      caption: 'Nuna Organica',
+    },
+    {
       src: 'assets/img/empresa/feria_nativa.jpg',
       alt: 'Feria Nativa',
       caption: 'Feria Nativa',
@@ -44,21 +54,13 @@ export class EmpresasComponent {
       alt: 'Los Caseros',
       caption: 'Los Caseros',
     },
-    {
-      src: 'assets/img/empresa/madrenaturaperu.jpg',
-      alt: 'Madre Natura Peru',
-      caption: 'Madre Natura Peru',
-    },
+
     {
       src: 'assets/img/empresa/naturLife.jpg',
       alt: 'Producto 6',
       caption: 'naturLife',
     },
-    {
-      src: 'assets/img/empresa/nunaorganica.jpg',
-      alt: 'Nuna Organica',
-      caption: 'Nuna Organica',
-    },
+
     {
       src: 'assets/img/empresa/wasainatural.jpg',
       alt: 'Wasai Natural',
