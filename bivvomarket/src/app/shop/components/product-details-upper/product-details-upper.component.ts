@@ -22,7 +22,12 @@ export class ProductDetailsUpperComponent {
   constructor(
     public productService: ProductService,
     public cartService: CartService
-  ) {}
+  ) {
+
+    this.cartService.orderQuantity = 1;
+
+
+  }
 
   ngOnInit() {
     if (this.product) {

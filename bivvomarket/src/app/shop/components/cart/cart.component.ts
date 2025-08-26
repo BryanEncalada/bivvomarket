@@ -14,7 +14,11 @@ export class CartComponent {
   couponCode: string = '';
   shipCost: number = 0;
 
-  constructor(public cartService: CartService) { }
+  constructor(public cartService: CartService) {
+
+    this.cartService.orderQuantity = 1;
+
+  }
 
   handleCouponSubmit() {
     if (this.couponCode) {

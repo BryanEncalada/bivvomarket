@@ -95,16 +95,18 @@
             </div>
             <div class="product-quantity mr-20 mb-20">
               <div class="cart-plus-minus">
-                <input type="text" [value]="cartService.getCantProductCard(product)" disabled readonly />
+                <input type="text" [value]="cartService.orderQuantity" disabled readonly />
+
+                <div (click)="cartService.decrement()" class="dec qtybutton">-</div>
+                <div (click)="cartService.increment()" class="inc qtybutton">+</div>
 
 
-                <div (click)="cartService.quantityDecrement(product)" class="dec qtybutton">
-                  -
-                </div>
-                <div (click)="cartService.addCartProduct(product)" class="inc qtybutton">
-                  +
-                </div>
               </div>
+            </div>
+            <div class="pro-cart-btn">
+              <a (click)="cartService.addCartProduct(product)" class="add-cart-btn mb-20 cursor-pointer">
+                + Add to Cart
+              </a>
             </div>
 
           </div>

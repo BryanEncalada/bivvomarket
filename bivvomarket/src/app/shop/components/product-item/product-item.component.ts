@@ -22,7 +22,12 @@ export class ProductItemComponent {
     public wishlistService: WishlistService,
     public compareService: CompareService,
     public utilsService: UtilsService
-  ) {}
+  ) {
+
+    this.cartService.orderQuantity = 1;
+
+
+  }
 
   // add to cart
   addToCart(item: IProduct) {

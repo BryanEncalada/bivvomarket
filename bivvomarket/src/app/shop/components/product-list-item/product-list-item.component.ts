@@ -21,7 +21,12 @@ export class ProductListItemComponent {
     public wishlistService: WishlistService,
     public compareService: CompareService,
     public utilsService: UtilsService
-  ) {  }
+  ) {
+
+    this.cartService.orderQuantity = 1;
+
+
+  }
 
   ngOnInit(): void {
     console.log(

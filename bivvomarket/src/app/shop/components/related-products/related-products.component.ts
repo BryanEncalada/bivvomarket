@@ -31,7 +31,7 @@ export class RelatedProductsComponent implements OnChanges {
       this.productService.getRelatedProducts(this.productId!, this.brand!)
         .subscribe((res: IProduct[]) => {
           this.related_products = res;
-          console.log("Productos relacionados:", this.related_products);
+          //console.log("Productos relacionados:", this.related_products);
         });
 
     }
