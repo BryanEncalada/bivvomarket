@@ -5,10 +5,11 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import social_links, { ISocial } from '../../../shared/data/social-data';
 import { IProduct } from '../../../shared/types/IProduct';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-product-details-upper',
-  imports: [NgClass, NgIf, NgFor, RouterLink],
+  imports: [NgClass, NgIf, NgFor, RouterLink, TranslocoModule],
   templateUrl: './product-details-upper.component.html',
   styleUrl: './product-details-upper.component.scss',
 })

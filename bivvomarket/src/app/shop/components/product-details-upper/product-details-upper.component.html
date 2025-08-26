@@ -91,7 +91,7 @@
         <form action="#">
           <div class="pro-quan-area d-sm-flex align-items-center">
             <div class="product-quantity-title">
-              <label>Cantidad</label>
+              <label>{{ 'Cantidad' | transloco }}</label>
             </div>
             <div class="product-quantity mr-20 mb-20">
               <div class="cart-plus-minus">
@@ -105,7 +105,7 @@
             </div>
             <div class="pro-cart-btn">
               <a (click)="cartService.addCartProduct(product)" class="add-cart-btn mb-20 cursor-pointer">
-                + Add to Cart
+                + {{ 'AgregarCarrito' | transloco }}
               </a>
             </div>
 
@@ -119,7 +119,7 @@
           <span><a class="cursor-pointer">{{ product.category }}</a></span>
         </div>
         <div class="product__share">
-          <span>Compartir :</span>
+          <span>{{ 'Compartir' | transloco }} :</span>
 
           <ul>
             <li *ngFor="let item of social_links">
