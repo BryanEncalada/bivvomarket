@@ -129,9 +129,17 @@
           <div class="footer__social f-right">
             <ul>
               <li *ngFor="let item of social_links">
-                <a [href]="item.link" target="_blank"
-                  ><i [class]="item.icon"></i
-                ></a>
+                <a [href]="item.link" target="_blank">
+                  <!-- <i [class]="item.icon">
+                    </i > -->
+                  <img
+                    [src]="item.svgUrl"
+                    width="24"
+                    height="24"
+                    [alt]="item.name"
+                    class="icon-svg"
+                  />
+                </a>
               </li>
             </ul>
           </div>

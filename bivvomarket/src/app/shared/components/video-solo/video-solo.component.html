@@ -1,12 +1,21 @@
 <section class="video-banner-section">
-  <div class="video-frame">
-    <video autoplay muted playsinline loop class="responsive-video">
-      <source src="assets/video/VIDEO_VM01.mp4" type="video/mp4" />
-    </video>
-
-    <!-- Fallback / accesibilidad fuera del <video> -->
-    <span class="visually-hidden">
-      {{ "video.support" | transloco }}
-    </span>
+  <div class="video-frame" #viewport>
+    <!-- Solo renderizamos el <video> cuando shouldLoad sea true -->
+    <ng-container *ngIf="shouldLoad">
+      <video
+        autoplay
+        muted
+        playsinline
+        loop
+        preload="none"
+        class="responsive-video"
+        [attr.poster]="poster"
+        aria-label="Video promocional"
+      >
+        <!-- OJO: type correcto para webm -->
+        <source [attr.src]="videoSrc" type="video/webm" />
+      </video>
+      <span class="visually-hidden">{{ "video.support" | transloco }}</span>
+    </ng-container>
   </div>
 </section>
