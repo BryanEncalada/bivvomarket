@@ -19,7 +19,6 @@
   "SeccionRecetasTit": "Nuestras recetas",
   "about-Mision": "Misión",
   "about-target": "Visión",
-
   "about-values": "Nuestro valores",
   "about-Us": "Sobre nosotros",
   "SeccionRecetasSub": "Descubre ideas fáciles, nutritivas y deliciosas para aprovechar el cereal de quinua en tu día a día.",
@@ -429,5 +428,25 @@
       "phone": "Teléfono: 3057944827",
       "email": "Correo: <a href=\"mailto:barrioceo@yahoo.com\">barrioceo@yahoo.com</a>"
     }
+  },
+  "empresas": {
+    "TitEnergizante": "Energizante",
+    "SubEnergizante": "Cómelo como cereal",
+    "TitPortable": "Portable",
+    "SubPortable": "Llévalo contigo",
+    "TitVersatil": "Versátil",
+    "SubVersatil": "Mézclalo en un batido",
+    "TitNutritivo": "Nutritivo",
+    "SubNutritivo": "Mezclalo con todo"
+  },
+  "Video2Component": {
+    "TitRefrescante": "Natural",
+    "SubRefrescante": "Sin azúcar",
+    "TitEnergetico": "Energético",
+    "SubEnergetico": "Carga tu cuerpo de energía",
+    "TitVitaminado": "Vitaminado",
+    "SubVitaminado": "Llena tu día de vitaminas",
+    "TitSaludable": "Saludable",
+    "SubSaludable": "Natural y sin añadidos"
   }
 }

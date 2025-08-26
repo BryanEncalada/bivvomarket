@@ -38,7 +38,7 @@
         <a [routerLink]="['/shop/shop-details', product._id]" [innerHTML]="product.title"></a>
       </h4>
       <div class="product__price">
-        <span>${{ product.price }}</span>
+        <span>S/{{ product.price }}</span>
         <span *ngIf="product.old_price" class="old-price">${{ product.old_price }}</span>
       </div>
     </div>

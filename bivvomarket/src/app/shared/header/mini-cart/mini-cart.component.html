@@ -26,7 +26,7 @@
           <div class="cart-price">
             <span class="ammount">{{ item.order_quantity }} <i class="fal fa-times"></i></span>
 
-            <span class="price">${{ item.price | number:'1.2-2' }}</span>
+            <span class="price">S/{{ item.price | number:'1.2-2' }}</span>
           </div>
         </div>
         <div class="del-icon f-right mt-30">
@@ -38,7 +38,7 @@
     </ul>
     <div class="total-price d-flex justify-content-between mb-30">
       <span>Subtotal:</span>
-      <span>${{ cartService.totalPriceQuantity().total | number:'1.2-2' }}</span>
+      <span>S/{{ cartService.totalPriceQuantity().total | number:'1.2-2' }}</span>
     </div>
     <div class="checkout-link">
       <a routerLink="/shop/cart" class="os-btn">{{

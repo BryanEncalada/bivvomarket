@@ -81,8 +81,8 @@
         <!-- <span class="review rating-left"><a href="#">Add your Review</a></span> -->
       </div>
       <div class="product__price-2 mb-25">
-        <span>${{ product.price }}</span>
-        <span *ngIf="product.old_price" class="old-price">${{ product.old_price }}</span>
+        <span>S/{{ product.price }}</span>
+        <span *ngIf="product.old_price >0" class="old-price">${{ product.old_price }}</span>
       </div>
       <div class="product__modal-des mb-30">
         <p>{{ product.sm_desc }}</p>

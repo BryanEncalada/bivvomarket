@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TituloSeccionComponent } from '../../../shared/components/titulo-seccion/titulo-seccion.component';
 import { TranslocoModule } from '@jsverse/transloco';
-import { EspaciadorComponent } from '../../../shared/components/espaciador/espaciador.component';
 
 interface FotoItem {
   src: string;
@@ -70,6 +69,11 @@ export class EmpresasComponent {
       src: 'assets/img/empresa/alpaku.jpg',
       alt: 'Alpaku',
       caption: 'Alpaku',
+    },
+    {
+      src: 'assets/img/empresa/sede.jpg',
+      alt: 'La Sede',
+      caption: 'La Sede',
     },
   ];
 

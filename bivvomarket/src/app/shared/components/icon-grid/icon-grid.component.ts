@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-icon-grid',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslocoModule],
   templateUrl: './icon-grid.component.html',
   styleUrl: './icon-grid.component.scss',
   standalone: true, // ✅ ESTA LÍNEA ES CLAVE

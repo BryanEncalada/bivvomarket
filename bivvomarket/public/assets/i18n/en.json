@@ -21,12 +21,10 @@
   "SeccionResenaTit": "Customer Reviews",
   "SeccionResenaSub": "Discover real experiences from those who enjoy our products every day. Your opinion matters too!",
   "billingDetails": "Billing Details",
-
   "about-Mision": "Mission",
   "about-target": "Vision",
   "about-values": "Our Values",
   "about-Us": "About Us",
-
   "noItems": "No items found in cart to checkout",
   "returnToShop": "Return to shop",
   "firstName": "First Name",
@@ -430,5 +428,25 @@
       "phone": "Phone: 3057944827",
       "email": "Email: <a href=\"mailto:barrioceo@yahoo.com\">barrioceo@yahoo.com</a>"
     }
+  },
+  "empresas": {
+    "TitEnergizante": "Energizing",
+    "SubEnergizante": "Eat it as cereal",
+    "TitPortable": "Portable",
+    "SubPortable": "Take it with you",
+    "TitVersatil": "Versatile",
+    "SubVersatil": "Mix it in a smoothie",
+    "TitNutritivo": "Nutritious",
+    "SubNutritivo": "Mix it with everything"
+  },
+  "Video2Component": {
+    "TitRefrescante": "Natural",
+    "SubRefrescante": "Sugar-free",
+    "TitEnergetico": "Energizing",
+    "SubEnergetico": "Recharge your body with energy",
+    "TitVitaminado": "Fortified with Vitamins",
+    "SubVitaminado": "Fill your day with vitamins",
+    "TitSaludable": "Healthy",
+    "SubSaludable": "Natural and additive-free"
   }
 }

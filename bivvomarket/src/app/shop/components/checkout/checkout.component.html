@@ -153,7 +153,7 @@
                       </td>
                       <td class="product-total">
 
-                        <span class="amount">${{ item.price | number:'1.2-2' }}</span>
+                        <span class="amount">S/{{ item.price | number:'1.2-2' }}</span>
                       </td>
                     </tr>
                   </tbody>
@@ -161,14 +161,14 @@
                     <tr class="cart-subtotal">
                       <th>{{ 'cartSubtotal' |transloco}}</th>
                       <td>
-                        <span class="amount">${{cartService.totalPriceQuantity().total}}</span>
+                        <span class="amount">S/{{cartService.totalPriceQuantity().total}}</span>
                       </td>
                     </tr>
 
                     <tr class="order-total">
                       <th>{{ 'orderTotal' |transloco}}</th>
                       <td><strong><span class="amount">
-                            ${{(cartService.totalPriceQuantity().total +
+                            S/{{(cartService.totalPriceQuantity().total +
                             shipCost)}}
                           </span></strong>
                       </td>

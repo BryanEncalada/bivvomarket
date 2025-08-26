@@ -34,7 +34,7 @@
                     }}</a>
                 </td>
                 <td class="product-price">
-                  <span class="amount">${{ item.price | number:'1.2-2' }}</span>
+                  <span class="amount">S/{{ item.price | number:'1.2-2' }}</span>
                 </td>
                 <td class="product-quantity">
                   <div class="cart-plus-minus">
@@ -49,7 +49,7 @@
                 </td>
                 <td class="product-subtotal">
                   <span class="amount">
-                    ${{ (item.price * item.order_quantity!).toFixed(2) }}
+                    S/{{ (item.price * item.order_quantity!).toFixed(2) }}
                   </span>
                 </td>
                 <td class="product-remove">
