@@ -30,7 +30,7 @@ import { TituloSeccionComponent } from "../../../shared/components/titulo-seccio
     TranslocoModule,
     CommonModule,
     TituloSeccionComponent
-],
+  ],
   templateUrl: './shop-area.component.html',
   styleUrl: './shop-area.component.scss',
 })
@@ -51,7 +51,7 @@ export class ShopAreaComponent {
   public color: string | null = null;
   public brand: string | null = null;
   public pageNo: number = 1;
-  public pageSize: number = 12;
+  public pageSize: number = 16;
   public paginate: any = {}; // Pagination use only
   public sortBy: string = 'asc'; // Sorting Order
 
@@ -115,20 +115,20 @@ export class ShopAreaComponent {
 
   // SortBy Filter
   //sortByFilter(value: string) {
-    // this.router
-    //   .navigate([], {
-    //     relativeTo: this.route,
-    //     queryParams: { sortBy: value ? value : null },
-    //     queryParamsHandling: 'merge',
-    //     skipLocationChange: false,
-    //   })
-    //   .finally(() => {
-    //     this.viewScroller.setOffset([120, 120]);
-    //     this.viewScroller.scrollToAnchor('products');
-    //   });
+  // this.router
+  //   .navigate([], {
+  //     relativeTo: this.route,
+  //     queryParams: { sortBy: value ? value : null },
+  //     queryParamsHandling: 'merge',
+  //     skipLocationChange: false,
+  //   })
+  //   .finally(() => {
+  //     this.viewScroller.setOffset([120, 120]);
+  //     this.viewScroller.scrollToAnchor('products');
+  //   });
   //}
 
-   sortByFilter(sortValue: string) {
+  sortByFilter(sortValue: string) {
     switch (sortValue) {
 
       case 'high':
@@ -139,8 +139,12 @@ export class ShopAreaComponent {
         this.products.sort((a, b) => a.price - b.price);
         break;
 
+      case 'asc':
+        this.products.sort((a, b) => a.parent_category.localeCompare(b.parent_category));
+        break;
+
       default: // asc o el "Default Sorting"
-        this.products.sort((a, b) => a.category.localeCompare(b.category));
+        this.products.sort((a, b) => b.parent_category.localeCompare(a.parent_category));
         break;
     }
   }

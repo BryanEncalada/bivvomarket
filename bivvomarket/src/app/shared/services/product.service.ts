@@ -91,27 +91,7 @@ export class ProductService {
     return this.products;
   }
 
-  // Sorting Filter
-  public sortProducts(products: IProduct[], payload: string): IProduct[] {
-    const sortedProducts = [...products]; // Clona el arreglo para no mutar el original
 
-    switch (payload) {
-      case 'asc':
-        return sortedProducts.sort((a, b) => a._id.localeCompare(b._id));
-
-      case 'sale':
-        return sortedProducts.filter((p) => p.discount && p.discount > 0);
-
-      case 'low':
-        return sortedProducts.sort((a, b) => a.price - b.price);
-
-      case 'high':
-        return sortedProducts.sort((a, b) => b.price - a.price);
-
-      default:
-        return products; // Retorna sin ordenar si el payload no es válido
-    }
-  }
 
   public getFilteredProducts(params: any): Observable<IProduct[]> {
     let queryParams = new HttpParams();
