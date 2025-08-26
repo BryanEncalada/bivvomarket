@@ -9,80 +9,48 @@
 
 <div class="container my-5">
   <div class="row g-4">
-    <!-- Card 1 -->
-    <div class="col-12 col-md-4">
-      <div class="card card-colored card-1 shadow-sm h-100">
+    <!-- Generar 3 cards con *ngFor -->
+    <div class="col-12 col-md-4" *ngFor="let v of videos">
+      <div
+        class="card shadow-sm h-100 border-0 video-card"
+        data-bs-toggle="modal"
+        data-bs-target="#videoModal"
+        (click)="openVideo(v.src)"
+      >
         <div
-          class="ratio rounded-3 overflow-hidden"
-          style="--bs-aspect-ratio: 177.8%"
+          class="ratio ratio-16x9 rounded-3 overflow-hidden position-relative"
         >
-          <div
-            class="d-flex align-items-center justify-content-center w-100 h-100 p-2"
-          >
-            <video
-              class="video-el"
-              autoplay
-              muted
-              playsinline
-              loop
-              title="Video 1"
-            >
-              <source src="assets/video/video03.mp4" type="video/mp4" />
-              Tu navegador no soporta video HTML5.
-            </video>
-          </div>
+          <img
+            [src]="v.poster"
+            [alt]="v.title"
+            class="w-100 h-100 object-fit-cover d-block"
+          />
+          <div class="play-overlay">▶︎</div>
         </div>
       </div>
     </div>
+  </div>
+</div>
 
-    <!-- Card 2 -->
-    <div class="col-12 col-md-4">
-      <div class="card card-colored card-2 shadow-sm h-100">
-        <div
-          class="ratio rounded-3 overflow-hidden"
-          style="--bs-aspect-ratio: 177.8%"
-        >
-          <div
-            class="d-flex align-items-center justify-content-center w-100 h-100 p-2"
-          >
-            <video
-              class="video-el"
-              autoplay
-              muted
-              playsinline
-              loop
-              title="Video 2"
-            >
-              <source src="assets/video/video01.mp4" type="video/mp4" />
-              Tu navegador no soporta video HTML5.
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 (nuevo) -->
-    <div class="col-12 col-md-4">
-      <div class="card card-colored card-3 shadow-sm h-100">
-        <div
-          class="ratio rounded-3 overflow-hidden"
-          style="--bs-aspect-ratio: 177.8%"
-        >
-          <div
-            class="d-flex align-items-center justify-content-center w-100 h-100 p-2"
-          >
-            <video
-              class="video-el"
-              autoplay
-              muted
-              playsinline
-              loop
-              title="Video 3"
-            >
-              <source src="assets/video/video02.mp4" type="video/mp4" />
-              Tu navegador no soporta video HTML5.
-            </video>
-          </div>
+<!-- Modal de video -->
+<div
+  class="modal fade"
+  id="videoModal"
+  #videoModalEl
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-black border-0">
+      <div class="modal-body p-0">
+        <div class="ratio ratio-16x9">
+          <video
+            #modalVideo
+            [src]="currentVideoSrc"
+            class="w-100 h-100"
+            controls
+            playsinline
+          ></video>
         </div>
       </div>
     </div>

@@ -7,3 +7,12 @@
     padding-top: 10px;
   }
 }
+
+.custom-product-img {
+  transition: transform 0.3s ease; /* transición suave */
+}
+
+.custom-product-img:hover {
+  transform: scale(1.05); /* zoom */
+  /* o bien puedes usar: transform: translateY(-5px); para mover hacia arriba */
+}

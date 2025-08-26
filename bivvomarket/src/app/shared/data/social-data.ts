@@ -6,7 +6,7 @@ export type ISocial = {
 
 const social_links: ISocial[] = [
   {
-    link: 'http://facebook.com',
+    link: 'https://www.facebook.com/profile.php?id=100086910256696&sk=about',
     icon: 'fab fa-facebook-f',
     name: 'Facebook',
   },

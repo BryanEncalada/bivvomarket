@@ -31,3 +31,26 @@
     margin-inline: auto;
   }
 }
+
+.video-card {
+  cursor: pointer;
+  position: relative;
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0; /* ocupa todo el contenedor */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem; /* tamaño grande */
+  font-weight: bold;
+  color: white;
+  background: rgba(0, 0, 0, 0.35); /* semitransparente tipo máscara */
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.video-card:hover .play-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
