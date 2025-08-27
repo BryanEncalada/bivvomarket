@@ -29,10 +29,7 @@ export class ProductListItemComponent {
   }
 
   ngOnInit(): void {
-    console.log(
-      'Product recibido en ProductListItemComponent:',
-      this.product
-    );
+
   }
 
   // add to cart

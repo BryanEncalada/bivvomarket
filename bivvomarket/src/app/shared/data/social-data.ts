@@ -8,7 +8,7 @@ export type ISocial = {
 const social_links: ISocial[] = [
   {
     link: 'https://www.facebook.com/profile.php?id=100086910256696&sk=about',
-    icon: 'fal fa-facebook',
+    icon: 'fa fa-facebook',
     name: 'Facebook',
     svgUrl: 'assets/img/svg/brand-facebook.svg',
   },

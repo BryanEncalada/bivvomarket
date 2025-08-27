@@ -5,7 +5,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { ProductService } from '../../services/product.service';
-import { Response, response } from 'express';
 import { Observable } from 'rxjs';
 import { IProduct } from '../../types/IProduct';
 
