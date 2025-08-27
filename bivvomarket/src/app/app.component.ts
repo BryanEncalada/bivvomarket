@@ -9,20 +9,23 @@ import { Router, NavigationEnd } from '@angular/router';
 @Component({
   standalone: true,
   selector: 'app-root',
-  imports: [RouterOutlet, HeaderTwoComponent, FooterComponent, ProductModalComponent],
+  imports: [
+    RouterOutlet,
+    HeaderTwoComponent,
+    FooterComponent,
+    ProductModalComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
-
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'bivvomarket';
 
   constructor(private router: Router) {
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' }); // 👈 scroll inmediato al tope
-    });
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        window.scrollTo({ top: 0, behavior: 'auto' }); // 👈 scroll inmediato al tope
+      });
   }
-
 }

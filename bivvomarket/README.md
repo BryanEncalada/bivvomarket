@@ -60,3 +60,6 @@ For more information on using the Angular CLI, including detailed command refere
 
 #iconos
 https://tabler.io/icons
+
+#para SEO
+ng add @angular/ssr
