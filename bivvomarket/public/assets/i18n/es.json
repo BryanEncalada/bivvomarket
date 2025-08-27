@@ -3,7 +3,7 @@
   "description": "Bienvenido a nuestra tienda",
   "Inicio": "Inicio",
   "Productos": "Producto",
-  "Nosotros": "Producto",
+  "Nosotros": "Nosotros",
   "Recetas": "Recetas",
   "Contacto": "Contacto",
   "ComprarAhora": "COMPRAR AHORA",
@@ -137,7 +137,7 @@
     "Sub": "Explore nuestro sitio web para encontrar los artículos más populares en el mercado ahora."
   },
   "video": {
-    "suport": "Tu navegador no soporta el video.",
+    "support": "Tu navegador no soporta el video.",
     "Natural": "100% Natural y Orgánico",
     "Sugar": "Sin azúcar añadida",
     "Hermetic": "Sello Hermético",
@@ -438,7 +438,7 @@
     "TitVersatil": "Versátil",
     "SubVersatil": "Mézclalo en un batido",
     "TitNutritivo": "Nutritivo",
-    "SubNutritivo": "Mezclalo con todo"
+    "SubNutritivo": "Alto en proteinas"
   },
   "Video2Component": {
     "TitRefrescante": "Natural",

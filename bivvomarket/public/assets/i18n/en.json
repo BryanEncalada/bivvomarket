@@ -137,7 +137,7 @@
     "Sub": "Explore our website to find the most popular items on the market right now."
   },
   "video": {
-    "suport": "Your browser does not support the video.",
+    "support": "Your browser does not support the video.",
     "Natural": "100% Natural & Organic",
     "Sugar": "No added sugar",
     "Hermetic": "Hermetic Seal",
@@ -438,7 +438,7 @@
     "TitVersatil": "Versatile",
     "SubVersatil": "Mix it in a smoothie",
     "TitNutritivo": "Nutritious",
-    "SubNutritivo": "Mix it with everything"
+    "SubNutritivo": "High in protein"
   },
   "Video2Component": {
     "TitRefrescante": "Natural",
