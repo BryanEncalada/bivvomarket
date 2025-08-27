@@ -140,11 +140,27 @@ export class ShopAreaComponent {
         break;
 
       case 'asc':
-        this.products.sort((a, b) => a.parent_category.localeCompare(b.parent_category));
+        this.products.sort((a, b) => {
+          // primero ordena por categoría
+          const categoryCompare = a.parent_category.localeCompare(b.parent_category);
+          if (categoryCompare !== 0) {
+            return categoryCompare;
+          }
+          // si la categoría es la misma, ordena por order_quantity
+          return a.order_quantity - b.order_quantity;
+        });
         break;
 
       default: // asc o el "Default Sorting"
-        this.products.sort((a, b) => b.parent_category.localeCompare(a.parent_category));
+        this.products.sort((a, b) => {
+          // primero ordena por categoría
+          const categoryCompare = a.parent_category.localeCompare(b.parent_category);
+          if (categoryCompare !== 0) {
+            return categoryCompare;
+          }
+          // si la categoría es la misma, ordena por order_quantity
+          return a.order_quantity - b.order_quantity;
+        });
         break;
     }
   }
