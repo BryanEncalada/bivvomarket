@@ -4,7 +4,7 @@
     <ng-container *ngIf="shouldLoad">
       <video
         autoplay
-        muted
+        [muted]="true"
         playsinline
         loop
         preload="none"
@@ -12,7 +12,6 @@
         [attr.poster]="poster"
         aria-label="Video promocional"
       >
-        <!-- OJO: type correcto para webm -->
         <source [attr.src]="videoSrc" type="video/webm" />
       </video>
       <span class="visually-hidden">{{ "video.support" | transloco }}</span>
