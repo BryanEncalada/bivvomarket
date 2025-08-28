@@ -104,7 +104,7 @@
     "1": {
       "title": "QUINOA POP ORIGINAL<br />",
       "subtitle": "QUINOA ORIGINAL es un superalimento 100% orgánico con alto contenido de proteína",
-      "bgImg": "/assets/img/slider/03/sliderBM04.webp",
+      "bgImg": "/assets/img/slider/03/sliderBM04_2.jpg",
       "isDark": true
     },
     "2": {
@@ -117,6 +117,12 @@
       "title": "QUINOA POP CUBIERTO CON MIEL<br />",
       "subtitle": "QUINOA CON MIEL es un superalimento a base de quinoa 100% orgánica y miel natural",
       "bgImg": "/assets/img/slider/03/sliderBM06.webp",
+      "isDark": true
+    },
+    "4": {
+      "title": "QUINOA POP COVERED WITH HONEY<br />",
+      "subtitle": "HONEY QUINOA is a superfood based on 100% organic quinoa and natural honey",
+      "bgImg": "/assets/img/slider/03/sliderBM07.png",
       "isDark": true
     }
   },
@@ -138,12 +144,12 @@
   },
   "video": {
     "support": "Tu navegador no soporta el video.",
-    "Natural": "100% Natural y Orgánico",
+    "Natural": "100% Natural",
     "Sugar": "Sin azúcar añadida",
     "Hermetic": "Sello Hermético",
     "Keeps": "Mantiene la frescura",
     "High": "Alta en Proteínas",
-    "Source": "Fuente",
+    "Source": "Músculos saludables",
     "Premium": "Premium",
     "Product": "Producto"
   },
@@ -226,7 +232,7 @@
   "terms_agreement": {
     "title": "ACUERDO DE TÉRMINOS",
     "intro_p1": "Estos Términos de Uso constituyen un acuerdo legalmente vinculante entre tú, ya sea a título personal o en representación de una entidad (“tú”), y The Pacific Brothers USA, LLC, operando bajo el nombre comercial Bivvo Market (\"Bivvo Market“, “nosotros”, “nos” o “nuestro”), con respecto a tu acceso y uso del sitio web <a href=\"https://bivvo-market.myshopify.com/\" target=\"_blank\">https://bivvo-market.myshopify.com/</a>, así como de cualquier otro medio, canal de medios, sitio móvil o aplicación móvil relacionada, vinculada o conectada a este (colectivamente, el “Sitio”).",
-    "intro_p2": "Estamos registrados en Florida, Estados Unidos, y nuestra oficina registrada se encuentra en 8841 Froude Ave, Surfside, FL 33154. Al acceder al Sitio, declaras que has leído, comprendido y aceptado estar sujeto a todos estos Términos de Uso. SI NO ESTÁS DE ACUERDO CON TODOS ESTOS TÉRMINOS DE USO, ENTONCES TIENES PROHIBIDO USAR EL SITIO Y DEBES DEJAR DE USARLO INMEDIATAMENTE.",
+    "intro_p2": "Estamos registrados en Florida, Estados Unidos, y nuestra oficina registrada se encuentra en v. Paseo de la Castellana 705, Santiago de Surco - Lima. Al acceder al Sitio, declaras que has leído, comprendido y aceptado estar sujeto a todos estos Términos de Uso. SI NO ESTÁS DE ACUERDO CON TODOS ESTOS TÉRMINOS DE USO, ENTONCES TIENES PROHIBIDO USAR EL SITIO Y DEBES DEJAR DE USARLO INMEDIATAMENTE.",
     "intro_p3": "Términos y condiciones adicionales o documentos que puedan ser publicados ocasionalmente en el Sitio se incorporan expresamente por referencia. Nos reservamos el derecho, a nuestra entera discreción, de realizar cambios o modificaciones a estos Términos de Uso en cualquier momento y por cualquier motivo. Te notificaremos sobre cualquier cambio actualizando la fecha de “Última actualización” de estos Términos de Uso, y renuncias al derecho a recibir notificación específica de cada cambio. Por favor, asegúrate de revisar los Términos aplicables cada vez que utilices nuestro Sitio para entender qué condiciones son aplicables.",
     "intro_p4": "Estarás sujeto a, y se considerará que has sido informado y que has aceptado, cualquier cambio realizado en los Términos de Uso revisados mediante tu uso continuado del Sitio después de la fecha en que se publiquen dichos Términos revisados.",
     "intro_p5": "La información proporcionada en el Sitio no está destinada a ser distribuida o utilizada por ninguna persona o entidad en ninguna jurisdicción o país donde dicha distribución o uso sea contrario a la ley o regulación, o que nos someta a requisitos de registro en dicha jurisdicción o país. Por lo tanto, aquellas personas que elijan acceder al Sitio desde otras ubicaciones lo hacen por iniciativa propia y son responsables del cumplimiento de las leyes locales, en la medida en que estas sean aplicables.",
@@ -423,11 +429,11 @@
       "title": "CONTÁCTANOS",
       "p1": "Para resolver una queja o recibir más información sobre el uso del Sitio, contáctanos en:",
       "company_name": "The Pacific Brothers USA, LLC",
-      "address_line1": "8841 Froude Ave",
+      "address_line1": "Av. Paseo de la Castellana 705, Santiago de Surco",
       "address_line2": "Surfside, FL 33154",
-      "country": "Estados Unidos",
-      "phone": "Teléfono: 3057944827",
-      "email": "Correo: <a href=\"mailto:barrioceo@yahoo.com\">barrioceo@yahoo.com</a>"
+      "country": "Peru",
+      "phone": "Teléfono: (+51) 99741 1309",
+      "email": "Correo: <a href=\"mailto:Contacto@Thepacificbrothers.com\">Contacto@Thepacificbrothers.com</a>"
     }
   },
   "empresas": {
@@ -442,11 +448,11 @@
   },
   "Video2Component": {
     "TitRefrescante": "Natural",
-    "SubRefrescante": "Sin azúcar",
+    "SubRefrescante": "Pulpa de frutas",
     "TitEnergetico": "Energético",
     "SubEnergetico": "Carga tu cuerpo de energía",
-    "TitVitaminado": "Vitaminado",
-    "SubVitaminado": "Llena tu día de vitaminas",
+    "TitVitaminado": "Práctico",
+    "SubVitaminado": "Úsalo en todas tus bebidas",
     "TitSaludable": "Saludable",
     "SubSaludable": "Natural y sin añadidos"
   }

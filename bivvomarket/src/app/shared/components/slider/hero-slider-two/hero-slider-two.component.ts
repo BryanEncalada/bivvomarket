@@ -21,7 +21,7 @@ export class HeroSliderTwoComponent {
   constructor(private translocoService: TranslocoService) {}
 
   ngAfterViewInit() {
-    const ids = [1, 2, 3];
+    const ids = [1, 2, 3, 4];
     const observables = ids.map((id) =>
       this.translocoService.selectTranslateObject(`heroSlider.${id}`)
     );
@@ -40,6 +40,10 @@ export class HeroSliderTwoComponent {
             loop: true,
             effect: 'fade',
             modules: [Pagination, EffectFade],
+            autoplay: {
+              delay: 5000, // ⏱ cada 5 segundos
+              disableOnInteraction: false, // sigue después de interactuar
+            },
             pagination: {
               clickable: true,
               el: '.tp-slider-dot-2',
