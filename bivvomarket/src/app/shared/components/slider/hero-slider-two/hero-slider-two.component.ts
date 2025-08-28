@@ -21,7 +21,7 @@ export class HeroSliderTwoComponent {
   constructor(private translocoService: TranslocoService) {}
 
   ngAfterViewInit() {
-    const ids = [1, 2, 3, 4];
+    const ids = [1, 2, 3, 4, 5, 6];
     const observables = ids.map((id) =>
       this.translocoService.selectTranslateObject(`heroSlider.${id}`)
     );
