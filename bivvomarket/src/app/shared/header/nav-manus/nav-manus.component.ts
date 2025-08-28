@@ -15,8 +15,10 @@ import { IProduct } from '../../types/IProduct';
   styleUrl: './nav-manus.component.scss',
 })
 export class NavManusComponent {
+
   public menu_data: IMenuType[] = menuData;
   public products$: Observable<IProduct[]> | undefined;
+  public gruposCategoria: String[] = [];
 
   constructor(public productService: ProductService) {
     this.products$ = this.productService.products;
@@ -26,10 +28,24 @@ export class NavManusComponent {
       const productosMenu = this.menu_data.find((m) => m.title === 'Productos');
 
       if (productosMenu) {
-        productosMenu.dropdownItems = prods.map((p) => ({
+
+        prods.forEach((p) => {
+          const categoria: string = p.category.toUpperCase();
+          if (!this.gruposCategoria.find(f => f === categoria)) {
+            this.gruposCategoria.push(categoria);
+          }
+        });
+
+        productosMenu.dropdownItems = prods.map((p) =>
+        ({
           link: `/shop/shop-details/${p._id}`, // ajusta según tu API
           title: p.title, // ajusta según tu modelo
-        }));
+          categoria: p.category.toUpperCase(), // ajusta según tu modelo
+        })
+        );
+
+
+
       }
     });
   }

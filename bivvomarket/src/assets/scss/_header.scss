@@ -497,6 +497,7 @@
         & ul.submenu {
           visibility: visible;
           opacity: 1;
+          background-color: $white;
           @include transform(scaleY(1));
         }
       }

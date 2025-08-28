@@ -7,6 +7,7 @@ export interface IMenuType {
   dropdownItems?:{
     link: string
     title: string,
+    categoria?: string,
     dropdownMenu?:{
       link: string
       title: string,
