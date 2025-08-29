@@ -34,7 +34,7 @@ export class ContactFormComponent {
     this.formSubmitted = true;
     if (this.contactForm.valid) {
 
-      //this.toastrService.success(`Message sent successfully`);
+
 
       // Reset the form
       this.contactForm.reset();

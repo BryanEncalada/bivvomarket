@@ -76,7 +76,7 @@
     "ourLinks": "Nuestros Enlaces",
     "privacy": "Política de privacidad",
     "terms": "Términos y condiciones",
-    "copyright": "Copyright ©Bivvo todos los derechos reservados. Desarrollado por Bivvo"
+    "copyright": "Copyright ©Bivvo todos los derechos reservados. Desarrollado por "
   },
   "testimonials": {
     "1": {
@@ -440,9 +440,8 @@
     "contact_us": {
       "title": "CONTÁCTANOS",
       "p1": "Para resolver una queja o recibir más información sobre el uso del Sitio, contáctanos en:",
-      "company_name": "The Pacific Brothers USA, LLC",
+      "company_name": "The Pacific Brothers SAC",
       "address_line1": "Av. Paseo de la Castellana 705, Santiago de Surco",
-      "address_line2": "Surfside, FL 33154",
       "country": "Peru",
       "phone": "Teléfono: (+51) 99741 1309",
       "email": "Correo: <a href=\"mailto:Contacto@Thepacificbrothers.com\">Contacto@Thepacificbrothers.com</a>"
@@ -467,5 +466,15 @@
     "SubVitaminado": "Úsalo en todas tus bebidas",
     "TitSaludable": "Saludable",
     "SubSaludable": "Natural y sin añadidos"
+  },
+  "cart":{
+    "Images": "Imagen",
+    "Product": "Producto",
+    "UnitPrice": "Precio Unitario",
+    "Quantity": "Cantidad",
+    "Total": "Total",
+    "Remove": "Eliminar",
+    "Clearcart": "Borrar Carrito",
+    "ProceedCheckout": "Proceder al Pago"
   }
 }

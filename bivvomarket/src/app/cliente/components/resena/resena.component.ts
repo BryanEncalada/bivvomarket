@@ -28,7 +28,7 @@ export class ResenaComponent {
   public testimonial_data: any[] = [];
   private subscription!: Subscription;
 
-  constructor(private translocoService: TranslocoService) {}
+  constructor(private translocoService: TranslocoService) { }
 
   ngOnInit(): void {
     const ids = [1, 2, 3, 4];
@@ -60,6 +60,12 @@ export class ResenaComponent {
             clickable: true,
             el: '.tp-slider-dot-3',
           },
+          autoplay: {
+            delay: 3000, // tiempo entre slides (ms)
+            disableOnInteraction: false, // para que siga después de hacer click/drag
+          },
+          loop: true,
+
         });
       });
     });
