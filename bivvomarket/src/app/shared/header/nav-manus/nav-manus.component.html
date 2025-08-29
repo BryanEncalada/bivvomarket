@@ -4,17 +4,11 @@
       <a *ngIf="!item.href" [routerLink]="item.link">
         {{item.title | transloco}}
       </a>
-      <a *ngIf="item.href" [href]="item.link">
+      <a *ngIf="item.href" (click)="goToSection('/productos', 'sRecetas', $event)"
+        style="cursor: pointer;color: #323232;">
         {{ item.title | transloco }}
       </a>
 
-
-      <!-- <ul *ngIf="item.hasDropdown && item.megamenu" class="submenu transition-3"
-      style="background-image: url('/assets/img/logo/logoBM01.webp');background-position: center;" >
-        <li *ngFor="let m_mnu of item.dropdownItems; let index = index" class="has-dropdown">
-          <a [routerLink]="m_mnu.link">{{ m_mnu.title }}</a>
-        </li>
-      </ul> -->
 
       <ul *ngIf="item.hasDropdown && item.megamenu" class="submenu">
 
@@ -23,12 +17,17 @@
           <div *ngFor="let gc of gruposCategoria; let index = index" class="category">
             <h3>{{gc}}</h3>
             <div *ngFor="let m_mnu of item.dropdownItems; let index = index">
-              <a style="padding: 0px;padding-bottom: 20px;" *ngIf="m_mnu.categoria == gc" [routerLink]="m_mnu.link">{{ m_mnu.title }}</a>
+              <a *ngIf="m_mnu.categoria == gc" style="padding: 0px;padding-bottom: 20px;" [routerLink]="m_mnu.link"
+                (mouseenter)="cambiarImagen(m_mnu.img)" (mouseleave)="cambiarImagen('/assets/img/shop/HojaVerde.png')">
+                {{ m_mnu.title }}
+              </a>
             </div>
-            <div *ngIf="index == 0">
-              <img src="/assets/img/shop/HojaVerde.png" alt="Logo" class="category-image" style="margin-top: 50px;" width="150px" height="100px">
 
-            </div>
+          </div>
+          <div class="category">
+
+            <img [src]="imgOver" alt="Logo" style="width: 100%; height: auto;padding-top: 80px;">
+
           </div>
 
         </div>

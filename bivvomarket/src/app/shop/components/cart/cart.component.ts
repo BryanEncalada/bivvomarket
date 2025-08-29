@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { CartService } from '../../../shared/services/cart.service';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-cart',
-  imports: [NgIf, NgFor, RouterLink, CommonModule],
+  imports: [NgIf, NgFor, RouterLink, CommonModule, TranslocoModule],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })

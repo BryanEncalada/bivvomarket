@@ -8,6 +8,7 @@ export interface IMenuType {
     link: string
     title: string,
     categoria?: string,
+    img: string,
     dropdownMenu?:{
       link: string
       title: string,

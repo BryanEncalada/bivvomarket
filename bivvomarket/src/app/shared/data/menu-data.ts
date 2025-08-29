@@ -2,8 +2,9 @@ import { IMenuType, IMobileMenu } from '../types/menu-d-t';
 
 const menuData: IMenuType[] = [
   {
-    link: '/',
+    link: '/a',
     title: 'Inicio',
+    href: false,
   },
   {
     link: '/pages/nosotros',
@@ -14,11 +15,11 @@ const menuData: IMenuType[] = [
     title: 'Productos',
     hasDropdown: true,
     megamenu: true,
-    href: true,
+    href: false,
     dropdownItems: [],
   },
   {
-    link: '/#sRecetas',
+    link: '#sRecetas',
     title: 'Recetas',
     href: true,
   },
