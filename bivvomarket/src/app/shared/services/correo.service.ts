@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Icorreo } from '../types/correo';
+import { Icorreo, IcorreoRes } from '../types/correo';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CorreoService {
 
-  private apiUrl = 'https://app.enervym.com/api/correo';
+  private apiUrl = 'https://app.enervym.com/api/Correo';
 
   constructor(private http: HttpClient) { }
 
-  public enviarCorreo(fd: FormData): Observable<Icorreo> {
+  public enviarCorreo(body: Partial<Icorreo>): Observable<IcorreoRes> {
 
-    return this.http.post<Icorreo>(`${this.apiUrl}`, fd);
+    return this.http.post<IcorreoRes>(`${this.apiUrl}`, body);
 
   }
 

@@ -6,6 +6,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { CorreoService } from '../../../services/correo.service';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class ContactFormComponent {
   public contactForm!: FormGroup;
   public formSubmitted = false;
 
-  //constructor(private toastrService: ToastrService) {}
+  constructor(private correo: CorreoService) { }
 
   ngOnInit() {
     this.contactForm = new FormGroup({
@@ -34,7 +35,27 @@ export class ContactFormComponent {
     this.formSubmitted = true;
     if (this.contactForm.valid) {
 
+      const formData = {
+        to: this.contactForm.value.email,
+        name: this.contactForm.value.name,
+        subject: this.contactForm.value.subject,
+        message: this.contactForm.value.message,
+      }
 
+      this.correo.enviarCorreo(formData).subscribe({
+        next: (data) => {
+
+
+
+        },
+        error: (err) => {
+          window.alert('No se ha podido enviar el correo, intentalo de nuevo');
+          //console.log(err);
+        },
+        complete: () => {
+
+        }
+      });
 
       // Reset the form
       this.contactForm.reset();
