@@ -1,5 +1,8 @@
 <app-espaciador height="6rem"></app-espaciador>
-<app-titulo-seccion [Titulo1]="'SeccionRecetasTit' | transloco" [desc1]="'SeccionRecetasSub' | transloco">
+<app-titulo-seccion
+  [Titulo1]="'SeccionRecetasTit' | transloco"
+  [desc1]="'SeccionRecetasSub' | transloco"
+>
 </app-titulo-seccion>
 <app-espaciador height="2rem"></app-espaciador>
 
@@ -7,10 +10,20 @@
   <div class="row g-4">
     <!-- Generar 3 cards con *ngFor -->
     <div class="col-12 col-md-4" *ngFor="let v of videos">
-      <div class="card shadow-sm h-100 border-0 video-card" data-bs-toggle="modal" data-bs-target="#videoModal"
-        (click)="openVideo(v.src)">
-        <div class="ratio ratio-16x9 rounded-3 overflow-hidden position-relative">
-          <img [src]="v.poster" [alt]="v.title" class="w-100 h-100 object-fit-cover d-block" />
+      <div
+        class="card shadow-sm h-100 border-0 video-card"
+        data-bs-toggle="modal"
+        data-bs-target="#videoModal"
+        (click)="openVideo(v.src)"
+      >
+        <div
+          class="ratio ratio-16x9 rounded-3 overflow-hidden position-relative"
+        >
+          <img
+            [src]="v.poster"
+            [alt]="v.title"
+            class="w-100 h-100 object-fit-cover d-block"
+          />
           <div class="play-overlay">▶︎</div>
         </div>
       </div>
@@ -19,12 +32,24 @@
 </div>
 
 <!-- Modal de video -->
-<div class="modal fade" id="videoModal" #videoModalEl tabindex="-1" aria-hidden="true">
+<div
+  class="modal fade"
+  id="videoModal"
+  #videoModalEl
+  tabindex="-1"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content bg-black border-0">
       <div class="modal-body p-0">
         <div class="ratio ratio-16x9">
-          <video #modalVideo [src]="currentVideoSrc" class="w-100 h-100" controls playsinline></video>
+          <video
+            #modalVideo
+            [src]="currentVideoSrc"
+            class="w-100 h-100"
+            controls
+            playsinline
+          ></video>
         </div>
       </div>
     </div>
