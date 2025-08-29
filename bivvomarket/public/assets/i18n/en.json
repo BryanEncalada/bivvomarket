@@ -120,13 +120,13 @@
       "isDark": true
     },
     "4": {
-      "title": "LEMONGRASS SYRUP<br />",
+      "title": "PASSION FRUIT SYRUP<br />",
       "subtitle": "ENJOY THE REAL FRUIT FLAVOR OF OUR SYRUPS",
-      "bgImg": "/assets/img/slider/03/fix/bivvo04.webp",
+      "bgImg": "/assets/img/slider/03/fix/bivvo05.webp",
       "isDark": true
     },
     "5": {
-      "title": "PINEAPPLE SYRUP<br />",
+      "title": "RED FRUITS SYRUP<br />",
       "subtitle": "ENJOY THE REAL FRUIT FLAVOR OF OUR SYRUPS",
       "bgImg": "/assets/img/slider/03/fix/bivvo05.webp",
       "isDark": true
@@ -468,7 +468,7 @@
     "TitSaludable": "Healthy",
     "SubSaludable": "Natural and additive-free"
   },
-  "cart":{
+  "cart": {
     "Images": "Images",
     "Product": "Product",
     "UnitPrice": "Unit Price",

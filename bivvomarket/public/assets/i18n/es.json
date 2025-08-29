@@ -122,17 +122,17 @@
     "4": {
       "title": "JARABE DE HIERBA LUISA <br />",
       "subtitle": "DISFRUTA EL VERDADERO SABOR A FRUTA DE NUESTROS JARABES",
-      "bgImg": "/assets/img/slider/03/fix/bivvo04.webp",
-      "isDark": true
-    },
-    "5": {
-      "title": "JARABE DE PIÑA<br />",
-      "subtitle": "DISFRUTA EL VERDADERO SABOR A FRUTA DE NUESTROS JARABES",
       "bgImg": "/assets/img/slider/03/fix/bivvo05.webp",
       "isDark": true
     },
+    "5": {
+      "title": "JARABE DE MARACUYA<br />",
+      "subtitle": "DISFRUTA EL VERDADERO SABOR A FRUTA DE NUESTROS JARABES",
+      "bgImg": "/assets/img/slider/03/fix/bivvo04.webp",
+      "isDark": true
+    },
     "6": {
-      "title": "JARABE DE FRESA<br />",
+      "title": "JARABE DE FRUTOS ROJOS<br />",
       "subtitle": "DISFRUTA EL VERDADERO SABOR A FRUTA DE NUESTROS JARABES",
       "bgImg": "/assets/img/slider/03/fix/bivvo06.webp",
       "isDark": true
@@ -467,7 +467,7 @@
     "TitSaludable": "Saludable",
     "SubSaludable": "Natural y sin añadidos"
   },
-  "cart":{
+  "cart": {
     "Images": "Imagen",
     "Product": "Producto",
     "UnitPrice": "Precio Unitario",
