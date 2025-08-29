@@ -21,6 +21,7 @@ export interface IMenuType {
 export interface IMobileMenu{
   title: string;
   link?: string;
+  href?:boolean;
   dropdownMenu?: {
     link: string;
     title: string;

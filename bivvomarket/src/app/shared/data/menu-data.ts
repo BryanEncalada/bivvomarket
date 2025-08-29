@@ -35,8 +35,8 @@ export default menuData;
 // mobile menus
 export const mobile_menus: IMobileMenu[] = [
   {
-    link: '/',
-    title: 'Home',
+    link: '/a',
+    title: 'Inicio',
   },
 
   {
@@ -45,15 +45,16 @@ export const mobile_menus: IMobileMenu[] = [
   },
   {
     link: '/pages/producto',
-    title: 'Producto',
+    title: 'Productos',
   },
   {
-    link: '/pages/contact',
+    link: '#sRecetas',
     title: 'Recetas',
+    href: true
   },
 
   {
-    link: 'contact',
+    link: '/pages/contact',
     title: 'Contacto',
   },
 ];

@@ -64,9 +64,9 @@ export class UtilsService {
   }
 
   // open mobile sidebar
-  // handleOpenMobileMenu() {
-  //   this.openMobileMenus = !this.openMobileMenus;
-  // }
+  handleOpenMobileMenu() {
+    this.openMobileMenus = !this.openMobileMenus;
+  };
 
   // modal video play
   playVideo(videoId: string) {
@@ -106,7 +106,7 @@ export class UtilsService {
     this.modalId = id;
     this.product = item;
     this.productService.handleImageActive(item.img);
-   
+
   }
 
   open() {

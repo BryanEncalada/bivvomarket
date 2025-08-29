@@ -3,38 +3,69 @@ import { IMobileMenu } from '../../types/menu-d-t';
 import { mobile_menus } from '../../data/menu-data';
 import { UtilsService } from '../../services/utils.service';
 import { CommonModule } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { RouterLink } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-offcanvas',
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslocoModule],
   templateUrl: './offcanvas.component.html',
   styleUrl: './offcanvas.component.scss',
 })
 export class OffcanvasComponent {
+
+  constructor(public utilsService: UtilsService, private router: Router) { }
+
   mobile_menus: IMobileMenu[] = mobile_menus;
-  activeMenu: string | null = null;
 
-  constructor(public utilsService: UtilsService) {}
+  activeMenu: string = "";
 
-  // Abre/cierra submenú
-  toggle(title: string) {
-    this.activeMenu = this.activeMenu === title ? null : title;
+  handleOpenMenu(navTitle: string) {
+    if (navTitle === this.activeMenu) {
+      this.activeMenu = "";
+    } else {
+      this.activeMenu = navTitle;
+    }
   }
 
-  // Cerrar panel completo
-  closeOffcanvas() {
-    this.utilsService.close();
-    this.activeMenu = null;
+  scrollTo(id: string) {
+    const el = document.getElementById(id);
+
+    if (el) {
+
+      // Altura de tu menú fijo
+      const menuHeight = 80; // ajusta según tu header
+
+      // Posición del elemento en la página
+      const y = el.getBoundingClientRect().top + window.scrollY - menuHeight;
+
+      //el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   }
 
-  // Accesibilidad: cerrar con ESC
-  @HostListener('document:keydown.escape')
-  onEsc() {
-    if (this.utilsService.openMobileMenus) this.closeOffcanvas();
+
+  goToSection(page: string, id: string, event?: Event) {
+
+    if (event) {
+      event.preventDefault(); // evita el salto automático del <a>
+    }
+
+    const currentUrl = this.router.url;
+
+
+    if (currentUrl === '/' || currentUrl.startsWith('/#')) {
+      this.scrollTo(id);
+      return; // ya estamos en la página principal, solo hacemos scroll
+    }
+
+    this.router.navigate([page]).then(() => {
+      // esperamos a que el DOM termine de pintar
+      setTimeout(() => {
+        this.scrollTo(id);
+      }, 700); // ajusta el tiempo si tu vista tarda más en cargar
+    });
   }
 
-  // trackBy para no re-renderizar toda la lista
-  trackByTitle = (_: number, item: IMobileMenu) => item.title;
 }
