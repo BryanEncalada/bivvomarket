@@ -27,12 +27,12 @@ export class ExtraGarabeComponent implements AfterViewInit {
     },
     {
       src: 'assets/video/video01.mp4',
-      title: 'Coctel Bivvo Maracuya',
+      title: 'Cóctel Bivvo Maracuyá',
       poster: 'assets/img/receta/video02.jpg',
     },
     {
       src: 'assets/video/video02.mp4',
-      title: 'Coctel Bivvo Variado',
+      title: 'Cóctel Bivvo Variado',
       poster: 'assets/img/receta/video03.jpg',
     },
   ];
