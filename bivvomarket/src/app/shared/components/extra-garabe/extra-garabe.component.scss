@@ -1,4 +1,3 @@
-
 .ratio {
   --bs-aspect-ratio: 177.8%; /* 850/478*100 */
   max-width: 280px; /* 🔹 ajusta el tamaño máximo del video */
@@ -22,6 +21,8 @@
 }
 
 .video-card {
+  aspect-ratio: 1/1; /* asegura que la card sea cuadrada */
+  overflow: hidden;
   cursor: pointer;
   position: relative;
 }
@@ -34,11 +35,20 @@
   justify-content: center;
   font-size: 4rem; /* tamaño grande */
   font-weight: bold;
-  color: white;
+  color: grey;
+  background: rgba(0, 0, 0, 0.3); /* 🔹 negro con 5% de opacidad */
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .video-card:hover .play-overlay {
   background: rgba(0, 0, 0, 0.5);
   transform: scale(1);
+}
+
+.card-title-custom {
+  font-family: inherit; /* mismo que usas en 'NUESTRAS RECETAS' */
+  font-weight: 700; /* negrita */
+  text-transform: uppercase;
+  color: #1d4d2f; /* el verde que se ve en la imagen */
+  letter-spacing: 1px; /* opcional, para más impacto */
 }

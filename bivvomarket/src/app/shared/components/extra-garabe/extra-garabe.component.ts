@@ -22,17 +22,17 @@ export class ExtraGarabeComponent implements AfterViewInit {
   videos = [
     {
       src: 'assets/video/video03.mp4',
-      title: 'Video 1',
+      title: 'Quinoa Pop reseña',
       poster: 'assets/img/receta/video01.jpg',
     },
     {
       src: 'assets/video/video01.mp4',
-      title: 'Video 2',
+      title: 'Coctel Bivvo Maracuya',
       poster: 'assets/img/receta/video02.jpg',
     },
     {
       src: 'assets/video/video02.mp4',
-      title: 'Video 3',
+      title: 'Coctel Bivvo Variado',
       poster: 'assets/img/receta/video03.jpg',
     },
   ];
