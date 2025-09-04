@@ -5,7 +5,7 @@
       <div
         *ngFor="let item of hero_slider_data"
         class="single-slider single-slider-2 slider__height-2 d-flex align-items-center swiper-slide"
-        [style.backgroundImage]="'url(' + item.bgImg + ')'"
+        [style.backgroundImage]="'url(' + getImgPath(item.bgImg) + ')'"
       >
         <div class="container-fluid">
           <div class="row">
@@ -37,7 +37,7 @@
     height="60px"
   ></app-wave-divider> -->
 
-  <!-- Divisor inferior blanco 
+  <!-- Divisor inferior blanco
   <app-wave-divider
     position="bottom"
     color="e7401e"
