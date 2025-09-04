@@ -2,7 +2,7 @@
   "hello": "Hello! Enn",
   "description": "Welcome to our store",
   "Inicio": "Home",
-  "Productos": "Product",
+  "Productos": "Products",
   "Nosotros": "About us",
   "Recetas": "Recipes",
   "Contacto": "Contact",
@@ -476,6 +476,7 @@
     "Total": "Total",
     "Remove": "Remove",
     "Clearcart": "Clear cart",
+    "ContinueShop": "Continue Shopping",
     "ProceedCheckout": "Proceed to checkout"
   }
 }

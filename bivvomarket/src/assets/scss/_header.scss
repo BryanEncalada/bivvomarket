@@ -141,17 +141,23 @@
           @include box-shadow(0px 15px 30px 0px rgba(0, 3, 143, 0.1));
           visibility: hidden;
           opacity: 0;
+
           @include transition(0.3s);
 
           @media #{$xs} {
-            width: 280px;
-            right: -60%;
+            width: 320px;
+
+            left: -250px;
           }
 
           & .mini-cart-list {
+
+
+
             &.slider-height_1 {
               height: 50px;
               overflow: hidden;
+
             }
 
             &.slider-height_2 {

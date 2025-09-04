@@ -41,9 +41,13 @@
       <span>S/{{ cartService.totalPriceQuantity().total | number:'1.2-2' }}</span>
     </div>
     <div class="checkout-link">
+      <a routerLink="/pages/producto" class="os-btn"> {{'cart.ContinueShop' |
+        transloco }}
+      </a>
       <a routerLink="/shop/cart" class="os-btn">{{
         "VerCarrito" | transloco
-        }}</a>
+        }}
+      </a>
       <a class="os-btn os-btn-black" routerLink="/shop/checkout">{{
         "PagarAhora" | transloco
         }}</a>

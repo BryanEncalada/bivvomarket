@@ -2,7 +2,7 @@
   "hello": "¡Hola!",
   "description": "Bienvenido a nuestra tienda",
   "Inicio": "Inicio",
-  "Productos": "Producto",
+  "Productos": "Productos",
   "Nosotros": "Nosotros",
   "Recetas": "Recetas",
   "Contacto": "Contacto",
@@ -475,6 +475,7 @@
     "Total": "Total",
     "Remove": "Eliminar",
     "Clearcart": "Borrar Carrito",
+    "ContinueShop": "Continuar comprando",
     "ProceedCheckout": "Proceder al Pago"
   }
 }
