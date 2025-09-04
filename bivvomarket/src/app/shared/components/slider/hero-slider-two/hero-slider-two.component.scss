@@ -28,14 +28,31 @@
       height: 62vh;
       min-height: 320px;
     }
+
     .slider__content {
-      padding-top: 2rem; /* sube todo el bloque */
+      padding-top: 2rem;
+      /* sube todo el bloque */
     }
 
     .slider__content h2 {
-      font-size: 2rem; /* más pequeño para móvil */
-      margin-top: -10rem; /* <- aquí subes solo el h2 */
+      font-size: 2rem;
+      /* más pequeño para móvil */
+      margin-top: -10rem;
+      /* <- aquí subes solo el h2 */
     }
+
+    .os-btn-white {
+      width: 210px;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .os-btn {
+      width: 210px;
+      padding: 0px;
+      margin: 0px;
+    }
+
   }
 
 
