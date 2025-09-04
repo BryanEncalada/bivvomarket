@@ -1,4 +1,5 @@
 .slider__area-2 {
+
   .swiper-container,
   .swiper-wrapper,
   .swiper-slide {
@@ -7,21 +8,21 @@
 
   /* Tu clase ya usada en el slide */
   .slider__height-2 {
-    /* Altura base del hero */
-
-    min-height: 480px; /* evita que quede muy bajo */
-    max-height: 820px; /* opcional: techo en desktop */
-
+    min-height: 480px;
+    max-height: 820px;
     background-repeat: no-repeat;
   }
 
   /* Ajustes por breakpoint */
   @media (max-width: 992px) {
+    border: 0px solid blue($color: #000000);
+
     .slider__height-2 {
       height: 60vh;
       min-height: 480px;
     }
   }
+
   @media (max-width: 576px) {
     .slider__height-2 {
       height: 62vh;
@@ -32,8 +33,10 @@
     }
 
     .slider__content h2 {
-      font-size: 2.8rem; /* más pequeño para móvil */
-      margin-top: -16.5rem; /* <- aquí subes solo el h2 */
+      font-size: 2rem; /* más pequeño para móvil */
+      margin-top: -10rem; /* <- aquí subes solo el h2 */
     }
   }
+
+
 }
