@@ -8,7 +8,9 @@ import { Icorreo, IcorreoRes } from '../types/correo';
 })
 export class CorreoService {
 
-  private apiUrl = 'https://app.enervym.com/api/Correo';
+  //private apiUrl = 'https://app.enervym.com/api/Correo';
+  private apiUrl = 'https://apps.brunellalecca.com/api/Correo';
+
 
   constructor(private http: HttpClient) { }
 
