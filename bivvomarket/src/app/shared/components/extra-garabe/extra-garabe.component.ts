@@ -35,6 +35,11 @@ export class ExtraGarabeComponent implements AfterViewInit {
       title: 'Cóctel Bivvo Variado',
       poster: 'assets/img/receta/video03.jpg',
     },
+    {
+      src: 'assets/video/video04.mp4',
+      title: 'Alfajores de frutos rojos ',
+      poster: 'assets/img/receta/video04.jpg',
+    },
   ];
 
   currentVideoSrc = '';

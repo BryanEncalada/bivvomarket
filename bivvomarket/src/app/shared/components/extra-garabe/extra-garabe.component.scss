@@ -1,14 +1,14 @@
 .ratio {
   --bs-aspect-ratio: 177.8%; /* 850/478*100 */
   max-width: 280px; /* 🔹 ajusta el tamaño máximo del video */
-  width: 100%; /* ocupa todo el espacio disponible hasta el max */
+  width: 80%; /* ocupa todo el espacio disponible hasta el max */
   margin: auto; /* lo centra dentro de la card */
 }
 
 .video-el {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* evita cortes */
+  object-fit: contain;
   border-radius: 12px;
 }
 
