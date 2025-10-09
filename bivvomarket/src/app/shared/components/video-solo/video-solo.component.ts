@@ -17,8 +17,11 @@ import { TranslocoModule } from '@jsverse/transloco';
 })
 export class VideoSoloComponent implements AfterViewInit, OnDestroy {
   // Rutas reales
-  videoSrc = 'assets/video/VIDEO_VM01.webm';
-  poster = 'assets/video/VIDEO_VM01.webp'; // opcional
+  // videoSrc = 'assets/video/VIDEO_VM01.webm';
+  // poster = 'assets/video/VIDEO_VM01.webp'; // opcional
+
+  videoSrc = 'assets/video/VIDEO_BIVVO_final.mp4';
+  poster = 'assets/video/VIDEO_BIVVO_final.mp4'; // opcional
 
   shouldLoad = false; // hasta que entre al viewport
   private io?: IntersectionObserver;
