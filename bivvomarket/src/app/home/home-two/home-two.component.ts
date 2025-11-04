@@ -25,7 +25,6 @@ import { OffcanvasComponent } from '../../shared/header/offcanvas/offcanvas.comp
 import { HeaderTwoComponent } from '../../shared/header/header-two/header-two.component';
 import { EmpresasComponent } from '../../cliente/components/empresas/empresas.component';
 import { ExtraGarabeComponent } from '../../shared/components/extra-garabe/extra-garabe.component';
-import { PruebaComponent } from '../../shared/components/prueba/prueba.component';
 
 @Component({
   selector: 'app-home-two',
@@ -34,6 +33,7 @@ import { PruebaComponent } from '../../shared/components/prueba/prueba.component
     ShopAreaComponent,
     VideoComponent,
     Video2Component,
+
     ResenaComponent,
     CaracteristicasComponent,
     CommonModule,
@@ -41,7 +41,6 @@ import { PruebaComponent } from '../../shared/components/prueba/prueba.component
     EspaciadorComponent,
     EmpresasComponent,
     ExtraGarabeComponent,
-    PruebaComponent,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
