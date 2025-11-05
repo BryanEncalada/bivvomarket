@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../../shared/services/cart.service';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { CommonModule, NgFor, NgIf } from '@angular/common';
 import { TranslocoModule } from '@jsverse/transloco';
 
@@ -8,18 +13,16 @@ import { TranslocoModule } from '@jsverse/transloco';
   selector: 'app-checkout',
   imports: [ReactiveFormsModule, NgIf, NgFor, TranslocoModule, CommonModule],
   templateUrl: './checkout.component.html',
-  styleUrl: './checkout.component.scss'
+  styleUrl: './checkout.component.scss',
 })
 export class CheckoutComponent {
-
-
   public isOpenLogin = false;
   public isOpenCoupon = false;
   public shipCost: number = 0;
   public couponCode: string = '';
   public payment_name: string = '';
 
-  constructor(public cartService: CartService) { }
+  constructor(public cartService: CartService) {}
 
   handleOpenLogin() {
     this.isOpenLogin = !this.isOpenLogin;
@@ -36,8 +39,6 @@ export class CheckoutComponent {
     }
   }
 
-
-
   handleCouponSubmit() {
     console.log(this.couponCode);
     // Add coupon code handling logic here
@@ -45,21 +46,19 @@ export class CheckoutComponent {
       // logic here
 
       // when submitted the from than empty will be coupon code
-      this.couponCode = ''
+      this.couponCode = '';
     }
   }
 
   // handle payment item
   handlePayment(value: string) {
-    this.payment_name = value
+    this.payment_name = value;
   }
 
   public checkoutForm!: FormGroup;
   public formSubmitted = false;
 
-
   ngOnInit() {
-
     this.checkoutForm = new FormGroup({
       firstName: new FormControl(null, Validators.required),
       lastName: new FormControl(null, Validators.required),
@@ -68,16 +67,15 @@ export class CheckoutComponent {
       address: new FormControl(null, Validators.required),
       city: new FormControl(null, Validators.required),
       state: new FormControl(null, Validators.required),
-      apartment: new FormControl(null ),
+      apartment: new FormControl(null),
       zipCode: new FormControl(null, Validators.required),
       phone: new FormControl(null, Validators.required),
       orderNote: new FormControl(null),
       email: new FormControl(null, [Validators.required, Validators.email]),
-    })
+    });
   }
 
   onSubmit() {
-
     this.formSubmitted = true;
     if (this.checkoutForm.valid) {
       console.log('checkout-form-value', this.checkoutForm.value);
@@ -91,7 +89,8 @@ export class CheckoutComponent {
 
       const productos = this.cartService.getCartProducts();
 
-      let mensaje: string = 'Hola, estoy interesado en los siguientes productos:\n';
+      let mensaje: string =
+        'Hola, estoy interesado en los siguientes productos:\n';
       for (const producto of productos) {
         mensaje += ` *${producto.title} - ${producto.price}* \n\n`;
       }
@@ -100,43 +99,63 @@ export class CheckoutComponent {
       const nombre = `*${this.checkoutForm.value.firstName}  ${this.checkoutForm.value.lastName}*`;
       const email = `*${this.checkoutForm.value.email}*`;
       const celular = `*${this.checkoutForm.value.phone}*`;
-      const direcicon = `*${this.checkoutForm.value.address} - ${this.checkoutForm.value.apartment} - ${this.checkoutForm.value.city} - ${this.checkoutForm.value.state}*`
+      const direcicon = `*${this.checkoutForm.value.address} - ${this.checkoutForm.value.apartment} - ${this.checkoutForm.value.city} - ${this.checkoutForm.value.state}*`;
       const detalle = `*${this.checkoutForm.value.orderNote}*`;
 
-
-      mensaje += `Mi nombre es: ${nombre}\n`
+      mensaje += `Mi nombre es: ${nombre}\n`;
       mensaje += `Mi correo es: ${email}\n`;
       mensaje += `Mi celular es: ${celular}\n`;
       mensaje += `Mi direccion es: ${direcicon}\n`;
       mensaje += `Detalles del pedido: ${detalle}\n`;
 
-      const telefono = '51941712238'; // Reemplaza con tu número, incluye el código de país
+      const telefono = '51953350581'; // Reemplaza con tu número, incluye el código de país
 
-      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-
+      const url = `https://wa.me/${telefono}?text=${encodeURIComponent(
+        mensaje
+      )}`;
 
       console.log('checkout-form', this.checkoutForm.value);
 
       window.open(url, '_blank'); // Abre WhatsApp en una nueva pestaña
 
       //  FIN WHATSAPPS
-
     }
-
   }
 
-  get firstName() { return this.checkoutForm.get('firstName') }
-  get lastName() { return this.checkoutForm.get('lastName') }
-  get company() { return this.checkoutForm.get('company') }
-  get country() { return this.checkoutForm.get('country') }
-  get address() { return this.checkoutForm.get('address') }
-  get city() { return this.checkoutForm.get('city') }
-  get state() { return this.checkoutForm.get('state') }
-  get apartment() { return this.checkoutForm.get('apartment') }
-  get zipCode() { return this.checkoutForm.get('zipCode') }
-  get phone() { return this.checkoutForm.get('phone') }
-  get orderNote() { return this.checkoutForm.get('orderNote') }
-  get email() { return this.checkoutForm.get('email') }
-
-
+  get firstName() {
+    return this.checkoutForm.get('firstName');
+  }
+  get lastName() {
+    return this.checkoutForm.get('lastName');
+  }
+  get company() {
+    return this.checkoutForm.get('company');
+  }
+  get country() {
+    return this.checkoutForm.get('country');
+  }
+  get address() {
+    return this.checkoutForm.get('address');
+  }
+  get city() {
+    return this.checkoutForm.get('city');
+  }
+  get state() {
+    return this.checkoutForm.get('state');
+  }
+  get apartment() {
+    return this.checkoutForm.get('apartment');
+  }
+  get zipCode() {
+    return this.checkoutForm.get('zipCode');
+  }
+  get phone() {
+    return this.checkoutForm.get('phone');
+  }
+  get orderNote() {
+    return this.checkoutForm.get('orderNote');
+  }
+  get email() {
+    return this.checkoutForm.get('email');
+  }
 }

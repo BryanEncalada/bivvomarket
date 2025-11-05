@@ -25,6 +25,7 @@ import { OffcanvasComponent } from '../../shared/header/offcanvas/offcanvas.comp
 import { HeaderTwoComponent } from '../../shared/header/header-two/header-two.component';
 import { EmpresasComponent } from '../../cliente/components/empresas/empresas.component';
 import { ExtraGarabeComponent } from '../../shared/components/extra-garabe/extra-garabe.component';
+import { WhatsappButtonComponent } from '../../shared/components/whatsapp-button/whatsapp-button.component';
 
 @Component({
   selector: 'app-home-two',
@@ -33,7 +34,6 @@ import { ExtraGarabeComponent } from '../../shared/components/extra-garabe/extra
     ShopAreaComponent,
     VideoComponent,
     Video2Component,
-
     ResenaComponent,
     CaracteristicasComponent,
     CommonModule,
@@ -41,6 +41,7 @@ import { ExtraGarabeComponent } from '../../shared/components/extra-garabe/extra
     EspaciadorComponent,
     EmpresasComponent,
     ExtraGarabeComponent,
+    WhatsappButtonComponent,
   ],
   templateUrl: './home-two.component.html',
   styleUrl: './home-two.component.scss',
